@@ -1,0 +1,151 @@
+@import "compass";
+@import 'singularitygs';
+@import "breakpoint";
+@import 'vars/color';
+@import 'vars/font';
+
+body {
+    background-color: $background-color;
+}
+
+.moblemenu {
+    @include transition-property(all);
+    @include transition-duration(0.5s);
+    @include transition-timing-function(ease-in);
+    ul {
+        float: right;
+    }
+    li {
+        display: inline-block;
+        padding: 15px;
+        @include transition-property(all);
+        @include transition-duration(0.1s);
+        @include transition-timing-function(ease-in);
+    }
+    a {
+        font-size: 14px;
+        color: $font-main-color;
+        font-weight: 400;
+        @include transition-property(all);
+        @include transition-duration(0.2s);
+        @include transition-timing-function(ease-in);
+    }
+}
+#featured, #buynow {
+    background-color: $main-green;
+    color: $font-color;
+    h2 {
+        font-weight: 400;
+    }
+}
+#footer {
+    background-color: $footer-background-color;
+    h4 { color: $font-color }
+    p { color: $font-footer-color }
+}
+#copyright {
+    background-color: $copy-right-bg-color;
+    p { color: #999; }
+}
+
+.footer-tags {
+    a {
+        background-color: $footer-button-color;
+        padding: 8px 15px;
+        margin: 5px 3.6px;
+        font-size: 14px;
+        color: $font-footer-color;
+        display: inline-block;
+        @include transition-property(all);
+        @include transition-duration(0.5s);
+        @include transition-timing-function(ease-in);
+        &:hover {
+            background-color: $main-green;
+            color: $font-color;
+        }
+    }
+}
+
+.userinfor {
+    img {
+        width: 100px;
+        height: 100px;
+        float: left;
+        @include border-radius(100%);
+    }
+    author { margin-left: 25px }
+    .lead {
+        margin-left: 125px;
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+}
+
+
+.buy-link {
+    background-color: $button-green;
+    padding: 20px 10px;
+    color: $font-color;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    @include transition-property(all);
+    @include transition-duration(0.5s);
+    @include transition-timing-function(ease-in);
+    &:hover {
+        background: $footer-background-color;
+    }
+}
+.maintags {
+    a {
+        font-size: 14px;
+        line-height: 1.5em;
+        color: inherit;
+    }
+    .input {
+        background: #4fc0e9;
+        padding: 10px 30px;
+        color: $font-color;
+        @include border-radius(20px);
+    }
+}
+
+.sidebar {
+    date {
+        background-color: #cad4dd;
+        padding: 20px;
+        @include border-radius(5px);
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.logo {
+    font-weight: 400;
+}
+
+#slider {
+    background: url(../img/slide.jpg) no-repeat 50% 50%;
+    @include background-size(cover);
+    width: 100%;
+    height: 70vh;
+}
+
+.form-control {
+    border: 1px solid #999;
+}
+.btn {
+    background-color: $copy-right-bg-color;
+    color: $font-color;
+    @include transition-property(all);
+    @include transition-duration(0.5s);
+    @include transition-timing-function(ease-in);
+    &:hover {
+        background-color: $main-green;
+    }
+}
+
+
+
+
+@import 'vars/grid';
