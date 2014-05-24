@@ -40,7 +40,7 @@ body {
     @include breakpoint($phone) {
         width: 500px;
     }
-    @include breakpoint($phone) {
+    @include breakpoint($min-phone) {
         width: 300px;
     }
 }
@@ -292,3 +292,39 @@ body {
         }
     }
 }
+
+// main blog 
+
+.main-blog {
+    @include grid-span(9, 1);
+    @include breakpoint($big-tablet) {
+        @include grid-span(12, 1);
+    }
+}
+.read-more-link {
+    @include grid-span(5, 1);
+    @include breakpoint($big-tablet) {
+        @include grid-span(12, 1);
+        a { display: block; text-align: center; }
+    }
+}
+article {
+    header {
+        h2 {
+            @include breakpoint($phone) {
+                font-size: 1.5em;
+            }     
+        }
+    }
+    .tags {
+        @include grid-span(7, 6);
+        @include breakpoint($big-tablet) {
+            @include grid-span(12, 1);
+        }
+    }
+}
+
+
+
+
+
