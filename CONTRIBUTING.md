@@ -20,7 +20,8 @@ and [submitting pull requests](#pull-requests), but please respect the following
 restrictions:
 
 * Please **do not** use the issue tracker for personal support requests (use
-  [Stack Overflow](http://stackoverflow.com/questions/tagged/html5boilerplate)).
+  [Stack Overflow](http://stackoverflow.com/questions/tagged/html5boilerplate)
+  or IRC).
 
 * Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.
@@ -150,4 +151,4 @@ included in the project:
     with a clear title and description.
 
 **IMPORTANT**: By submitting a patch, you agree to allow the project owners to
-license your work under the terms of the [MIT License](LICENSE.md).
+license your work under the the terms of the [MIT License](LICENSE.md).

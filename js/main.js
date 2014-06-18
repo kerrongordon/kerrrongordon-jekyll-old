@@ -1,6 +1,7 @@
-$(document).ready(function() {
-    //toggle mobile menu
-      $('.menubutton').click(function() {
-          $('nav.moblemenu').toggleClass('showmenu');
-     });
+$( document ).ready(function() {
+    //$("body").fadeIn(2000);
 });
+   
+        
+ 
+

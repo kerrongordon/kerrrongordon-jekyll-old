@@ -1,0 +1,124 @@
+.head-banner {
+    height: 300px;
+    background: url(/img/port.png) center center no-repeat;
+    background-size: cover;
+    position: relative;
+    .in-head-banner {
+        background-color: rgba(26, 188, 156, 0.9);
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        .headed {
+            font-size: 4em;
+            text-align: center;
+            color: $white;
+            padding: 2em 0 0 0;
+            text-transform: uppercase;
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                width: 32%;
+                height: 1px;
+                position: absolute;
+                bottom: 30px;
+                left: 0;
+                border: solid 0.03em $white;
+            }
+            &:after {
+                content: "";
+                display: block;
+                width: 32%;
+                height: 1px;
+                position: absolute;
+                bottom: 30px;
+                right: 0;
+                border: solid 0.03em $white;
+            }
+        }
+        .sub-headed {
+            text-align: center;
+            color: $white;
+            text-transform: uppercase;
+            font-size: $font-size;
+        }
+    }
+}
+
+
+
+.portfolio {
+    background-color: #f9f9f9;
+    .in-portfolio {
+        padding: 4em 0 8em 0;
+        background: url(/img/port.png) 90% 70% no-repeat;
+        .site {
+            width: 288px;
+            padding: 1em;
+            background: $white;
+            margin: 4em 1em 0 1em;
+            text-align: center;
+            display: inline-block;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            border: solid 0.07em rgba(67, 67, 67, 0.31);
+            @include transition-duration(0.3s);
+            @include transition-timing-function(ease-in);
+            .site-img {
+                width: 250px;
+                border: solid 0.07em rgba(67, 67, 67, 0.31);
+                margin-bottom: 2.5em;
+            }
+            h3 { margin: 1em 0 0 0; color: #777; font-size: 1.4em; text-transform: uppercase;}
+            p {
+                margin: 2em 1em;
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 1.5em;
+                color: #777;
+            }
+            .btn a {
+                color: $white;
+                text-decoration: none;
+                background: rgba(47, 200, 212, 0.76);
+                padding: 10px 15px;
+                margin: 0.5em 1em;
+                display: inline-block;
+                @include border-radius(5px);
+                @include transition-duration(0.4s);
+                @include transition-timing-function(ease-in-out);
+                &:hover {
+                    background: rgba(47, 212, 110, 0.76);
+                }
+            }
+            .img-hover {
+                position: relative;
+                overflow: hidden;
+            }
+            .img-hover-infor {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 155px;
+                bottom: 0;
+                background: rgba(52, 73, 94, 0);
+                @include transition-duration(0.4s);
+                @include transition-timing-function(ease-in-out);
+            }
+            &:hover .img-hover-infor {
+                top: 0;
+                background: rgba(52, 73, 94, 0.9);
+            }
+            &:hover h3 {
+                color: $white;
+            }
+            &:hover p {
+                color: $white;
+            }
+        }
+    }
+}

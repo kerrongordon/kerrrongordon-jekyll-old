@@ -3,20 +3,33 @@ table of contents](TOC.md)
 
 # The HTML
 
+## Conditional `html` classes
+
+A series of IE conditional comments apply the relevant IE-specific classes to
+the `html` tag. This provides one method of specifying CSS fixes for specific
+legacy versions of IE. While you may or may not choose to use this technique in
+your project code, HTML5 Boilerplate's default CSS does not rely on it.
+
+When using the conditional classes technique, applying classes to the `html`
+element has several benefits:
+
+* It avoids a [file blocking
+  issue](http://webforscher.wordpress.com/2010/05/20/ie-6-slowing-down-ie-8/)
+  discovered by Stoyan Stefanov and Markus Leptien.
+* It avoids the need for an empty comment that also fixes the above issue.
+* CMSes like WordPress and Drupal use the body class more heavily. This makes
+  integrating there a touch simpler.
+* It still validates as HTML5.
+* It uses the same element as Modernizr (and Dojo). That feels nice.
+* It can improve the clarity of code in multi-developer teams.
+
+
 ## The `no-js` class
 
 Allows you to more easily explicitly add custom styles when JavaScript is
 disabled (`no-js`) or enabled (`js`). More here: [Avoiding the
 FOUC](http://paulirish.com/2009/avoiding-the-fouc-v3/).
 
-## Language attribute
-
-Please consider specifying the language of your content by adding the `lang`
-attribute to `<html>` as in this example:
-
-```html
-<html class="no-js" lang="en">
-```
 
 ## The order of meta tags, and `<title>`
 
@@ -34,6 +47,10 @@ vectors](http://code.google.com/p/doctype-mirror/wiki/ArticleUtf7).
 
 The meta tag for compatibility mode [needs to be before all elements except
 title and meta](http://h5bp.com/f "Defining Document Compatibility - MSDN").
+And that same meta tag can only be invoked for Google Chrome Frame if it is
+within the [first 1024
+bytes](http://code.google.com/p/chromium/issues/detail?id=23003).
+
 
 ## X-UA-Compatible
 
@@ -53,10 +70,8 @@ This `meta` tag ensures that anyone browsing your site in IE is treated to the
 best possible user experience that their browser can offer.
 
 This line breaks validation. To avoid this edge case issue it is recommended
-that you **remove this line and use the
-[`.htaccess`](https://github.com/h5bp/server-configs-apache)** (or [other server
-config](https://github.com/h5bp/server-configs)) to send these headers instead.
-You also might want to read [Validating:
+that you **remove this line and use the `.htaccess`** (or other server config)
+to send these headers instead. You also might want to read [Validating:
 X-UA-Compatible](http://groups.google.com/group/html5boilerplate/browse_thread/thread/6d1b6b152aca8ed2).
 
 If you are serving your site on a non-standard port, you will need to set this
@@ -110,11 +125,11 @@ The central part of the boilerplate template is pretty much empty. This is
 intentional, in order to make the boilerplate suitable for both web page and
 web app development.
 
-### BrowseHappy Prompt
+### Google Chrome Frame
 
-The main content area of the boilerplate includes a prompt to install an up to
-date browser for users of IE 6/7. If you intended to support IE 6/7, then you
-should remove the snippet of code.
+The main content area of the boilerplate includes a prompt to install Chrome
+Frame (which no longer requires administrative rights) for users of IE 6. If
+you intended to support IE 6, then you should remove the snippet of code.
 
 ### Google CDN for jQuery
 
@@ -124,32 +139,23 @@ in the [FAQ](faq.md)). A local fallback of jQuery is included for rare instances
 when the CDN version might not be available, and to facilitate offline
 development.
 
-The Google CDN version is chosen over other potential candidates (like the
-[jQuery CDN](http://jquery.com/download/#jquery-39-s-cdn-provided-by-maxcdn))
-because it's fast in absolute terms and it has the best overall
-[penetration](http://httparchive.org/trends.php#perGlibs) which increases the
-odds of having a copy of the library in your user's browser cache.
+Regardless of which JavaScript library you choose to use, it is well worth the
+time and effort to look up and reference the Google CDN (Content Delivery
+Network) version. Your users may already have this version cached in their
+browsers, and Google's CDN is likely to deliver the asset faster than your
+server.
 
-While the Google CDN is a strong default solution your site or application may
-require a different configuration. Testing your site with services like
-[WebPageTest](http://www.webpagetest.org/) and browser tools like
-[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) or
-[YSlow](http://developer.yahoo.com/yslow/) will help you examine the real
-world performance of your site and can show where you can optimize your specific
-site or application.
+### Google Analytics Tracking Code
 
-
-### Google Univeral Analytics Tracking Code
-
-Finally, an optimized version of the Google Univeral Analytics tracking code is
+Finally, an optimized version of the latest Google Analytics tracking code is
 included. Google recommends that this script be placed at the top of the page.
-Factors to consider: if you place this script at the top of the page, you’ll
-be able to count users who don’t fully load the page, and you’ll incur the max
+Factors to consider: if you place this script at the top of the page, you’ll be
+able to count users who don’t fully load the page, and you’ll incur the max
 number of simultaneous connections of the browser.
 
 Further information:
 
-* [Optimizing the Google Universal Analytics
-  Snippet](http://mathiasbynens.be/notes/async-analytics-snippet#universal-analytics)
-* [Introduction to
-  Analytics.js](https://developers.google.com/analytics/devguides/collection/analyticsjs/)
+* [Optimizing the asynchronous Google Analytics
+  snippet](http://mathiasbynens.be/notes/async-analytics-snippet).
+* [Tracking Site Activity - Google
+  Analytics](http://code.google.com/apis/analytics/docs/tracking/asyncTracking.html).

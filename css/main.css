@@ -10,8 +10,15 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+html,
+button,
+input,
+select,
+textarea {
     color: #222;
+}
+
+html {
     font-size: 1em;
     line-height: 1.4;
 }
@@ -53,7 +60,6 @@ hr {
 audio,
 canvas,
 img,
-svg,
 video {
     vertical-align: middle;
 }
@@ -112,7 +118,26 @@ textarea {
    ========================================================================== */
 
 /*
- * Hide visually and from screen readers: h5bp.com/u
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
  */
 
 .hidden {
@@ -121,7 +146,7 @@ textarea {
 }
 
 /*
- * Hide only visually, but have it available for screen readers: h5bp.com/v
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
 
 .visuallyhidden {
@@ -151,7 +176,7 @@ textarea {
 }
 
 /*
- * Hide visually and from screen readers, but maintain layout
+ * Hide visually and from screenreaders, but maintain layout
  */
 
 .invisible {
@@ -180,6 +205,15 @@ textarea {
     clear: both;
 }
 
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -199,7 +233,7 @@ textarea {
 
 /* ==========================================================================
    Print styles.
-   Inlined to avoid the additional HTTP request: h5bp.com/r
+   Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 
 @media print {
@@ -224,12 +258,12 @@ textarea {
     }
 
     /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
+     * Don't show links for images, or javascript/internal links
      */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
         content: "";
     }
 
@@ -250,6 +284,10 @@ textarea {
 
     img {
         max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
     }
 
     p,

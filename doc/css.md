@@ -31,12 +31,19 @@ These include:
 * Basic typography settings to provide improved text readability by default.
 * Protection against unwanted `text-shadow` during text highlighting.
 * Tweaks to default image alignment, fieldsets, and textareas.
-* A pretty prompt to update your browser if you are on an outdated browser.
+* A pretty Chrome Frame prompt.
 
 You are free to modify or add to these base styles as your project requires.
 
 
 ## Common helpers
+
+#### `.ir`
+
+Add the `.ir` class to any element you are applying image-replacement to. When
+replacing an element's content with an image, make sure to also set a specific
+`background-image: url(pathtoimage.png);`, `width`, and `height` so that your
+replacement image appears.
 
 #### `.hidden`
 
@@ -93,7 +100,7 @@ and (max-width: 480px)`.
 
 Take a look into the [Mobile
 Boilerplate](https://github.com/h5bp/mobile-boilerplate) for features that are
-useful when developing mobile web apps.
+useful when developing mobile wep apps.
 
 
 ## Print styles
@@ -122,6 +129,7 @@ useful when developing mobile web apps.
 * Headings should always appear with the text they are titles for. So, we
   ensure headings never appear in a different page than the text they describe
   by using `page-break-after: avoid;`.
+* We also apply a default margin for the page specified in `cm`.
 * We do not want [orphans and
   widows](http://en.wikipedia.org/wiki/Widows_and_orphans) to appear on pages
   you print. So, by defining `orphans: 3` and `widows: 3` you define the minimal

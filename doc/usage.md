@@ -10,7 +10,8 @@ usually involves the following:
 2. Add some content, style, and functionality.
 3. Run your site locally to see how it looks.
 4. (Optionally run a build script to automate the optimization of your site -
-   e.g. [ant build script](https://github.com/h5bp/ant-build-script))
+   e.g. [ant build script](https://github.com/h5bp/ant-build-script) or [node
+   build script](https://github.com/h5bp/node-build-script)).
 5. Deploy your site.
 
 
@@ -64,7 +65,7 @@ get you started. [About the JavaScript](js.md).
 
 The default web server configs are for Apache. For more information, please
 refer to the [Apache Server Configs
-repository](https://github.com/h5bp/server-configs-apache).
+documentation](https://github.com/h5bp/server-configs-apache/tree/master/doc).
 
 Host your site on a server other than Apache? You're likely to find the
 corresponding server configs project listed in our [Server Configs
@@ -83,8 +84,8 @@ need to integrate this starting HTML with your setup.
 Make sure that you update the URLs for the referenced CSS and JavaScript if you
 modify the directory structure at all.
 
-If you are using Google Universal Analytics, make sure that you edit the 
-corresponding snippet at the bottom to include your analytics ID.
+If you are using Google Analytics, make sure that you edit the corresponding
+snippet at the bottom to include your analytics ID.
 
 ### humans.txt
 

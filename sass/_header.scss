@@ -1,0 +1,60 @@
+.header {
+    background-color: blue;
+    background: url(/img/header-bg-1.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 800px;
+    height: 100vh;
+    position: relative;
+    .in-header {
+        background: rgba(255, 0, 0, 0.54);
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .logo {
+        float: left;
+        margin: 3em 0 0 0;
+        img { width: 70px; }
+    }
+    nav {
+        float: right;
+        margin: 5.5em 0 0 0;
+        li {
+            display:  inline-block;
+            margin: 0 0 0 1em;
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: $white;
+                font-size: $font-size;
+                padding: 10px 15px;
+                border-radius: 5px;
+                @include transition-duration(0.3s);
+                @include transition-timing-function(ease-in);
+                &:hover {
+                    color: $white;
+                    background: rgba(43, 43, 43, 0.5);
+                }
+            }
+        }
+    }
+    .headed {
+        font-size: 5em;
+        text-transform: uppercase;
+        color: $white;
+        text-align: center;
+        margin: 3em 0 0.5em 0;
+        span {
+            border: solid 0.02em $white;
+            padding: 10px 30px;
+        }
+    }
+    .sub-headed {
+        color: $white;
+        text-align: center;
+        font-size: $font-size;
+    }
+}
