@@ -13,9 +13,6 @@
     .content {
         text-align: center;
         overflow: hidden;
-        opacity: 0;
-        @include transition-duration(0.4s);
-        @include transition-timing-function(ease-in);
         margin: 1em;
         .site-img {
             width: 300px;
@@ -114,9 +111,4 @@
     }
 }
 
-.show { 
-    width: 625px;
-    .content {
-        opacity: 1;
-    }
-}
+.show { width: 625px; }

@@ -181,14 +181,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     /* line 8, ../sass/_portfolio.scss */
     .portfolio .in-portfolio .site {
       width: 288px;
-      padding: 1em;
-      background: white;
+      height: 288px;
+      background: #db7575;
       margin: 4em 1em 0 1em;
       text-align: center;
       display: inline-block;
       box-sizing: border-box;
       position: relative;
       overflow: hidden;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%;
       border: solid 0.07em rgba(67, 67, 67, 0.31);
       -webkit-transition-duration: 0.3s;
       -moz-transition-duration: 0.3s;
@@ -198,25 +203,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       -moz-transition-timing-function: ease-in;
       -o-transition-timing-function: ease-in;
       transition-timing-function: ease-in; }
-      /* line 21, ../sass/_portfolio.scss */
+      /* line 23, ../sass/_portfolio.scss */
       .portfolio .in-portfolio .site .site-img {
-        width: 250px;
+        width: 288px;
+        height: 288px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        border-radius: 100%;
         border: solid 0.07em rgba(67, 67, 67, 0.31);
-        margin-bottom: 2.5em; }
-      /* line 26, ../sass/_portfolio.scss */
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-in-out;
+        -moz-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out; }
+      /* line 32, ../sass/_portfolio.scss */
       .portfolio .in-portfolio .site h3 {
-        margin: 1em 0 0 0;
+        margin: 1em 0 1.5em 0;
         color: #777;
         font-size: 1.4em;
         text-transform: uppercase; }
-      /* line 27, ../sass/_portfolio.scss */
+      /* line 33, ../sass/_portfolio.scss */
       .portfolio .in-portfolio .site p {
         margin: 2em 1em;
         text-transform: uppercase;
         font-size: 12px;
         line-height: 1.5em;
         color: #777; }
-      /* line 34, ../sass/_portfolio.scss */
+      /* line 40, ../sass/_portfolio.scss */
       .portfolio .in-portfolio .site .btn a {
         color: white;
         text-decoration: none;
@@ -237,21 +255,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         -moz-transition-timing-function: ease-in-out;
         -o-transition-timing-function: ease-in-out;
         transition-timing-function: ease-in-out; }
-        /* line 44, ../sass/_portfolio.scss */
+        /* line 50, ../sass/_portfolio.scss */
         .portfolio .in-portfolio .site .btn a:hover {
           background: rgba(47, 212, 110, 0.76); }
-      /* line 48, ../sass/_portfolio.scss */
+      /* line 54, ../sass/_portfolio.scss */
       .portfolio .in-portfolio .site .img-hover {
         position: relative;
         overflow: hidden; }
-      /* line 52, ../sass/_portfolio.scss */
+      /* line 58, ../sass/_portfolio.scss */
       .portfolio .in-portfolio .site .img-hover-infor {
         position: absolute;
         left: 0;
         right: 0;
-        top: 155px;
+        top: 210px;
         bottom: 0;
-        background: rgba(52, 73, 94, 0);
+        background: white;
+        border: solid 1px rgba(119, 119, 119, 0.5);
+        -webkit-box-shadow: 0 0 5px rgba(119, 119, 119, 0.5);
+        -moz-box-shadow: 0 0 5px rgba(119, 119, 119, 0.5);
+        box-shadow: 0 0 5px rgba(119, 119, 119, 0.5);
         -webkit-transition-duration: 0.4s;
         -moz-transition-duration: 0.4s;
         -o-transition-duration: 0.4s;
@@ -260,16 +282,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         -moz-transition-timing-function: ease-in-out;
         -o-transition-timing-function: ease-in-out;
         transition-timing-function: ease-in-out; }
-      /* line 62, ../sass/_portfolio.scss */
+      /* line 70, ../sass/_portfolio.scss */
       .portfolio .in-portfolio .site:hover .img-hover-infor {
         top: 0;
+        padding: 3.7em 0;
         background: rgba(52, 73, 94, 0.9); }
-      /* line 66, ../sass/_portfolio.scss */
+      /* line 75, ../sass/_portfolio.scss */
       .portfolio .in-portfolio .site:hover h3 {
         color: white; }
-      /* line 69, ../sass/_portfolio.scss */
+      /* line 78, ../sass/_portfolio.scss */
       .portfolio .in-portfolio .site:hover p {
         color: white; }
+      /* line 81, ../sass/_portfolio.scss */
+      .portfolio .in-portfolio .site:hover .site-img {
+        width: 200px;
+        height: 200px;
+        margin: 3em auto;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0; }
 
 /* line 1, ../sass/_preview.scss */
 .site-preview {
@@ -296,17 +329,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   .site-preview .content {
     text-align: center;
     overflow: hidden;
-    opacity: 0;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    -webkit-transition-timing-function: ease-in;
-    -moz-transition-timing-function: ease-in;
-    -o-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
     margin: 1em; }
-    /* line 20, ../sass/_preview.scss */
+    /* line 17, ../sass/_preview.scss */
     .site-preview .content .site-img {
       width: 300px;
       height: 300px;
@@ -318,7 +342,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       -ms-border-radius: 100%;
       -o-border-radius: 100%;
       border-radius: 100%; }
-    /* line 29, ../sass/_preview.scss */
+    /* line 26, ../sass/_preview.scss */
     .site-preview .content h3 {
       font-size: 2em;
       text-align: center;
@@ -326,7 +350,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       margin: 1em 0;
       position: relative;
       text-transform: uppercase; }
-      /* line 36, ../sass/_preview.scss */
+      /* line 33, ../sass/_preview.scss */
       .site-preview .content h3:before {
         display: block;
         position: absolute;
@@ -336,7 +360,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         width: 20%;
         top: 15px;
         border-top: solid 0.04em #777777; }
-      /* line 46, ../sass/_preview.scss */
+      /* line 43, ../sass/_preview.scss */
       .site-preview .content h3:after {
         display: block;
         position: absolute;
@@ -346,7 +370,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         width: 20%;
         top: 15px;
         border-top: solid 0.04em #777777; }
-    /* line 57, ../sass/_preview.scss */
+    /* line 54, ../sass/_preview.scss */
     .site-preview .content p {
       color: #777777;
       font-size: 16px;
@@ -354,11 +378,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       line-height: 1.5em;
       text-transform: uppercase;
       text-align: justify; }
-    /* line 65, ../sass/_preview.scss */
+    /* line 62, ../sass/_preview.scss */
     .site-preview .content .btn-view {
       display: block;
       margin: 2em; }
-    /* line 69, ../sass/_preview.scss */
+    /* line 66, ../sass/_preview.scss */
     .site-preview .content .view-site {
       background: #27ae60;
       margin: 0 1em;
@@ -376,7 +400,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       -moz-transition-timing-function: ease-in;
       -o-transition-timing-function: ease-in;
       transition-timing-function: ease-in; }
-      /* line 76, ../sass/_preview.scss */
+      /* line 73, ../sass/_preview.scss */
       .site-preview .content .view-site a {
         display: block;
         color: white;
@@ -384,10 +408,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 400; }
-      /* line 84, ../sass/_preview.scss */
+      /* line 81, ../sass/_preview.scss */
       .site-preview .content .view-site:hover {
         background: #2ecc71; }
-    /* line 88, ../sass/_preview.scss */
+    /* line 85, ../sass/_preview.scss */
     .site-preview .content .view-github {
       background: #2980b9;
       margin: 0 1em;
@@ -405,7 +429,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       -moz-transition-timing-function: ease-in;
       -o-transition-timing-function: ease-in;
       transition-timing-function: ease-in; }
-      /* line 95, ../sass/_preview.scss */
+      /* line 92, ../sass/_preview.scss */
       .site-preview .content .view-github a {
         display: block;
         color: white;
@@ -413,10 +437,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 400; }
-      /* line 103, ../sass/_preview.scss */
+      /* line 100, ../sass/_preview.scss */
       .site-preview .content .view-github:hover {
         background: #3498db; }
-    /* line 107, ../sass/_preview.scss */
+    /* line 104, ../sass/_preview.scss */
     .site-preview .content .close-preview {
       padding: 10px 15px;
       background: white;
@@ -424,12 +448,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       text-align: center;
       display: block; }
 
-/* line 117, ../sass/_preview.scss */
+/* line 114, ../sass/_preview.scss */
 .show {
   width: 625px; }
-  /* line 119, ../sass/_preview.scss */
-  .show .content {
-    opacity: 1; }
 
 /* line 9, ../sass/style.scss */
 .container {

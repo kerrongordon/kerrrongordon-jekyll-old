@@ -7,23 +7,29 @@
         //background: url(/img/port.png) 90% 70% no-repeat;
         .site {
             width: 288px;
-            padding: 1em;
-            background: $white;
+            height: 288px;
+            //padding: 1em;
+            background: #db7575;
             margin: 4em 1em 0 1em;
             text-align: center;
             display: inline-block;
             box-sizing: border-box;
             position: relative;
             overflow: hidden;
+            @include border-radius(100%);
             border: solid 0.07em rgba(67, 67, 67, 0.31);
             @include transition-duration(0.3s);
             @include transition-timing-function(ease-in);
             .site-img {
-                width: 250px;
+                width: 288px;
+                height: 288px;
+                @include border-radius(100%);
                 border: solid 0.07em rgba(67, 67, 67, 0.31);
-                margin-bottom: 2.5em;
+                @include transition-duration(0.3s);
+                @include transition-timing-function(ease-in-out);
+                //margin-bottom: 2.5em;
             }
-            h3 { margin: 1em 0 0 0; color: #777; font-size: 1.4em; text-transform: uppercase;}
+            h3 { margin: 1em 0 1.5em 0; color: #777; font-size: 1.4em; text-transform: uppercase;}
             p {
                 margin: 2em 1em;
                 text-transform: uppercase;
@@ -53,14 +59,17 @@
                 position: absolute;
                 left: 0;
                 right: 0;
-                top: 155px;
+                top: 210px;
                 bottom: 0;
-                background: rgba(52, 73, 94, 0);
+                background: $white;
+                border: solid 1px rgba($dark, 0.5);
+                @include box-shadow(0 0 5px rgba($dark, 0.5)); 
                 @include transition-duration(0.4s);
                 @include transition-timing-function(ease-in-out);
             }
             &:hover .img-hover-infor {
                 top: 0;
+                padding: 3.7em 0;
                 background: rgba(52, 73, 94, 0.9);
             }
             &:hover h3 {
@@ -68,6 +77,12 @@
             }
             &:hover p {
                 color: $white;
+            }
+            &:hover .site-img {
+                width: 200px;
+                height: 200px;
+                margin: 3em auto;
+                @include border-radius(0);
             }
         }
     }
