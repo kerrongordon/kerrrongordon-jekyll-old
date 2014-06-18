@@ -1,60 +1,10 @@
-.head-banner {
-    height: 300px;
-    background: url(/img/port.png) center center no-repeat;
-    background-size: cover;
-    position: relative;
-    .in-head-banner {
-        background-color: rgba(26, 188, 156, 0.9);
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        .headed {
-            font-size: 4em;
-            text-align: center;
-            color: $white;
-            padding: 2em 0 0 0;
-            text-transform: uppercase;
-            position: relative;
-            &:before {
-                content: "";
-                display: block;
-                width: 32%;
-                height: 1px;
-                position: absolute;
-                bottom: 30px;
-                left: 0;
-                border: solid 0.03em $white;
-            }
-            &:after {
-                content: "";
-                display: block;
-                width: 32%;
-                height: 1px;
-                position: absolute;
-                bottom: 30px;
-                right: 0;
-                border: solid 0.03em $white;
-            }
-        }
-        .sub-headed {
-            text-align: center;
-            color: $white;
-            text-transform: uppercase;
-            font-size: $font-size;
-        }
-    }
-}
-
-
-
 .portfolio {
     background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
     .in-portfolio {
         padding: 4em 0 8em 0;
-        background: url(/img/port.png) 90% 70% no-repeat;
+        //background: url(/img/port.png) 90% 70% no-repeat;
         .site {
             width: 288px;
             padding: 1em;
