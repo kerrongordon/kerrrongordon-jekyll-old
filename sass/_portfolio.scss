@@ -2,9 +2,14 @@
     background-color: #f9f9f9;
     position: relative;
     overflow: hidden;
+    min-height: 1200px;
     .in-portfolio {
         padding: 4em 0 8em 0;
         //background: url(/img/port.png) 90% 70% no-repeat;
+        .load {
+            @include transition-duration(0.3s);
+            @include transition-timing-function(ease-in-out);
+        }
         .site {
             width: 288px;
             height: 288px;
