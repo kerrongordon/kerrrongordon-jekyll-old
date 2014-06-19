@@ -466,7 +466,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 116, ../sass/_preview.scss */
 .slide-out {
   position: absolute;
-  left: 0;
+  margin-left: -300px;
   width: 960px; }
 
 /* line 9, ../sass/style.scss */
