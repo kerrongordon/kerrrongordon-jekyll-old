@@ -463,7 +463,15 @@ body {
 
 .wrapper {
   max-width: 68em;
-  margin: 0 auto; }
+  margin-left: auto;
+  margin-right: auto; }
+  .wrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.padding-side {
+  padding: 0 20px; }
 
 .space {
   padding-top: 4em;
@@ -672,17 +680,16 @@ body {
   color: #099; }
 
 header.navigation {
-  height: 60px;
+  border-bottom: 1px solid #b3b3b3;
+  height: 100px;
   width: 100%;
-  z-index: 999;
-  height: 100px; }
+  z-index: 999; }
   header.navigation .navigation-wrapper {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    z-index: 9999;
-    padding-top: 20px; }
+    z-index: 9999; }
     header.navigation .navigation-wrapper:after {
       content: "";
       display: table;
@@ -693,11 +700,11 @@ header.navigation {
       clear: both; }
   header.navigation .logo {
     float: left;
-    max-height: 60px;
+    max-height: 100px;
     padding-left: 1em;
     padding-right: 2em; }
     header.navigation .logo img {
-      max-height: 60px;
+      max-height: 100px;
       padding: .8em 0; }
   header.navigation .navigation-menu-button {
     color: rgba(255, 255, 255, 0.7);
@@ -705,7 +712,7 @@ header.navigation {
     float: right;
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 100px;
     margin: 0;
     padding-right: 1em;
     text-transform: uppercase; }
@@ -737,7 +744,7 @@ header.navigation {
   header.navigation ul li.nav-link {
     background: #333;
     display: block;
-    line-height: 60px;
+    line-height: 100px;
     overflow: hidden;
     padding-right: .8em;
     text-align: right;
@@ -747,7 +754,7 @@ header.navigation {
       header.navigation ul li.nav-link {
         background: transparent;
         display: inline;
-        line-height: 60px;
+        line-height: 100px;
         text-decoration: none;
         width: auto; } }
     header.navigation ul li.nav-link a {
@@ -820,7 +827,7 @@ header.navigation {
       padding-right: 0; }
       @media screen and (min-width: 1200px) {
         header.navigation ul.submenu li {
-          line-height: 46.15385px; }
+          line-height: 76.92308px; }
           header.navigation ul.submenu li:first-child > a {
             border-top-left-radius: 0.1875em;
             border-top-right-radius: 0.1875em; }
@@ -952,7 +959,8 @@ header.navigation {
       header.navigation .search-bar {
         width: 16em;
         position: relative;
-        display: inline-block; }
+        display: inline-block;
+        padding-top: 30px; }
         header.navigation .search-bar input {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
@@ -960,8 +968,7 @@ header.navigation {
           display: block; } }
 
 .hero {
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), -webkit-linear-gradient(10deg, #217142, #214271), no-repeat #214271 scroll;
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), linear-gradient(10deg, #217142, #214271), no-repeat #214271 scroll;
+  background: url("/assets/img/bg.jpg") fixed;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -1056,24 +1063,27 @@ header.navigation {
             font-size: 1.1em;
             max-width: 40%; } }
 
-.icons-list .icon-item {
-  display: inline-block;
-  background: #fff;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  text-align: center;
-  margin: 50px 42px; }
-  .icons-list .icon-item i {
-    color: #BD5248; }
-  .icons-list .icon-item span {
-    display: block;
-    color: #fff;
-    padding: 15px;
-    font-size: 130%;
-    font-style: italic;
-    text-shadow: 0 0 5px #000;
-    text-transform: uppercase; }
+.icons-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .icons-list .icon-item {
+    display: inline-block;
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center; }
+    .icons-list .icon-item i {
+      color: #BD5248; }
+    .icons-list .icon-item span {
+      display: block;
+      color: #fff;
+      padding: 15px;
+      font-size: 130%;
+      font-style: italic;
+      text-shadow: 0 0 5px #000;
+      text-transform: uppercase; }
 
 .browsers {
   padding-top: 0;
@@ -1125,14 +1135,14 @@ header.navigation {
   width: 20%; }
 
 .browser:nth-child(1) {
-  background-color: #F0F0F0;
+  background-color: #3498db;
   display: none; }
   @media screen and (min-width: 1200px) {
     .browser:nth-child(1) {
       display: inline-block; } }
   .browser:nth-child(1) .browser-content {
-    background: url(https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot1.png);
-    background-color: #F0F0F0;
+    background: url(/assets/img/browser.svg);
+    background-color: #3498db;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -1143,7 +1153,7 @@ header.navigation {
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-  background-color: white;
+  background-color: #e74c3c;
   width: 90%; }
   @media screen and (min-width: 1200px) {
     .browser:nth-child(2) {
@@ -1154,21 +1164,21 @@ header.navigation {
       transform: scale(1.2);
       width: 40%; } }
   .browser:nth-child(2) .browser-content {
-    background: url(https://raw.githubusercontent.com/thoughtbot/refills/9c16f8b69d857c296c85f2d8c434e825f813a566/source/images/refills-screenshot2.jpg);
-    background-color: white;
+    background: url(/assets/img/browser.svg);
+    background-color: #e74c3c;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover; }
 
 .browser:nth-child(3) {
-  background-color: #F0F0F0;
+  background-color: #2ecc71;
   display: none; }
   @media screen and (min-width: 1200px) {
     .browser:nth-child(3) {
       display: inline-block; } }
   .browser:nth-child(3) .browser-content {
-    background: url(https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot3.png);
-    background-color: #F0F0F0;
+    background: url(/assets/img/browser.svg);
+    background-color: #2ecc71;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -1299,14 +1309,14 @@ header.navigation {
     background: #F6F6F8; }
 
 .footer {
-  background: #40526b;
+  background: #2b2b2b;
   padding: 4em 1.618em;
   width: 100%; }
   .footer .footer-logo {
     text-align: center;
     margin-bottom: 2em; }
     .footer .footer-logo img {
-      height: 3em; }
+      height: 6em; }
   .footer .footer-links {
     margin-bottom: 2em; }
     .footer .footer-links:after {
