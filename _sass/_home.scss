@@ -1,5 +1,10 @@
+//////////////////////////////////////////
+              ///header-s//
+/////////////////////////////////////////
+
+
 .header-s {
-	background: url(../img/header-bg.jpg) no-repeat;
+	background: url(../img/header-bg-2.jpg) no-repeat;
 	@include position( relative, 0px 0 0 0px );
 	background-position: 50% 50%;
 	background-size: cover;
@@ -7,13 +12,6 @@
 	height: 700px;
     text-align: center;
     color: $header-color;
-
-	.overlay {
-		background: $midnight-blue;
-		@include position( absolute, 0 0 0 0 );
-		opacity: 0.7;
-		z-index: 1; 
-	}
 
 	.site-header {
 		z-index: 999;
@@ -43,14 +41,14 @@
 				}
 			}
 
-		&:after {
-			content: "";
-			display: block;
-			border: solid 1px $header-color;
-			box-shadow: 0px 15px 0px -10px, 0px -15px 0px -10px;
-			height: 100px;
-			margin: -100px;
-		}
+		//&:after {
+			//content: "";
+			//display: block;
+			//border: solid 1px $header-color;
+			//box-shadow: 0px 15px 0px -10px, 0px -15px 0px -10px;
+			//height: 100px;
+			//margin: -100px;
+		//}
 
 		}
 	}
@@ -60,7 +58,7 @@
 
 /*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-	background: url(../img/header-bg@2x.jpg) no-repeat;
+	background: url(../img/header-bg-2@2x.jpg) no-repeat;
 	@include position( relative, 0px 0 0 0px );
 	background-position: 50% 50%;
 	background-size: cover;
@@ -73,10 +71,24 @@
 }
 
 
+//////////////////////////////////////////
+              ///main-infor//
+/////////////////////////////////////////
+
+
+
 .main-infor {
 
 	.content {
 		@include span-columns( 8 );
+
+		@include media($laptop) {
+			@include span-columns( 12 );
+		}
+
+		@include media($mobile) {
+			@include span-columns( 12 );
+		}
 	}
 
 	.sidebar {
@@ -87,6 +99,7 @@
 		}
 
 		li {
+			padding: 15px 0;
 
 			&:before {
 				counter-increment: section;     
@@ -106,12 +119,37 @@
 			font-size: 17px;
 			font-weight: bold;
 		}
+
+		@include media($laptop) {
+			@include span-columns( 6 );
+		}
+
+		@include media($mobile) {
+			@include span-columns( 12 );
+		}
 	}
 }
 
+
+//////////////////////////////////////////
+              ///contact//
+/////////////////////////////////////////
+
+
 .contact {
-	background: $peter-river;
+	background: url(../img/contact-bg.jpg) no-repeat;
+	@include position( relative, 0px 0 0 0px );
+	background-position: 50% 50%;
+	background-size: cover;
+	width: 100%;
+	background-color: $wet-asphalt;
 	color: $header-color;
+	//background-color: $peter-river;
+	color: $header-color;
+
+	.overlay {
+		opacity: 0.9;
+	}
 
 	.content {
 		@include span-columns( 6 );
@@ -119,20 +157,52 @@
 		.lema {
 			color: $header-color;
 		}
+
+		@include media($laptop) {
+			@include span-columns( 6 );
+		}
+
+		@include media($mobile) {
+			@include span-columns( 12 );
+		}
 	}
 
 	.main-form {
 		@include span-columns( 6 );
 
+		@include media($laptop) {
+			@include span-columns( 6 );
+		}
+
+		@include media($mobile) {
+			@include span-columns( 12 );
+		}
+
 		.cname {
 			@include span-columns( 6 );
 			font-size: 14px;
+
+			@include media($laptop) {
+				@include span-columns( 12 );
+			}
+
+			@include media($mobile) {
+				@include span-columns( 12 );
+			}
 		}
 
 		.cemail {
 			@include span-columns( 6 );
 			margin-right: 0;
 			font-size: 14px;
+
+			@include media($laptop) {
+				@include span-columns( 12 );
+			}
+
+			@include media($mobile) {
+				@include span-columns( 12 );
+			}
 		}
 
 		.form-group {
@@ -147,11 +217,56 @@
 			}
 		}
 	}
+
+/*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+	background: url(../img/contact-bg@2x.jpg) no-repeat;
+	@include position( relative, 0px 0 0 0px );
+	background-position: 50% 50%;
+	background-size: cover;
+	width: 100%;
+    text-align: center;
+    color: $header-color;  
 }
 
+}
+
+
+//////////////////////////////////////////
+              ///features//
+/////////////////////////////////////////
+
+
 .features {
-	background: $wet-asphalt;
+	background: url(../img/features-bg.jpg) no-repeat;
+	@include position( relative, 0px 0 0 0px );
+	background-position: 50% 50%;
+	background-size: cover;
+	width: 100%;
+	background-color: $wet-asphalt;
 	color: $header-color;
+
+	.overlay {
+		opacity: 0.9;
+	}
+
+	.f-item {
+		@include row()
+	}
+
+	
+	.full-w {
+		@include shift(0);
+
+		@include media($laptop) {
+			@include shift(3);
+		}
+
+		@include media($mobile) {
+			@include span-columns( 12 );
+			@include shift(0);
+		}
+	}
 
 	.content {
 		@include span-columns( 4 );
@@ -166,8 +281,34 @@
 		.lema {
 			color: $header-color;
 		}
+
+		@include media($laptop) {
+			@include span-columns( 6 );
+		}
+
+		@include media($mobile) {
+			@include span-columns( 12 );
+		}
+		
 	}
+
+/*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+	background: url(../img/features-bg@2x.jpg) no-repeat;
+	@include position( relative, 0px 0 0 0px );
+	background-position: 50% 50%;
+	background-size: cover;
+	width: 100%;
+    text-align: center;
+    color: $header-color;  
 }
+
+}
+
+
+//////////////////////////////////////////
+              ///main-work//
+/////////////////////////////////////////
 
 
 .main-work {
@@ -182,12 +323,26 @@
 			text-transform: uppercase;
 			font-weight: bold;
 		}
+
+		@include media($laptop) {
+			@include span-columns( 6 );
+			margin-right: 0; 
+		}
+
+		@include media($mobile) {
+			@include span-columns( 12 );
+		}
+
 	}
 	.right {
 		margin: 0;
 	}
 }
 
+
+//////////////////////////////////////////
+              ///site-footer//
+/////////////////////////////////////////
 
 
 .site-footer {
@@ -217,6 +372,9 @@
 
 
 
+//////////////////////////////////////////
+              ///global classes//
+/////////////////////////////////////////
 
 
 
@@ -227,6 +385,7 @@
 	font-weight: bold;
 	text-rendering: auto;
 	letter-spacing: 0.1em;
+	text-align: left;
 
 	&:before {
 		content: "";
@@ -264,6 +423,9 @@ img {
 textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple=multiple] {
 	border-radius: 0;
 	box-shadow: none;
+	background: rgba($midnight-blue, 0.5);
+	@extend .lema;
+	color: $header-color;
 }
 
 textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
