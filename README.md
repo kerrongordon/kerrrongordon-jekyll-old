@@ -1,12 +1,10 @@
-DevTips-Starter-Kit (Jekyll Friendly)
+Jekyll site
 ===================
 
-Use this as a simple structure for a simple start to a simple site.
 
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=GTBaQ2DcGUk
+<a href="http://kerrongordon.github.io/
 " target="_blank">
-Watch the video on YouTube
+Live site
 <img src="thumbnail.png" 
 alt="Watch the video on youtube" />
 
