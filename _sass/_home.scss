@@ -109,6 +109,118 @@
 	}
 }
 
+.contact {
+	background: $peter-river;
+	color: $header-color;
+
+	.content {
+		@include span-columns( 6 );
+
+		.lema {
+			color: $header-color;
+		}
+	}
+
+	.main-form {
+		@include span-columns( 6 );
+
+		.cname {
+			@include span-columns( 6 );
+			font-size: 14px;
+		}
+
+		.cemail {
+			@include span-columns( 6 );
+			margin-right: 0;
+			font-size: 14px;
+		}
+
+		.form-group {
+
+			label {
+				font-size: 14px;
+			}
+
+			textarea {
+				min-height: 200px;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.features {
+	background: $wet-asphalt;
+	color: $header-color;
+
+	.content {
+		@include span-columns( 4 );
+
+		h4 {
+			font-size: 17px;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		.lema {
+			color: $header-color;
+		}
+	}
+}
+
+
+.main-work {
+
+	.content {
+		@include span-columns( 3 );
+		text-align: center;
+
+		h4 {
+			font-size: 17px;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+	.right {
+		margin: 0;
+	}
+}
+
+
+
+.site-footer {
+	background: $midnight-blue;
+
+	.social-media-list {
+		@include span-columns( 3 );
+		text-align: right;
+
+		li {
+			display: inline-block;
+			font-size: 25px;
+			padding: 0 10px;
+
+			a {
+				text-decoration: none;
+				color: $header-color;
+				opacity: 0.7;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
 .section-title {
 	text-transform: uppercase;
 	font-style: italic;
@@ -128,4 +240,44 @@
 	font-size: 14px;
 	line-height: 1.9em;
 	color: #555;
+}
+
+.copyr {
+	@include span-columns( 9 );
+	@extend .lema;
+	color: $header-color;
+	opacity: 0.7;
+}
+
+img {
+	margin-bottom: 20px;
+}
+
+.big-icon {
+	font-size: 70px;
+	margin: 20px 0;
+	color: $alizarin;
+	opacity: 0.7;
+	display: block;
+}
+
+textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple=multiple] {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
+	border-color: $emerland;
+	box-shadow: none;
+}
+
+button, input[type="submit"] {
+	border-radius: 0;
+	background-color: $emerland;
+	opacity: 0.7;
+}
+
+button:hover, input[type="submit"]:hover {
+	background-color: $emerland;
+	opacity: 1;
 }
