@@ -697,6 +697,13 @@ pre {
   width: 75px; }
   .site-title, .site-title:visited {
     color: #fff; }
+  @media screen and (max-width: 900px) {
+    .site-title {
+      width: 50px;
+      margin-top: -20px; } }
+  @media screen and (max-width: 538px) {
+    .site-title {
+      width: 30px; } }
 
 .site-nav {
   float: right;
@@ -740,15 +747,16 @@ pre {
       -webkit-animation: scaleOut 0.2s ease-in;
       -moz-animation: scaleOut 0.2s ease-in;
       animation: scaleOut 0.2s ease-in; }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     .site-nav {
       position: absolute;
       top: 9px;
       right: 30px;
-      background-color: #fff;
+      background-color: rgba(52, 73, 94, 0.9);
       border: 1px solid #e8e8e8;
       border-radius: 5px;
-      text-align: right; }
+      text-align: right;
+      padding: 5px 5px 10px; }
       .site-nav .menu-icon {
         display: block;
         float: right;
@@ -756,18 +764,24 @@ pre {
         height: 26px;
         line-height: 0;
         padding-top: 10px;
-        text-align: center; }
+        text-align: center;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
         .site-nav .menu-icon > svg {
           width: 18px;
           height: 15px; }
           .site-nav .menu-icon > svg path {
-            fill: #424242; }
+            fill: #fff; }
       .site-nav .trigger {
         clear: both;
         display: none; }
       .site-nav:hover .trigger {
         display: block;
-        padding-bottom: 5px; }
+        padding-bottom: 5px;
+        -webkit-animation: scaleOut 0.2s ease-in;
+        -moz-animation: scaleOut 0.2s ease-in;
+        animation: scaleOut 0.2s ease-in; }
       .site-nav .page-link {
         display: block;
         padding: 5px 10px; } }
@@ -996,6 +1010,12 @@ pre {
     z-index: 999; }
   .header-s .header-line {
     line-height: 35em; }
+    @media screen and (max-width: 900px) {
+      .header-s .header-line {
+        line-height: 15em; } }
+    @media screen and (max-width: 538px) {
+      .header-s .header-line {
+        line-height: 5em; } }
   .header-s .site-name {
     vertical-align: middle;
     display: inline-block;
@@ -1011,6 +1031,18 @@ pre {
         -webkit-animation: blink 1s infinite ease-in;
         -moz-animation: blink 1s infinite ease-in;
         animation: blink 1s infinite ease-in; }
+      @media screen and (max-width: 900px) {
+        .header-s .site-name h1 {
+          font-size: 3rem; } }
+      @media screen and (max-width: 538px) {
+        .header-s .site-name h1 {
+          font-size: 2rem; } }
+  @media screen and (max-width: 900px) {
+    .header-s {
+      height: 500px; } }
+  @media screen and (max-width: 538px) {
+    .header-s {
+      height: 300px; } }
 @-webkit-keyframes blink {
   0% {
     opacity: 0; }
@@ -1046,6 +1078,12 @@ pre {
       height: 700px;
       text-align: center;
       color: #fff; } }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5) and (max-width: 900px), only screen and (-o-min-device-pixel-ratio: 3 / 2) and (max-width: 900px), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 900px), only screen and (min-devicepixel-ratio: 1.5) and (max-width: 900px), only screen and (min-resolution: 1.5dppx) and (max-width: 900px) {
+    .header-s {
+      height: 500px; } }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5) and (max-width: 538px), only screen and (-o-min-device-pixel-ratio: 3 / 2) and (max-width: 538px), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 538px), only screen and (min-devicepixel-ratio: 1.5) and (max-width: 538px), only screen and (min-resolution: 1.5dppx) and (max-width: 538px) {
+    .header-s {
+      height: 300px; } }
 
 .main-infor {
   z-index: 1; }
@@ -1387,7 +1425,8 @@ pre {
   font-weight: bold;
   text-rendering: auto;
   letter-spacing: 0.1em;
-  text-align: left; }
+  text-align: left;
+  margin-bottom: 2.5em; }
   .section-title:before {
     content: "";
     border: solid 5px #2ecc71;
@@ -1445,7 +1484,10 @@ button:hover, input[type="submit"]:hover {
   opacity: 1; }
 
 section {
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 
 @-webkit-keyframes scaleOut {
   from {

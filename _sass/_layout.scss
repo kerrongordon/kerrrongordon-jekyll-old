@@ -1,3 +1,7 @@
+$mobile: new-breakpoint(max-width 538px 12);
+$laptop: new-breakpoint(max-width 900px 12);
+$large: new-breakpoint(max-width 1200px 12);
+
 /**
  * Site header
  */
@@ -22,6 +26,15 @@
     &,
     &:visited {
         color: $header-color;
+    }
+
+    @include media($laptop) {
+        width: 50px;
+        margin-top: -20px;
+        }
+
+    @include media($mobile) {
+        width: 30px;
     }
 }
 
@@ -85,14 +98,15 @@
 
         }
 
-    @include media-query($on-laptop) {
+    @include media($laptop) {
         position: absolute;
         top: 9px;
         right: 30px;
-        background-color: $background-color;
+        background-color: rgba($wet-asphalt, 0.9);
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
+        padding: 5px 5px 10px;
 
         .menu-icon {
             display: block;
@@ -102,13 +116,14 @@
             line-height: 0;
             padding-top: 10px;
             text-align: center;
+            @include transition ( all 0.3s ease-in-out );
 
             > svg {
                 width: 18px;
                 height: 15px;
 
                 path {
-                    fill: $grey-color-dark;
+                    fill: $header-color;
                 }
             }
         }
@@ -121,6 +136,7 @@
         &:hover .trigger {
             display: block;
             padding-bottom: 5px;
+            @include animation( scaleOut 0.2s ease-in );
         }
 
         .page-link {
@@ -228,6 +244,3 @@
     }
 }
 
-$mobile: new-breakpoint(max-width 538px 12);
-$laptop: new-breakpoint(max-width 900px 12);
-$large: new-breakpoint(max-width 1200px 12);
