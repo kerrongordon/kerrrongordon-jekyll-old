@@ -1433,6 +1433,12 @@ pre {
     border: solid 5px #2ecc71;
     margin-right: 10px;
     opacity: 0.7; }
+  @media screen and (max-width: 900px) {
+    .section-title {
+      font-size: 1.6rem; } }
+  @media screen and (max-width: 538px) {
+    .section-title {
+      font-size: 1.2rem; } }
 
 .lema, .copyr, textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple=multiple] {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;

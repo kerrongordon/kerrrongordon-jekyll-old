@@ -423,6 +423,14 @@
 		margin-right: 10px;
 		opacity: 0.7;
 	}
+
+	@include media($laptop) {
+		font-size: 1.6rem;
+	}
+
+	@include media($mobile) {
+		font-size: 1.2rem;
+	}
 }
 
 .lema {
