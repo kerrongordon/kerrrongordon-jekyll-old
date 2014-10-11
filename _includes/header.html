@@ -1,20 +1,19 @@
-<header class="site-header">
+<header class="site-header wow fadeInDown">
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/icons/loop.svg"></a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">|||</a>
 
       <div class="trigger">
-        <a class="page-link" href="{{ site.baseurl }}/">Home</a>
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
+        <a class="page-link active" href="{{ site.baseurl }}/">Home</a>
+        <a class="page-link" href="{{ site.baseurl }}/">About</a>
+        <a class="page-link" href="{{ site.baseurl }}/">Features</a>
+        <a class="page-link" href="{{ site.baseurl }}/">Tools</a>
+        <a class="page-link" href="{{ site.baseurl }}/">Contact</a>
       </div>
     </nav>
 

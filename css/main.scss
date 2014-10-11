@@ -6,14 +6,14 @@
 
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: 'Open Sans', sans-serif;
 $base-font-size:   14px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.9;
 
 $spacing-unit:     60px;
 
-$text-color:       #555;
+$text-color:       #222;
 $background-color: #fff;
 $brand-color:      #2a7ae2;
 $header-color:     #fff;
@@ -76,5 +76,6 @@ $asbestos: 		#7f8c8d;
         "base",
         "layout",
         "syntax-highlighting",
-        "home"
+        "home",
+        "animate"
 ;

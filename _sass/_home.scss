@@ -78,6 +78,7 @@
 
 
 .main-infor {
+	z-index: 1;
 
 	.content {
 		@include span-columns( 8 );
@@ -324,6 +325,10 @@
 			font-weight: bold;
 		}
 
+		img {
+			width: 100px;
+		}
+
 		@include media($laptop) {
 			@include span-columns( 6 );
 			margin-right: 0; 
@@ -396,9 +401,15 @@
 }
 
 .lema {
-	font-size: 14px;
-	line-height: 1.9em;
-	color: #555;
+	font-family: $base-font-family;
+    font-size: 14px;
+    line-height: $base-line-height;
+    font-weight: 300;
+    color: $text-color;
+    -webkit-text-size-adjust: 100%;
+    counter-reset: section;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    -webkit-font-smoothing: antialiased !important;
 }
 
 .copyr {
@@ -443,3 +454,9 @@ button:hover, input[type="submit"]:hover {
 	background-color: $emerland;
 	opacity: 1;
 }
+
+section {
+	overflow: hidden;
+}
+
+@include keyframes( scaleOut ) {from {@include transform(scale( 0 ));} to {@include transform(scale( 100% ));}}
