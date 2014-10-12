@@ -8,7 +8,7 @@ layout: home
   <span class="header-line"></span>
 
   <div class="site-name wow fadeInUp">
-    <h1><span>Kerron Gordon</span></h1>
+    <h1><span>{{ site.title }}</span></h1>
   </div>
 
 </section>
@@ -16,36 +16,26 @@ layout: home
 <section id="main-infor" class="main-infor">
   <div class="page-content">
       <div class="wrapper">
-        <h2 class="section-title wow fadeInLeft">whats up for now</h2>
+        <h2 class="section-title wow fadeInLeft">{{ site.data.about.title }}</h2>
         <article class="content wow fadeInUp">
 
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic!</p>
+          <p class="lema">{{ site.data.about.paragraph-1 }}</p>
 
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum laborum nemo error vero officiis voluptatem laudantium expedita temporibus amet perferendis magni voluptatum molestias, distinctio soluta nihil, ea officia est ipsa.</p>
+          <p class="lema">{{ site.data.about.paragraph-2 }}</p>
 
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic!</p>
+          <p class="lema">{{ site.data.about.paragraph-3 }}</p>
 
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum laborum nemo error vero officiis voluptatem laudantium expedita temporibus amet perferendis magni voluptatum molestias, distinctio soluta nihil, ea officia est ipsa.</p>
+          <p class="lema">{{ site.data.about.paragraph-4 }}</p>
         </article>
 
         <aside class="sidebar wow fadeInUp">
           <ul>
-
+            {% for list in site.data.about.list %}
             <li>
-              <h4>dolor sit amet</h4>
-              <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum</p>
+              <h4>{{ list.title }}</h4>
+              <p class="lema">{{ list.content }}</p>
             </li>
-
-            <li>
-              <h4>dolor sit amet</h4>
-              <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum</p>
-            </li>
-
-            <li>
-              <h4>dolor sit amet</h4>
-              <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum</p>
-            </li>
-
+            {% endfor %}
           </ul>
         </aside>
       </div>
@@ -57,25 +47,16 @@ layout: home
 <div class="overlay"></div>
   <div class="page-content">
       <div class="wrapper">
-        <h2 class="section-title wow fadeInLeft">Features</h2>     
+        <h2 class="section-title wow fadeInLeft">{{ site.data.features.title }}</h2>     
         <div class="f-item">
-        <article class="content full-w wow fadeInLeft">
-          <img src="{{ site.baseurl }}/img/features-1.jpg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! </p>
-        </article>
 
-        <article class="content wow fadeInUp">
-          <img src="{{ site.baseurl }}/img/features-2.jpg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! </p>
+        {% for article in site.data.features.article %}
+        <article class="content full-w wow {{ article.ani }}">
+          <img src="{{ site.baseurl }}/img/{{ article.img }}">
+          <h4>{{ article.title }}</h4>
+          <p class="lema">{{ article.content }}</p>
         </article>
-
-        <article class="content wow fadeInRight">
-          <img src="{{ site.baseurl }}/img/features-3.jpg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! </p>
-        </article>
+        {% endfor %}
         </div>
       </div>
   </div>
@@ -84,55 +65,15 @@ layout: home
 <section id="main-work" class="main-work">
   <div class="page-content">
       <div class="wrapper">
-        <h2 class="section-title wow fadeInLeft">what we do</h2>
+        <h2 class="section-title wow fadeInLeft">{{ site.data.tools.title }}</h2>
         
-        <article class="content wow fadeInLeft">
-          <img src="{{ site.baseurl }}/img/icons/compas.svg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio </p>
+        {% for article in site.data.tools.article %}
+        <article class="content {{ article.class }} wow {{ article.ani }}">
+          <img src="{{ site.baseurl }}/img/icons/{{ article.icon }}">
+          <h4>{{ article.title }}</h4>
+          <p class="lema">{{ article.content }}</p>
         </article>
-
-        <article class="content wow fadeInLeft">
-          <img src="{{ site.baseurl }}/img/icons/loop.svg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio </p>
-        </article>
-
-        <article class="content wow fadeInRight">
-          <img src="{{ site.baseurl }}/img/icons/clipboard.svg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio </p>
-        </article>
-
-        <article class="content right wow fadeInRight">
-          <img src="{{ site.baseurl }}/img/icons/mail.svg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio </p>
-        </article>
-
-        <article class="content wow fadeInLeft">
-          <img src="{{ site.baseurl }}/img/icons/map.svg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio </p>
-        </article>
-
-        <article class="content wow fadeInLeft">
-          <img src="{{ site.baseurl }}/img/icons/paper-bag.svg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio </p>
-        </article>
-
-        <article class="content wow fadeInRight">
-          <img src="{{ site.baseurl }}/img/icons/pencils.svg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio </p>
-        </article>
-
-        <article class="content right wow fadeInRight">
-          <img src="{{ site.baseurl }}/img/icons/retina.svg">
-          <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio </p>
-        </article>
+        {% endfor %}
        
       </div>
     </div>
@@ -143,23 +84,23 @@ layout: home
   <div class="overlay"></div>
   <div class="page-content">
       <div class="wrapper">
-        <h2 class="section-title wow fadeInLeft">Stay in touch</h2>
+        <h2 class="section-title wow fadeInLeft">{{ site.data.contact.title }}</h2>
 
         <form class="main-form wow zoomIn" action="//forms.brace.io/{{ site.email }}" method="POST">
  
           <div class="form-group cname">
             <label>Your Name</label>
-            <input type="text" name="name" class="form-control" required="">
+            <input type="text" name="name" class="form-control" required placeholder="james brown" onfocus="this.placeholder = ''" onblur="this.placeholder = 'james brown'">
           </div>
 
           <div class="form-group cemail">
             <label>Your Email</label>
-            <input type="email" id="email" name="_replyto" required="">
+            <input type="email" id="email" name="_replyto" required placeholder="your-email@domain.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'your-email@domain.com'">
           </div>
 
           <div class="form-group">
             <label>Message</label>
-            <textarea type="text" name="message" class="form-control" required=""></textarea>
+            <textarea type="text" name="message" class="form-control" required></textarea>
           </div>
 
             <input type="submit" value="Send Message">
@@ -167,9 +108,9 @@ layout: home
 
         <article class="content wow fadeInRight">
           <h4>Lorem ipsum dolor</h4>
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! Lorem ipsum dolor sit amet, </p>
+          <p class="lema">{{ site.data.contact.paragraph-1 }}</p>
 
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum laborum nemo error vero officiis voluptatem laudantium expedita temporibus amet perferendis magni voluptatum molestias, distinctio soluta nihil, ea officia est ipsa.</p>
+          <p class="lema">{{ site.data.contact.paragraph-2 }}</p>
         </article>
 
       </div>

@@ -1,0 +1,12 @@
+title: Tools we use
+
+
+article:
+- {title: 'Lorem ipsum dolor', icon: 'compas.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
+- {title: 'Lorem ipsum dolor', icon: 'loop.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
+- {title: 'Lorem ipsum dolor', icon: 'clipboard.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
+- {title: 'Lorem ipsum dolor', class: 'right', icon: 'mail.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
+- {title: 'Lorem ipsum dolor', icon: 'map.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
+- {title: 'Lorem ipsum dolor', icon: 'paper-bag.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
+- {title: 'Lorem ipsum dolor', icon: 'pencils.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
+- {title: 'Lorem ipsum dolor', class: 'right', icon: 'retina.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}

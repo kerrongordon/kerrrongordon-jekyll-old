@@ -477,6 +477,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 	box-shadow: none;
 }
 
+
 button, input[type="submit"] {
 	border-radius: 0;
 	background-color: $emerland;
@@ -494,3 +495,4 @@ section {
 }
 
 @include keyframes( scaleOut ) {from {@include transform(scale( 0 ));} to {@include transform(scale( 100% ));}}
+
