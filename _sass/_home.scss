@@ -4,7 +4,8 @@
 
 
 .header-s {
-	background: url(../img/header-bg-2.jpg) no-repeat;
+	@include retina-image($header-bg-img, cover);
+	background-repeat: no-repeat;
 	@include position( relative, 0px 0 0 0px );
 	background-position: 50% 50%;
 	background-size: cover;
@@ -12,6 +13,14 @@
 	height: 700px;
     text-align: center;
     color: $header-color;
+
+    @include media($laptop) {
+		height: 500px;
+	}
+
+	@include media($mobile) {
+		height: 300px;
+	} 
 
 	.site-header {
 		z-index: 999;
@@ -50,6 +59,8 @@
 				}
 			}
 
+		
+
 		@include media($laptop) {
 			font-size: 3rem;
 		}
@@ -71,26 +82,6 @@
 
 
 	@include keyframes( blink ) {0% {opacity: 0;} 50% {opacity: 1;} 100% {opacity: 0;}}
-
-/*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
-@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-	background: url(../img/header-bg-2@2x.jpg) no-repeat;
-	@include position( relative, 0px 0 0 0px );
-	background-position: 50% 50%;
-	background-size: cover;
-	width: 100%;
-	height: 700px;
-    text-align: center;
-    color: $header-color;
-
-    @include media($laptop) {
-		height: 500px;
-	}
-
-	@include media($mobile) {
-		height: 300px;
-	}  
-}
 
 }
 
@@ -162,7 +153,8 @@
 
 
 .contact {
-	background: url(../img/contact-bg.jpg) no-repeat;
+	@include retina-image($contact-bg-img, cover);
+	background-repeat: no-repeat;
 	@include position( relative, 0px 0 0 0px );
 	background-position: 50% 50%;
 	background-size: cover;
@@ -242,18 +234,6 @@
 			}
 		}
 	}
-
-/*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
-@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-	background: url(../img/contact-bg@2x.jpg) no-repeat;
-	@include position( relative, 0px 0 0 0px );
-	background-position: 50% 50%;
-	background-size: cover;
-	width: 100%;
-    text-align: center;
-    color: $header-color;  
-}
-
 }
 
 
@@ -263,7 +243,8 @@
 
 
 .features {
-	background: url(../img/features-bg.jpg) no-repeat;
+	@include retina-image($features-bg-img, cover);
+	background-repeat: no-repeat;
 	@include position( relative, 0px 0 0 0px );
 	background-position: 50% 50%;
 	background-size: cover;
@@ -316,17 +297,6 @@
 		}
 		
 	}
-
-/*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
-@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-	background: url(../img/features-bg@2x.jpg) no-repeat;
-	@include position( relative, 0px 0 0 0px );
-	background-position: 50% 50%;
-	background-size: cover;
-	width: 100%;
-    text-align: center;
-    color: $header-color;  
-}
 
 }
 

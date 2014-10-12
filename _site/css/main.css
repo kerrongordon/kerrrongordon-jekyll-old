@@ -993,7 +993,8 @@ pre {
     color: #099; }
 
 .header-s {
-  background: url(../img/header-bg-2.jpg) no-repeat;
+  background-image: url("../img/header-bg-2.jpg");
+  background-repeat: no-repeat;
   position: relative;
   top: 0px;
   right: 0;
@@ -1004,8 +1005,17 @@ pre {
   width: 100%;
   height: 700px;
   text-align: center;
-  color: #fff;
-  /*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/ }
+  color: #fff; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    .header-s {
+      background-image: url("../img/header-bg-2_2x.jpg");
+      background-size: cover; } }
+  @media screen and (max-width: 900px) {
+    .header-s {
+      height: 500px; } }
+  @media screen and (max-width: 538px) {
+    .header-s {
+      height: 300px; } }
   .header-s .site-header {
     z-index: 999; }
   .header-s .header-line {
@@ -1065,27 +1075,6 @@ pre {
     opacity: 1; }
   100% {
     opacity: 0; } }
-  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-    .header-s {
-      background: url(../img/header-bg-2@2x.jpg) no-repeat;
-      position: relative;
-      top: 0px;
-      right: 0;
-      bottom: 0;
-      left: 0px;
-      background-position: 50% 50%;
-      background-size: cover;
-      width: 100%;
-      height: 700px;
-      text-align: center;
-      color: #fff; } }
-  @media only screen and (-moz-min-device-pixel-ratio: 1.5) and (max-width: 900px), only screen and (-o-min-device-pixel-ratio: 3 / 2) and (max-width: 900px), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 900px), only screen and (min-devicepixel-ratio: 1.5) and (max-width: 900px), only screen and (min-resolution: 1.5dppx) and (max-width: 900px) {
-    .header-s {
-      height: 500px; } }
-  @media only screen and (-moz-min-device-pixel-ratio: 1.5) and (max-width: 538px), only screen and (-o-min-device-pixel-ratio: 3 / 2) and (max-width: 538px), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 538px), only screen and (min-devicepixel-ratio: 1.5) and (max-width: 538px), only screen and (min-resolution: 1.5dppx) and (max-width: 538px) {
-    .header-s {
-      height: 300px; } }
-
 .main-infor {
   z-index: 1; }
   .main-infor .content {
@@ -1154,7 +1143,8 @@ pre {
           margin-right: 0; } }
 
 .contact {
-  background: url(../img/contact-bg.jpg) no-repeat;
+  background-image: url("../img/contact-bg.jpg");
+  background-repeat: no-repeat;
   position: relative;
   top: 0px;
   right: 0;
@@ -1165,8 +1155,11 @@ pre {
   width: 100%;
   background-color: #34495e;
   color: #fff;
-  color: #fff;
-  /*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/ }
+  color: #fff; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    .contact {
+      background-image: url("../img/contact-bg_2x.jpg");
+      background-size: cover; } }
   .contact .overlay {
     opacity: 0.9; }
   .contact .content {
@@ -1271,22 +1264,10 @@ pre {
     .contact .main-form .form-group textarea {
       min-height: 200px;
       font-size: 14px; }
-  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-    .contact {
-      background: url(../img/contact-bg@2x.jpg) no-repeat;
-      position: relative;
-      top: 0px;
-      right: 0;
-      bottom: 0;
-      left: 0px;
-      background-position: 50% 50%;
-      background-size: cover;
-      width: 100%;
-      text-align: center;
-      color: #fff; } }
 
 .features {
-  background: url(../img/features-bg.jpg) no-repeat;
+  background-image: url("../img/features-bg.jpg");
+  background-repeat: no-repeat;
   position: relative;
   top: 0px;
   right: 0;
@@ -1296,8 +1277,11 @@ pre {
   background-size: cover;
   width: 100%;
   background-color: #34495e;
-  color: #fff;
-  /*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/ }
+  color: #fff; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    .features {
+      background-image: url("../img/features-bg_2x.jpg");
+      background-size: cover; } }
   .features .overlay {
     opacity: 0.9; }
   .features .f-item {
@@ -1350,19 +1334,6 @@ pre {
         width: 100%; }
         .features .content:last-child {
           margin-right: 0; } }
-  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
-    .features {
-      background: url(../img/features-bg@2x.jpg) no-repeat;
-      position: relative;
-      top: 0px;
-      right: 0;
-      bottom: 0;
-      left: 0px;
-      background-position: 50% 50%;
-      background-size: cover;
-      width: 100%;
-      text-align: center;
-      color: #fff; } }
 
 .main-work .content {
   float: left;
