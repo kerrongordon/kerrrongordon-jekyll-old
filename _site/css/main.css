@@ -738,9 +738,9 @@ pre {
         animation: scaleOut 0.2s ease-in; }
     .site-nav .page-link:active {
       color: white; }
-  .site-nav .active {
+  .site-nav .active, .site-nav .mPS2id-clicked {
     color: white; }
-    .site-nav .active:after {
+    .site-nav .active:after, .site-nav .mPS2id-clicked:after {
       content: "";
       border: solid 1px white;
       display: block;
@@ -752,11 +752,11 @@ pre {
       position: absolute;
       top: 9px;
       right: 30px;
-      background-color: rgba(52, 73, 94, 0.9);
-      border: 1px solid #e8e8e8;
+      background-color: #34495e;
       border-radius: 5px;
       text-align: right;
-      padding: 5px 5px 10px; }
+      padding: 5px 5px 10px;
+      text-align: center; }
       .site-nav .menu-icon {
         display: block;
         float: right;
@@ -784,12 +784,19 @@ pre {
         animation: scaleOut 0.2s ease-in; }
       .site-nav .page-link {
         display: block;
-        padding: 5px 10px; } }
+        padding: 10px 10px; } }
 
 .menu-top {
   position: fixed;
   width: 100%;
-  background: rgba(44, 62, 80, 0.7); }
+  background-color: #34495e;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.75); }
+  .menu-top img {
+    width: 30px;
+    margin-top: 10px; }
+    @media screen and (max-width: 900px) {
+      .menu-top img {
+        margin: 30px 20px 0; } }
   .menu-top .wrapper {
     padding: 0; }
 
@@ -1119,7 +1126,7 @@ pre {
         margin: 0px 20px 50px;
         color: #fff;
         background: #2ecc71;
-        opacity: 0.7; }
+        opacity: 0.8; }
     .main-infor .sidebar h4 {
       text-transform: uppercase;
       margin-bottom: 15px;
@@ -1166,7 +1173,8 @@ pre {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%; }
+    width: 48.82117%;
+    margin-top: 25px; }
     .contact .content:last-child {
       margin-right: 0; }
     .contact .content .lema, .contact .content .copyr, .contact .content textarea, .contact .content input[type="email"], .contact .content input[type="number"], .contact .content input[type="password"], .contact .content input[type="search"], .contact .content input[type="tel"], .contact .content input[type="text"], .contact .content input[type="url"], .contact .content input[type="color"], .contact .content input[type="date"], .contact .content input[type="datetime"], .contact .content input[type="datetime-local"], .contact .content input[type="month"], .contact .content input[type="time"], .contact .content input[type="week"], .contact .content select[multiple=multiple] {
@@ -1290,6 +1298,8 @@ pre {
       content: "";
       display: table;
       clear: both; }
+  .features img {
+    border: solid 3px #fff; }
   .features .full-w {
     margin-left: 0%; }
     @media screen and (max-width: 900px) {
@@ -1391,6 +1401,46 @@ pre {
         .site-footer .social-media-list li a:hover {
           opacity: 1; }
 
+.main-user {
+  overflow: inherit;
+  padding: 0;
+  height: 200px; }
+  .main-user .page-content {
+    padding: 0; }
+  .main-user .wrapper {
+    padding: 0; }
+  .main-user .user-img {
+    text-align: center;
+    margin-top: -150px;
+    z-index: 444; }
+    .main-user .user-img img {
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      border: solid 10px #fff; }
+  @media screen and (max-width: 900px) {
+    .main-user {
+      height: 150px; }
+      .main-user .user-img {
+        text-align: center;
+        margin-top: -100px;
+        z-index: 444; }
+        .main-user .user-img img {
+          border-radius: 50%;
+          width: 200px;
+          height: 200px; } }
+  @media screen and (max-width: 538px) {
+    .main-user {
+      height: 80px; }
+      .main-user .user-img {
+        text-align: center;
+        margin-top: -70px;
+        z-index: 444; }
+        .main-user .user-img img {
+          border-radius: 50%;
+          width: 150px;
+          height: 150px; } }
+
 .section-title {
   text-transform: uppercase;
   font-style: italic;
@@ -1401,9 +1451,10 @@ pre {
   margin-bottom: 2.5em; }
   .section-title:before {
     content: "";
-    border: solid 5px #2ecc71;
+    border-left: solid 5px #2ecc71;
     margin-right: 10px;
-    opacity: 0.7; }
+    opacity: 0.8;
+    padding: 20px 0; }
   @media screen and (max-width: 900px) {
     .section-title {
       font-size: 1.6rem; } }

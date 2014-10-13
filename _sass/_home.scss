@@ -125,7 +125,7 @@
   				margin: 0px 20px 50px;
   				color: $header-color;
   				background: $emerland; 
-  				opacity: 0.7;
+  				opacity: 0.8;
 			}
 		}
 
@@ -170,6 +170,7 @@
 
 	.content {
 		@include span-columns( 6 );
+		margin-top: 25px;
 
 		.lema {
 			color: $header-color;
@@ -260,6 +261,9 @@
 		@include row()
 	}
 
+	img {
+		border: solid 3px #fff;
+	}
 	
 	.full-w {
 		@include shift(0);
@@ -372,6 +376,74 @@
 
 
 //////////////////////////////////////////
+              ///main-user//
+/////////////////////////////////////////
+
+
+.main-user {
+	overflow: inherit;
+	padding: 0;
+	height: 200px;
+
+	.page-content {
+		padding: 0;
+	}
+
+	.wrapper {
+		padding: 0;
+	}
+
+	.user-img {
+		text-align: center;
+		margin-top: -150px;
+		z-index: 444;
+
+		img {
+			border-radius: 50%;
+			width: 300px;
+			height: 300px;
+			border: solid 10px $background-color;
+		}
+	}
+
+	@include media($laptop) {
+		height: 150px;
+
+		.user-img {
+			text-align: center;
+			margin-top: -100px;
+			z-index: 444;
+
+			img {
+				border-radius: 50%;
+				width: 200px;
+				height: 200px;
+			}
+		}
+	}
+
+	@include media($mobile) {
+		height: 80px;
+
+		.user-img {
+			text-align: center;
+			margin-top: -70px;
+			z-index: 444;
+
+			img {
+				border-radius: 50%;
+				width: 150px;
+				height: 150px;
+			}
+		}
+	}
+
+	
+}
+
+
+
+//////////////////////////////////////////
               ///global classes//
 /////////////////////////////////////////
 
@@ -389,9 +461,10 @@
 
 	&:before {
 		content: "";
-		border: solid 5px $emerland;
+		border-left: solid 5px $emerland;
 		margin-right: 10px;
-		opacity: 0.7;
+		opacity: 0.8;
+		padding: 20px 0;
 	}
 
 	@include media($laptop) {

@@ -86,7 +86,7 @@ $large: new-breakpoint(max-width 1200px 12);
         }
     }
 
-    .active {
+    .active, .mPS2id-clicked {
             color: rgba($header-color, 1);            
 
             &:after {
@@ -102,11 +102,12 @@ $large: new-breakpoint(max-width 1200px 12);
         position: absolute;
         top: 9px;
         right: 30px;
-        background-color: rgba($wet-asphalt, 0.9);
-        border: 1px solid $grey-color-light;
+        background-color: rgba($wet-asphalt, 1);
+        //border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
         padding: 5px 5px 10px;
+        text-align: center;
 
         .menu-icon {
             display: block;
@@ -141,7 +142,7 @@ $large: new-breakpoint(max-width 1200px 12);
 
         .page-link {
             display: block;
-            padding: 5px 10px;
+            padding: 10px 10px;
         }
     }
 }
@@ -150,7 +151,17 @@ $large: new-breakpoint(max-width 1200px 12);
 .menu-top {
     position: fixed;
     width: 100%;
-    background: rgba($midnight-blue, 0.7);
+    background-color: rgba($wet-asphalt, 1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+
+    img {
+        width: 30px;
+        margin-top: 10px;
+
+        @include media($laptop) {
+            margin: 30px 20px 0;
+        }
+    }
 
     .wrapper {
         padding: 0;
