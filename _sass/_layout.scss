@@ -152,6 +152,7 @@ $large: new-breakpoint(max-width 1200px 12);
     @include position(fixed, 0px 0px null 0px);
     background-color: rgba($wet-asphalt, 1);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+    z-index: 999;
 
     img {
         width: 30px;

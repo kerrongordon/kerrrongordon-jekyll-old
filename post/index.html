@@ -1,0 +1,39 @@
+---
+layout: home
+---
+
+<section id="header-s" class="header-s">
+<div class="overlay"></div>
+{% include header.html %}
+  <span class="header-line"></span>
+
+  <div class="site-name animated fadeInUp">
+    <h1><span>Blog</span></h1>
+  </div>
+
+</section>
+
+<section id="blog" class="blog">
+  <div class="page-content">
+      <div class="wrapper">
+        <div class="home">
+
+          <ul class="post-list">
+            {% for post in site.posts %}
+              <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+                <h2>
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+                  {{ post.excerpt }}
+              </li>
+            {% endfor %}
+          </ul>
+
+          <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+        </div>
+      </div>
+    </div>
+</section>
