@@ -23,7 +23,7 @@
 
   <body>
  
-        <section id="header-s" class="header-s">
+        <section id="home" class="header-s">
 <div class="overlay"></div>
 <header class="site-header animated fadeInDown">
 
@@ -42,10 +42,10 @@
         </a>
 
       <div id="navigation-menu" class="trigger">
-        <a class="page-link" href="/#header-s">Home</a>
-        <a class="page-link" href="/#about-face">About</a>
+        <a class="page-link" href="/#home">Home</a>
+        <a class="page-link" href="/#about">About</a>
         <a class="page-link" href="/#features">Features</a>
-        <a class="page-link" href="/#main-work">Tools</a>
+        <a class="page-link" href="/#tools">Tools</a>
         <a class="page-link" href="/#contact">Contact</a>
       </div>
     </nav>
@@ -62,7 +62,7 @@
 
 </section>
 
-<section id="main-user" class="main-user">
+<section id="main-face" class="main-user">
   <div class="page-content">
       <div class="wrapper">
         
@@ -75,7 +75,7 @@
 
 </section>
 
-<section id="main-infor" class="main-infor">
+<section id="about" class="main-infor">
   <div class="page-content">
       <div class="wrapper">
         <h2 class="section-title wow fadeInLeft">About</h2>
@@ -146,7 +146,7 @@
   </div>
 </section>
 
-<section id="main-work" class="main-work">
+<section id="tools" class="main-work">
   <div class="page-content">
       <div class="wrapper">
         <h2 class="section-title wow fadeInLeft">Tools we use</h2>
@@ -244,9 +244,16 @@
 </section>
   
 
-    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/jquery-2.1.1.min.js"></script> 
 <script src="/js/jquery.malihu.PageScroll2id.min.js"></script>
+<script src="/js/jquery.mousewheel.min.js"></script>
+<script src="/js/jquery.simplr.smoothscroll.min.js"></script>
 <script src="/js/founction.js"></script>
+<script type="text/javascript">
+	$(function () {
+    	$.srSmoothscroll();
+	});
+</script>
 
 <footer class="site-footer">
 
