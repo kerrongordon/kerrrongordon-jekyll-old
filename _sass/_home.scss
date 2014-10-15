@@ -5,14 +5,9 @@
 
 .header-s {
 	@include retina-image($header-bg-img, cover);
-	background-repeat: no-repeat;
-	@include position( relative, 0px 0 0 0px );
-	background-position: 50% 50%;
-	background-size: cover;
-	width: 100%;
 	height: 700px;
     text-align: center;
-    color: $header-color;
+   
 
     @include media($laptop) {
 		height: 500px;
@@ -154,15 +149,6 @@
 
 .contact {
 	@include retina-image($contact-bg-img, cover);
-	background-repeat: no-repeat;
-	@include position( relative, 0px 0 0 0px );
-	background-position: 50% 50%;
-	background-size: cover;
-	width: 100%;
-	background-color: $wet-asphalt;
-	color: $header-color;
-	//background-color: $peter-river;
-	color: $header-color;
 
 	.overlay {
 		opacity: 0.9;
@@ -245,13 +231,6 @@
 
 .features {
 	@include retina-image($features-bg-img, cover);
-	background-repeat: no-repeat;
-	@include position( relative, 0px 0 0 0px );
-	background-position: 50% 50%;
-	background-size: cover;
-	width: 100%;
-	background-color: $wet-asphalt;
-	color: $header-color;
 
 	.overlay {
 		opacity: 0.9;
@@ -539,3 +518,13 @@ section {
 
 @include keyframes( scaleOut ) {from {@include transform(scale( 0 ));} to {@include transform(scale( 100% ));}}
 
+.header-s, .features, .contact {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	@include position( relative, 0px 0 0 0px );
+	background-position: 50% 50%;
+	background-size: cover;
+	width: 100%;
+	background-color: $wet-asphalt;
+	color: $header-color;
+}
