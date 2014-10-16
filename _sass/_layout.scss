@@ -168,6 +168,16 @@ $large: new-breakpoint(max-width 1200px 12);
     }
 }
 
+.header-s, .features, .contact {
+    background-repeat: no-repeat;
+    @include position( relative, 0px 0 0 0px );
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    background-color: $wet-asphalt;
+    color: $header-color;
+}
+
 
 /**
  * Site footer

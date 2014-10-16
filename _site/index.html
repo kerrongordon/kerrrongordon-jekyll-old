@@ -14,7 +14,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="canonical" href="http://yourdomain.com/">
-    <script src="/js/wow.min.js"></script>
+    <script src="/js/lib/wow.min.js"></script>
 	<script>
  		new WOW().init();
 	</script>
@@ -23,9 +23,9 @@
 
   <body>
  
-        <section id="home" class="header-s">
-<div class="overlay"></div>
-<header class="site-header animated fadeInDown">
+        <section id="home" data-original="/img/header-bg-2.jpg" class="lazy header-s">
+	<div class="overlay"></div>
+		<header class="site-header animated fadeInDown">
 
   <div class="wrapper">
 
@@ -42,11 +42,17 @@
         </a>
 
       <div id="navigation-menu" class="trigger">
+      
         <a class="page-link" href="/#home">Home</a>
+      
         <a class="page-link" href="/#about">About</a>
+      
         <a class="page-link" href="/#features">Features</a>
+      
         <a class="page-link" href="/#tools">Tools</a>
+      
         <a class="page-link" href="/#contact">Contact</a>
+      
       </div>
     </nav>
 
@@ -54,43 +60,40 @@
 
 </header>
 
-  <span class="header-line"></span>
-
-  <div class="site-name animated fadeInUp">
-    <h1><span>Your Awesome Title</span></h1>
-  </div>
-
+	<span class="header-line"></span>
+  	<div class="site-name wow fadeInUp">
+    	<h1><span>Your Awesome Title</span></h1>
+  	</div>
 </section>
 
 <section id="main-face" class="main-user">
   <div class="page-content">
       <div class="wrapper">
         
-        <div id="about-face" class="user-img animated zoomInDown">
+        <div id="about-face" class="user-img wow zoomInDown">
           <img src="/img/face.jpg">
         </div>
 
       </div>
     </div>
-
 </section>
 
 <section id="about" class="main-infor">
   <div class="page-content">
       <div class="wrapper">
-        <h2 class="section-title wow fadeInLeft">About</h2>
-        <article class="content wow fadeInUp">
+        <h2 class="section-title wow zoomInLeft">About</h2>
+        <article class="content wow zoomInLeft">
 
           <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic!</p>
 
-          <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum laborum nemo error vero officiis voluptatem laudantium expedita temporibus amet perferendis magni voluptatum molestias, distinctio soluta nihil, ea officia est ipsa.</p>
+          <blockquote class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum laborum nemo error vero officiis voluptatem laudantium expedita temporibus amet perferendis magni voluptatum molestias, distinctio soluta nihil, ea officia est ipsa.</blockquote>
 
           <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic!</p>
 
           <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum laborum nemo error vero officiis voluptatem laudantium expedita temporibus amet perferendis magni voluptatum molestias, distinctio soluta nihil, ea officia est ipsa.</p>
         </article>
 
-        <aside class="sidebar wow fadeInUp">
+        <aside class="sidebar wow zoomInRight">
           <ul>
             
             <li>
@@ -112,10 +115,9 @@
         </aside>
       </div>
     </div>
-
 </section>
 
-<section id="features" class="features">
+<section id="features" data-original="/img/features-bg.jpg" class="lazy features">
 <div class="overlay"></div>
   <div class="page-content">
       <div class="wrapper">
@@ -200,13 +202,11 @@
           <p class="lema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio</p>
         </article>
         
-       
       </div>
     </div>
-
 </section>
 
-<section id="contact" class="contact">
+<section id="contact" data-original="/img/contact-bg.jpg" class="lazy contact">
   <div class="overlay"></div>
   <div class="page-content">
       <div class="wrapper">
@@ -242,16 +242,23 @@
       </div>
   </div>
 </section>
+
   
 
-    <script src="/js/jquery-2.1.1.min.js"></script> 
-<script src="/js/jquery.malihu.PageScroll2id.min.js"></script>
-<script src="/js/jquery.mousewheel.min.js"></script>
-<script src="/js/jquery.simplr.smoothscroll.min.js"></script>
+    <script src="/js/lib/jquery-2.1.1.min.js"></script> 
+<script src="/js/lib/jquery.malihu.PageScroll2id.min.js"></script>
+<script src="/js/lib/jquery.mousewheel.min.js"></script>
+<script src="/js/lib/jquery.simplr.smoothscroll.min.js"></script>
+<script src="/js/lib/jquery.lazyload.min.js"></script>
 <script src="/js/founction.js"></script>
 <script type="text/javascript">
 	$(function () {
     	$.srSmoothscroll();
+
+      $("section.lazy").lazyload({
+        effect : "fadeIn"
+      });
+
 	});
 </script>
 

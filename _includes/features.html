@@ -1,0 +1,18 @@
+<section id="features" data-original="{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.features.backgroundImage }}" class="lazy features">
+<div class="overlay"></div>
+  <div class="page-content">
+      <div class="wrapper">
+        <h2 class="section-title wow fadeInLeft">{{ site.data.features.title }}</h2>     
+        <div class="f-item">
+
+        {% for article in site.data.features.article %}
+        <article class="content full-w wow {{ article.ani }}">
+          <img src="{{ site.baseurl }}/{{ site.image_location }}/{{ article.img }}">
+          <h4>{{ article.title }}</h4>
+          <p class="lema">{{ article.content }}</p>
+        </article>
+        {% endfor %}
+        </div>
+      </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+<section id="main-face" class="main-user">
+  <div class="page-content">
+      <div class="wrapper">
+        
+        <div id="about-face" class="user-img wow zoomInDown">
+          <img src="{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.about.face_image }}">
+        </div>
+
+      </div>
+    </div>
+</section>
+
+<section id="about" class="main-infor">
+  <div class="page-content">
+      <div class="wrapper">
+        <h2 class="section-title wow zoomInLeft">{{ site.data.about.title }}</h2>
+        <article class="content wow zoomInLeft">
+
+          <p class="lema">{{ site.data.about.paragraph-1 }}</p>
+
+          <blockquote class="lema">{{ site.data.about.paragraph-2 }}</blockquote>
+
+          <p class="lema">{{ site.data.about.paragraph-3 }}</p>
+
+          <p class="lema">{{ site.data.about.paragraph-4 }}</p>
+        </article>
+
+        <aside class="sidebar wow zoomInRight">
+          <ul>
+            {% for list in site.data.about.list %}
+            <li>
+              <h4>{{ list.title }}</h4>
+              <p class="lema">{{ list.content }}</p>
+            </li>
+            {% endfor %}
+          </ul>
+        </aside>
+      </div>
+    </div>
+</section>

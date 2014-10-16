@@ -14,16 +14,12 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-    counter-reset: section;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-    -webkit-font-smoothing: antialiased !important;
+    //font-family: $base-font-family;
+    //font-size: $base-font-size;
+    //line-height: $base-line-height;
+    //font-weight: 300;
+    //color: $text-color;
+    //background-color: $background-color;
 }
 
 
@@ -160,6 +156,7 @@ pre {
     @include outer-container; 
     @include pad( 30px default );
     @extend %clearfix;
+    @include transition ( all 0.3s ease-in-out );
 
     @include media-query($on-laptop) {
         

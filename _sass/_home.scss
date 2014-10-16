@@ -4,9 +4,10 @@
 
 
 .header-s {
-	@include retina-image($header-bg-img, cover);
+	//@include retina-image($header-bg-img, cover);
 	height: 700px;
     text-align: center;
+    @include transition ( all 0.3s ease-in-out );
    
 
     @include media($laptop) {
@@ -92,6 +93,7 @@
 
 	.content {
 		@include span-columns( 8 );
+		@include transition ( all 0.7s ease-in-out );
 
 		@include media($laptop) {
 			@include span-columns( 12 );
@@ -104,6 +106,7 @@
 
 	.sidebar {
 		@include span-columns( 4 );
+		@include transition ( all 0.7s ease-in-out );
 
 		ul {
 			margin: 0;
@@ -132,7 +135,7 @@
 		}
 
 		@include media($laptop) {
-			@include span-columns( 6 );
+			@include span-columns( 12 );
 		}
 
 		@include media($mobile) {
@@ -148,7 +151,7 @@
 
 
 .contact {
-	@include retina-image($contact-bg-img, cover);
+	//@include retina-image($contact-bg-img, cover);
 
 	.overlay {
 		opacity: 0.9;
@@ -157,6 +160,7 @@
 	.content {
 		@include span-columns( 6 );
 		margin-top: 25px;
+		@include transition ( all 0.7s ease-in-out );
 
 		.lema {
 			color: $header-color;
@@ -173,6 +177,7 @@
 
 	.main-form {
 		@include span-columns( 6 );
+		@include transition ( all 0.7s ease-in-out );
 
 		@include media($laptop) {
 			@include span-columns( 6 );
@@ -230,7 +235,7 @@
 
 
 .features {
-	@include retina-image($features-bg-img, cover);
+	//@include retina-image($features-bg-img, cover);
 
 	.overlay {
 		opacity: 0.9;
@@ -259,6 +264,7 @@
 
 	.content {
 		@include span-columns( 4 );
+		@include transition ( all 0.7s ease-in-out );
 
 		h4 {
 			font-size: 17px;
@@ -294,6 +300,7 @@
 	.content {
 		@include span-columns( 3 );
 		text-align: center;
+		@include transition ( all 0.7s ease-in-out );
 
 		h4 {
 			font-size: 17px;
@@ -456,15 +463,7 @@
 }
 
 .lema {
-	font-family: $base-font-family;
-    font-size: 14px;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    -webkit-text-size-adjust: 100%;
-    counter-reset: section;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-    -webkit-font-smoothing: antialiased !important;
+	
 }
 
 .copyr {
@@ -513,18 +512,8 @@ button:hover, input[type="submit"]:hover {
 
 section {
 	overflow: hidden;
-	@include transition ( all 0.5s ease-in-out );
+	//@include transition ( all 0.7s ease-in-out );
 }
 
 @include keyframes( scaleOut ) {from {@include transform(scale( 0 ));} to {@include transform(scale( 100% ));}}
 
-.header-s, .features, .contact {
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	@include position( relative, 0px 0 0 0px );
-	background-position: 50% 50%;
-	background-size: cover;
-	width: 100%;
-	background-color: $wet-asphalt;
-	color: $header-color;
-}

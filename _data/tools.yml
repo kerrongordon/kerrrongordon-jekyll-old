@@ -1,5 +1,6 @@
 title: Tools we use
 
+icon_location: icons
 
 article:
 - {title: 'Lorem ipsum dolor', icon: 'compas.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}

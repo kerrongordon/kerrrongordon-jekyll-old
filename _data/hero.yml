@@ -1,0 +1,10 @@
+logoImage: icons/loop.svg 
+
+backgroundImage: header-bg-2.jpg
+
+menu: 
+- {title: 'Home', link: '#home'}
+- {title: 'About', link: '#about'}
+- {title: 'Features', link: '#features'}
+- {title: 'Tools', link: '#tools'}
+- {title: 'Contact', link: '#contact'}

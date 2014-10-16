@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/icons/loop.svg"></a>
+    <a class="site-title" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.hero.logoImage }}"></a>
 
     <nav class="site-nav">
       <a href="javascript:void(0)" class="menu-icon">
@@ -15,11 +15,9 @@
         </a>
 
       <div id="navigation-menu" class="trigger">
-        <a class="page-link" href="{{ site.baseurl }}/#home">Home</a>
-        <a class="page-link" href="{{ site.baseurl }}/#about">About</a>
-        <a class="page-link" href="{{ site.baseurl }}/#features">Features</a>
-        <a class="page-link" href="{{ site.baseurl }}/#tools">Tools</a>
-        <a class="page-link" href="{{ site.baseurl }}/#contact">Contact</a>
+      {% for menu in site.data.hero.menu %}
+        <a class="page-link" href="{{ site.baseurl }}/{{ menu.link }}">{{ menu.title }}</a>
+      {% endfor %}
       </div>
     </nav>
 

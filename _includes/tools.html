@@ -1,0 +1,15 @@
+<section id="tools" class="main-work">
+  <div class="page-content">
+      <div class="wrapper">
+        <h2 class="section-title wow fadeInLeft">{{ site.data.tools.title }}</h2>
+        
+        {% for article in site.data.tools.article %}
+        <article class="content {{ article.class }} wow {{ article.ani }}">
+          <img src="{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.tools.icon_location }}/{{ article.icon }}">
+          <h4>{{ article.title }}</h4>
+          <p class="lema">{{ article.content }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<section id="contact" data-original="{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.contact.backgroundImage }}" class="lazy contact">
+  <div class="overlay"></div>
+  <div class="page-content">
+      <div class="wrapper">
+        <h2 class="section-title wow fadeInLeft">{{ site.data.contact.title }}</h2>
+
+        <form class="main-form wow zoomIn" action="//forms.brace.io/{{ site.email }}" method="POST">
+ 
+          <div class="form-group cname">
+            <label>Your Name</label>
+            <input type="text" name="name" class="form-control" required placeholder="james brown" onfocus="this.placeholder = ''" onblur="this.placeholder = 'james brown'">
+          </div>
+
+          <div class="form-group cemail">
+            <label>Your Email</label>
+            <input type="email" id="email" name="_replyto" required placeholder="your-email@domain.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'your-email@domain.com'">
+          </div>
+
+          <div class="form-group">
+            <label>Message</label>
+            <textarea type="text" name="message" class="form-control" required></textarea>
+          </div>
+
+            <input type="submit" value="Send Message">
+        </form>        
+
+        <article class="content wow fadeInRight">
+          <h4>{{ site.data.contact.sidebar_title }}</h4>
+          <p class="lema">{{ site.data.contact.paragraph-1 }}</p>
+
+          <p class="lema">{{ site.data.contact.paragraph-2 }}</p>
+        </article>
+
+      </div>
+  </div>
+</section>
