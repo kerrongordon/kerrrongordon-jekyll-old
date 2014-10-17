@@ -6,5 +6,5 @@ menu:
 - {title: 'Home', link: '#home'}
 - {title: 'About', link: '#about'}
 - {title: 'Features', link: '#features'}
-- {title: 'Tools', link: '#tools'}
+- {title: 'Projects', link: '#tools'}
 - {title: 'Contact', link: '#contact'}

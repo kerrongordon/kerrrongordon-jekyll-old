@@ -19,7 +19,7 @@ body {
     //line-height: $base-line-height;
     //font-weight: 300;
     //color: $text-color;
-    //background-color: $background-color;
+    background-color: $background-color;
 }
 
 
@@ -220,7 +220,7 @@ pre {
 
 
 .overlay {
-    background: $midnight-blue;
+    background: $accent_color;
     @include position( absolute, 0 0 0 0 );
     opacity: 0.7;
     z-index: 1; 

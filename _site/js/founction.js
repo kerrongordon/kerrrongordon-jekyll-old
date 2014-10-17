@@ -22,6 +22,24 @@
          }
     });
 
+    $('.elements-box .content').on('click', function(){
+    	$('.box').css({display: "block"});
+    	$('.elements-box').css({display: "none"});
+
+   
+    		var pageId = $(this).attr('id');
+    		$('.page-load').load('page/' + pageId + '.html')
+   
+    });
+
+    $('.close').on('click', function(e){
+    	e.preventDefault();
+    	$('.box').css({display: "none"});
+    	$('.elements-box').css({display: "block"});
+    });
+
 
 });
 })(jQuery);
+
+

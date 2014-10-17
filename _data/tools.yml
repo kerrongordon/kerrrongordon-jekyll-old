@@ -1,13 +1,13 @@
-title: Tools we use
+title: Projects
 
 icon_location: icons
 
 article:
-- {title: 'Lorem ipsum dolor', icon: 'compas.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
-- {title: 'Lorem ipsum dolor', icon: 'loop.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
-- {title: 'Lorem ipsum dolor', icon: 'clipboard.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
-- {title: 'Lorem ipsum dolor', class: 'right', icon: 'mail.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
-- {title: 'Lorem ipsum dolor', icon: 'map.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
-- {title: 'Lorem ipsum dolor', icon: 'paper-bag.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
-- {title: 'Lorem ipsum dolor', icon: 'pencils.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
-- {title: 'Lorem ipsum dolor', class: 'right', icon: 'retina.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio'}
+- {title: 'Lorem ipsum dolor', id: 'page-1', icon: 'compas.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non'}
+- {title: 'Lorem ipsum dolor', id: 'page-2', icon: 'loop.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non'}
+- {title: 'Lorem ipsum dolor', id: 'page-3', icon: 'clipboard.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non'}
+- {title: 'Lorem ipsum dolor', id: 'page-4', class: 'right', icon: 'mail.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non'}
+- {title: 'Lorem ipsum dolor', id: 'page-5', icon: 'map.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non'}
+- {title: 'Lorem ipsum dolor', id: 'page-6', icon: 'paper-bag.svg', ani: 'fadeInLeft', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non'}
+- {title: 'Lorem ipsum dolor', id: 'page-7', icon: 'pencils.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non'}
+- {title: 'Lorem ipsum dolor', id: 'page-8', class: 'right', icon: 'retina.svg', ani: 'fadeInRight', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non'}

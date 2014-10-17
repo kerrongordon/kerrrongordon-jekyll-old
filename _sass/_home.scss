@@ -76,9 +76,6 @@
 		height: 300px;
 	}
 
-
-	@include keyframes( blink ) {0% {opacity: 0;} 50% {opacity: 1;} 100% {opacity: 0;}}
-
 }
 
 
@@ -122,8 +119,23 @@
   				padding: 15px 25px;
   				margin: 0px 20px 50px;
   				color: $header-color;
-  				background: $emerland; 
+  				background: $accent_color_secondary; 
   				opacity: 0.8;
+			}
+		}
+
+		h3 {
+			text-align: left;
+			margin: 15px 20px;
+			text-transform: uppercase;
+			font-size: 25px;
+			font-weight: 700;
+
+			&:after {
+				content: "";
+				border-bottom: solid 1px $text-color;
+				display: block;
+				padding: 5px;
 			}
 		}
 
@@ -296,11 +308,14 @@
 
 
 .main-work {
+	@include transition ( all 0.5s ease-in-out );
 
 	.content {
 		@include span-columns( 3 );
 		text-align: center;
-		@include transition ( all 0.7s ease-in-out );
+		margin-top: 20px;
+		cursor: pointer;
+		@include transition ( all 0.2s ease-in-out );
 
 		h4 {
 			font-size: 17px;
@@ -310,7 +325,8 @@
 		}
 
 		img {
-			width: 100px;
+			@include size( 100px 100px );
+			margin-top: 20px;
 		}
 
 		@include media($laptop) {
@@ -322,9 +338,21 @@
 			@include span-columns( 12 );
 		}
 
+		&:hover {
+			img {
+				@include animation( iconmove 0.5s ease-in );
+			}
+		}
+
+		&:active, &:focus {
+			background: transparent;
+			box-shadow: inset 0 0px 5px rgba(0, 0, 0, 0.3);
+			outline: none;
+		}
+
 	}
 	.right {
-		margin: 0;
+		margin: 20px 0;
 	}
 }
 
@@ -335,7 +363,7 @@
 
 
 .site-footer {
-	background: $midnight-blue;
+	background: $accent_color;
 
 	.social-media-list {
 		@include span-columns( 3 );
@@ -349,10 +377,10 @@
 			a {
 				text-decoration: none;
 				color: $header-color;
-				opacity: 0.7;
+				opacity: 0.8;
 
 				&:hover {
-					opacity: 1;
+					color: $accent_color_secondary;
 				}
 			}
 		}
@@ -388,7 +416,31 @@
 			border-radius: 50%;
 			width: 300px;
 			height: 300px;
-			border: solid 10px $background-color;
+			border: solid 10px $accent_color_secondary;
+			background-color: $accent_color;
+			@include background(linear-gradient(rgba($accent_color, .7), $accent_color) left repeat);
+			z-index: 200;
+			position: relative;
+		}
+
+		&:before {
+			content: " ";
+			border-bottom: solid 1px $background-color;
+			border-top: solid 1px $background-color;
+			padding: 20px 10%;
+			margin-right: -8px;
+			border-radius: 20px 0 0 0;
+			background: $background-color;
+		}
+
+		&:after {
+			content: " ";
+			border-bottom: solid 1px $background-color;
+			border-top: solid 1px $background-color;
+			padding: 20px 10%;
+			margin-left: -8px;
+			border-radius: 0 20px 0 0;
+			background: $background-color;
 		}
 	}
 
@@ -430,7 +482,7 @@
 
 
 //////////////////////////////////////////
-              ///global classes//
+          ///global classes//
 /////////////////////////////////////////
 
 
@@ -447,7 +499,7 @@
 
 	&:before {
 		content: "";
-		border-left: solid 5px $emerland;
+		border-left: solid 5px $accent_color_secondary;
 		margin-right: 10px;
 		opacity: 0.8;
 		padding: 20px 0;
@@ -477,37 +529,30 @@ img {
 	margin-bottom: 20px;
 }
 
-.big-icon {
-	font-size: 70px;
-	margin: 20px 0;
-	color: $alizarin;
-	opacity: 0.7;
-	display: block;
-}
+
 
 textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple=multiple] {
 	border-radius: 0;
 	box-shadow: none;
-	background: rgba($midnight-blue, 0.5);
-	@extend .lema;
+	background: rgba($accent_color, 0.5);
+	border-color: $header-color;
 	color: $header-color;
 }
 
 textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
-	border-color: $emerland;
+	border-color: $accent_color_secondary;
 	box-shadow: none;
 }
 
 
 button, input[type="submit"] {
 	border-radius: 0;
-	background-color: $emerland;
-	opacity: 0.7;
+	background-color: rgba($accent_color_secondary, 0.7);
+	@include transition ( all 0.4s ease-in-out );
 }
 
 button:hover, input[type="submit"]:hover {
-	background-color: $emerland;
-	opacity: 1;
+	background-color: $accent_color_secondary;
 }
 
 section {
@@ -515,5 +560,13 @@ section {
 	//@include transition ( all 0.7s ease-in-out );
 }
 
+@include keyframes( blink ) {0% {opacity: 0;} 50% {opacity: 1;} 100% {opacity: 0;}}
 @include keyframes( scaleOut ) {from {@include transform(scale( 0 ));} to {@include transform(scale( 100% ));}}
 
+@include keyframes( iconmove ) {
+	0% {@include transform(rotate( 0deg ));} 
+	25% {@include transform(rotate( 30deg ) scale(1.2,1.2));}
+	50% {@include transform(rotate( 0deg ) scale(1.5,1.5));}
+	75% {@include transform(rotate( -30deg ) scale(1.2,1.2));}  
+	100% {@include transform(rotate( 0deg ));}
+}
