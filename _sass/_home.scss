@@ -4,7 +4,7 @@
 
 
 .header-s {
-	//@include retina-image($header-bg-img, cover);
+	@include retina-image($header-bg-img, cover);
 	height: 700px;
     text-align: center;
     @include transition ( all 0.3s ease-in-out );
@@ -166,7 +166,7 @@
 	//@include retina-image($contact-bg-img, cover);
 
 	.overlay {
-		opacity: 0.9;
+		//opacity: 0.9;
 	}
 
 	.content {
@@ -247,7 +247,7 @@
 
 
 .features {
-	//@include retina-image($features-bg-img, cover);
+	@include retina-image($features-bg-img, cover);
 
 	.overlay {
 		opacity: 0.9;
@@ -339,6 +339,8 @@
 		}
 
 		&:hover {
+			box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.2), 0 15px 35px 5px rgba(0, 0, 0, 0.3);
+
 			img {
 				@include animation( iconmove 0.5s ease-in );
 			}
@@ -363,7 +365,7 @@
 
 
 .site-footer {
-	background: $accent_color;
+	background: darken($accent_color, 10% );
 
 	.social-media-list {
 		@include span-columns( 3 );
@@ -416,31 +418,11 @@
 			border-radius: 50%;
 			width: 300px;
 			height: 300px;
-			border: solid 10px $accent_color_secondary;
+			border: solid 10px $background-color;
 			background-color: $accent_color;
-			@include background(linear-gradient(rgba($accent_color, .7), $accent_color) left repeat);
+			//@include background(linear-gradient(rgba($accent_color, .7), $accent_color) left repeat);
 			z-index: 200;
 			position: relative;
-		}
-
-		&:before {
-			content: " ";
-			border-bottom: solid 1px $background-color;
-			border-top: solid 1px $background-color;
-			padding: 20px 10%;
-			margin-right: -8px;
-			border-radius: 20px 0 0 0;
-			background: $background-color;
-		}
-
-		&:after {
-			content: " ";
-			border-bottom: solid 1px $background-color;
-			border-top: solid 1px $background-color;
-			padding: 20px 10%;
-			margin-left: -8px;
-			border-radius: 0 20px 0 0;
-			background: $background-color;
 		}
 	}
 

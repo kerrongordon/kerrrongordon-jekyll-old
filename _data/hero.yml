@@ -1,6 +1,6 @@
 logoImage: icons/loop.svg 
 
-backgroundImage: header-bg-2.jpg
+backgroundImage: header-bg-2
 
 menu: 
 - {title: 'Home', link: '#home'}

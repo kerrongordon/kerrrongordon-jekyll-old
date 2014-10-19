@@ -22,13 +22,18 @@
          }
     });
 
+    $('.page-load').load('page/load.html');
+
     $('.elements-box .content').on('click', function(){
     	$('.box').css({display: "block"});
     	$('.elements-box').css({display: "none"});
 
-   
+   			/* load in page by there id */
     		var pageId = $(this).attr('id');
     		$('.page-load').load('page/' + pageId + '.html')
+
+    		/* Page Scroll to id tools */
+			$.mPageScroll2id("scrollTo","tools");
    
     });
 
@@ -36,6 +41,8 @@
     	e.preventDefault();
     	$('.box').css({display: "none"});
     	$('.elements-box').css({display: "block"});
+
+    		$('.page-load').load('page/load.html');
     });
 
 

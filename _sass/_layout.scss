@@ -267,12 +267,12 @@ $large: new-breakpoint(max-width 1200px 12);
 
 .element {
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
     border-radius: 2px;
 }
 
 .box {
-    max-width: 800px;
+    max-width: 100%;
     position: relative;
     margin: 0 auto;
     display: none;
@@ -280,7 +280,7 @@ $large: new-breakpoint(max-width 1200px 12);
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
     
     .close {
-        margin: 10px 20px 0;
+        margin: 20px 20px 0;
     }
 
     .page-load {

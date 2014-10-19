@@ -14,7 +14,7 @@ $base-line-height: 1.9;
 $spacing-unit:     60px;
 
 $text-color:       #222;
-$background-color: #e9eaed;
+$background-color: #FCFCFC;
 $brand-color:      #2a7ae2;
 $header-color:     #fff;
 
@@ -53,12 +53,12 @@ $silver: 		#bdc3c7;
 $asbestos: 		#7f8c8d;
 
 
-$accent_color: #546e7a;
+$accent_color: $wet-asphalt;
 $accent_color_secondary: #00bcd4;
 
-$header-bg-img:  '../img/header-bg-2';
-$contact-bg-img: '../img/contact-bg';
-$features-bg-img: '../img/features-bg';
+$header-bg-img:   '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.hero.backgroundImage }}';
+//$contact-bg-img:  '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.contact.backgroundImage }}';
+$features-bg-img: '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.features.backgroundImage }}';
 
 
 
