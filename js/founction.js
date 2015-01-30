@@ -15,11 +15,24 @@
 
 	$(window).bind('scroll', function() {
          if ($(window).scrollTop() > $('.header-s').height() ) {
-             $('.site-header').addClass('menu-top animated fadeInDown');
+             //$('.site-header').addClass('menu-top animated fadeInDown');
          }
          else {
-             $('.site-header').removeClass('menu-top animated fadeInDown');
+             //$('.site-header').removeClass('menu-top animated fadeInDown');
          }
+    });
+
+    $('.menu-icon').click(function() {
+
+        $('.body').toggleClass( "menu-open" );
+    });
+
+    $('#navigation-menu a').click(function() {
+        $('.body').toggleClass( "menu-open" );
+    });
+
+    $('.main-page').click(function() {
+        $('.body').removeClass( "menu-open" );
     });
 
     $('.page-load').load('page/load.html');
