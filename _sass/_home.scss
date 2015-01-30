@@ -34,7 +34,7 @@
 
 .menu-icon {
 	width: 60px;
-	margin: 37px -320px;
+	margin: 37px -55px;
 	float: left;
 	@include transition(all 0.3s ease-in-out);
 }
@@ -150,7 +150,9 @@
 	z-index: 1;
 
 	.content {
-		@include span-columns( 8 );
+		text-align: center;
+		font-size: 1.4rem;
+		@include span-columns( 12 );
 		@include transition ( all 0.7s ease-in-out );
 
 		@include media($laptop) {
@@ -160,56 +162,29 @@
 		@include media($mobile) {
 			@include span-columns( 12 );
 		}
+
+		.lema {
+			margin: 0 auto 60px;
+			max-width: 800px;
+		}
 	}
 
-	.sidebar {
-		@include span-columns( 4 );
-		@include transition ( all 0.7s ease-in-out );
+	.bar-l {
+		@include span-columns( 6 );
+		padding: 30px 50px;
+		font-size: 1rem;
+		text-align: left;
 
-		ul {
-			margin: 0;
-		}
-
-		li {
-			padding: 15px 0;
-
-			&:before {
-				counter-increment: section;     
-  				content: "" counter(section) " ";
-  				float: left;
-  				padding: 15px 25px;
-  				margin: 0px 20px 50px;
-  				color: $header-color;
-  				background: $accent_color_secondary; 
-  				opacity: 0.8;
-			}
-		}
-
-		h3 {
-			text-align: left;
-			margin: 15px 20px;
-			text-transform: uppercase;
-			font-size: 25px;
-			font-weight: 700;
-
-			&:after {
-				content: "";
-				border-bottom: solid 1px $text-color;
-				display: block;
-				padding: 5px;
-			}
-		}
-
-		h4 {
-			text-transform: uppercase;
-			margin-bottom: 15px;
-			font-size: 17px;
-			font-weight: bold;
-		}
-
-		@include media($laptop) {
+		@include media($mobile) {
 			@include span-columns( 12 );
 		}
+	}
+
+	.bar-r {
+		@include span-columns( 6 );
+		padding: 30px 50px;
+		font-size: 1rem;
+		text-align: left;
 
 		@include media($mobile) {
 			@include span-columns( 12 );
@@ -612,4 +587,36 @@ section {
 	50% {@include transform(rotate( 0deg ) scale(1.5,1.5));}
 	75% {@include transform(rotate( -30deg ) scale(1.2,1.2));}  
 	100% {@include transform(rotate( 0deg ));}
+}
+
+
+.prog {
+   background: #ccc;
+   height: .3em;
+   width: 100%;
+   margin: 15px 0;
+  }
+
+.prog-bar {
+  height: 100%;
+  display: block;
+  transition: all 1s ease-in-out;
+}
+
+$current-color: #00bcd4;
+
+
+.color-3 { 
+    background: -webkit-linear-gradient(#fff -170%, $current-color 100%);
+    background: -moz-linear-gradient(#fff -170%, $current-color 100%);
+    background: -o-linear-gradient(#fff -170%, $current-color 100%);
+    background: linear-gradient(#fff -170%, $current-color 100%);
+}
+
+$bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%;
+@each $current-bar in $bar-list {
+    $i: index($bar-list, $current-bar);
+    .prog-w-#{$i*5} { 
+        width: $current-bar;
+    }
 }

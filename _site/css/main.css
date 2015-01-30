@@ -802,7 +802,7 @@ pre {
 
 .menu-icon {
   width: 60px;
-  margin: 37px -320px;
+  margin: 37px -55px;
   float: left;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -878,10 +878,12 @@ pre {
 .main-infor {
   z-index: 1; }
   .main-infor .content {
+    text-align: center;
+    font-size: 1.4rem;
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 65.88078%;
+    width: 100%;
     -webkit-transition: all 0.7s ease-in-out;
     -moz-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out; }
@@ -903,60 +905,44 @@ pre {
         width: 100%; }
         .main-infor .content:last-child {
           margin-right: 0; } }
-  .main-infor .sidebar {
+    .main-infor .content .lema, .main-infor .content .copyr {
+      margin: 0 auto 60px;
+      max-width: 800px; }
+  .main-infor .bar-l {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
-    -webkit-transition: all 0.7s ease-in-out;
-    -moz-transition: all 0.7s ease-in-out;
-    transition: all 0.7s ease-in-out; }
-    .main-infor .sidebar:last-child {
+    width: 48.82117%;
+    padding: 30px 50px;
+    font-size: 1rem;
+    text-align: left; }
+    .main-infor .bar-l:last-child {
       margin-right: 0; }
-    .main-infor .sidebar ul {
-      margin: 0; }
-    .main-infor .sidebar li {
-      padding: 15px 0; }
-      .main-infor .sidebar li:before {
-        counter-increment: section;
-        content: "" counter(section) " ";
-        float: left;
-        padding: 15px 25px;
-        margin: 0px 20px 50px;
-        color: #fff;
-        background: #00bcd4;
-        opacity: 0.8; }
-    .main-infor .sidebar h3 {
-      text-align: left;
-      margin: 15px 20px;
-      text-transform: uppercase;
-      font-size: 25px;
-      font-weight: 700; }
-      .main-infor .sidebar h3:after {
-        content: "";
-        border-bottom: solid 1px #222;
-        display: block;
-        padding: 5px; }
-    .main-infor .sidebar h4 {
-      text-transform: uppercase;
-      margin-bottom: 15px;
-      font-size: 17px;
-      font-weight: bold; }
-    @media screen and (max-width: 900px) {
-      .main-infor .sidebar {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 100%; }
-        .main-infor .sidebar:last-child {
-          margin-right: 0; } }
     @media screen and (max-width: 538px) {
-      .main-infor .sidebar {
+      .main-infor .bar-l {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%; }
-        .main-infor .sidebar:last-child {
+        .main-infor .bar-l:last-child {
+          margin-right: 0; } }
+  .main-infor .bar-r {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    padding: 30px 50px;
+    font-size: 1rem;
+    text-align: left; }
+    .main-infor .bar-r:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 538px) {
+      .main-infor .bar-r {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .main-infor .bar-r:last-child {
           margin-right: 0; } }
 
 .contact .content {
@@ -1408,6 +1394,83 @@ section {
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); } }
+.prog {
+  background: #ccc;
+  height: .3em;
+  width: 100%;
+  margin: 15px 0; }
+
+.prog-bar {
+  height: 100%;
+  display: block;
+  transition: all 1s ease-in-out; }
+
+.color-3 {
+  background: -webkit-linear-gradient(#fff -170%, #00bcd4 100%);
+  background: -moz-linear-gradient(#fff -170%, #00bcd4 100%);
+  background: -o-linear-gradient(#fff -170%, #00bcd4 100%);
+  background: linear-gradient(#fff -170%, #00bcd4 100%); }
+
+.prog-w-5 {
+  width: 5%; }
+
+.prog-w-10 {
+  width: 10%; }
+
+.prog-w-15 {
+  width: 15%; }
+
+.prog-w-20 {
+  width: 20%; }
+
+.prog-w-25 {
+  width: 25%; }
+
+.prog-w-30 {
+  width: 30%; }
+
+.prog-w-35 {
+  width: 35%; }
+
+.prog-w-40 {
+  width: 40%; }
+
+.prog-w-45 {
+  width: 45%; }
+
+.prog-w-50 {
+  width: 50%; }
+
+.prog-w-55 {
+  width: 55%; }
+
+.prog-w-60 {
+  width: 60%; }
+
+.prog-w-65 {
+  width: 65%; }
+
+.prog-w-70 {
+  width: 70%; }
+
+.prog-w-75 {
+  width: 75%; }
+
+.prog-w-80 {
+  width: 80%; }
+
+.prog-w-85 {
+  width: 85%; }
+
+.prog-w-90 {
+  width: 90%; }
+
+.prog-w-95 {
+  width: 95%; }
+
+.prog-w-100 {
+  width: 100%; }
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT

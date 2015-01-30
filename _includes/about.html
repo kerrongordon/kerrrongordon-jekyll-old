@@ -18,24 +18,53 @@
 
           <p class="lema">{{ site.data.about.paragraph-1 }}</p>
 
-          <blockquote class="lema">{{ site.data.about.paragraph-2 }}</blockquote>
+          <div class="bar-l">
+            <span>Communication</span>
+            <div class="prog">
+              <span class="prog-bar color-3 prog-w-90"></span>
+            </div>
 
-          <p class="lema">{{ site.data.about.paragraph-3 }}</p>
+            <span>Organization</span>
+            <div class="prog">
+              <span class="prog-bar color-3 prog-w-70"></span>
+            </div>
 
-          <p class="lema">{{ site.data.about.paragraph-4 }}</p>
+            <span>Learning</span>
+            <div class="prog">
+              <span class="prog-bar color-3 prog-w-100"></span>
+            </div>
+
+            <span>Teaching</span>
+            <div class="prog">
+              <span class="prog-bar color-3 prog-w-65"></span>
+            </div>
+          </div>
+
+          <div class="bar-r">
+            <span>Planning</span>
+            <div class="prog">
+              <span class="prog-bar color-3 prog-w-75"></span>
+            </div>
+
+            <span>Visual Design</span>
+            <div class="prog">
+              <span class="prog-bar color-3 prog-w-50"></span>
+            </div>
+
+            <span>UX Design</span>
+            <div class="prog">
+              <span class="prog-bar color-3 prog-w-80"></span>
+            </div>
+
+            <span>Programming</span>
+            <div class="prog">
+              <span class="prog-bar color-3 prog-w-65"></span>
+            </div>
+          </div>
+
         </article>
 
-        <aside class="sidebar wow zoomInRight">
-          <h3>sidebar</h3>
-          <ul>
-            {% for list in site.data.about.list %}
-            <li>
-              <h4>{{ list.title }}</h4>
-              <p class="lema">{{ list.content }}</p>
-            </li>
-            {% endfor %}
-          </ul>
-        </aside>
+        
       </div>
     </div>
 </section>
