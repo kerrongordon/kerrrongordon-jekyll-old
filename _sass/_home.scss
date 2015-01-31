@@ -164,7 +164,7 @@
 		}
 
 		.lema {
-			margin: 0 auto 60px;
+			margin: 60px auto;
 			max-width: 800px;
 		}
 	}
@@ -172,7 +172,7 @@
 	.bar-l {
 		@include span-columns( 6 );
 		padding: 30px 50px;
-		font-size: 1rem;
+		font-size: 0.7em;
 		text-align: left;
 
 		@include media($mobile) {
@@ -183,7 +183,7 @@
 	.bar-r {
 		@include span-columns( 6 );
 		padding: 30px 50px;
-		font-size: 1rem;
+		font-size: 0.7em;
 		text-align: left;
 
 		@include media($mobile) {
@@ -619,4 +619,34 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
     .prog-w-#{$i*5} { 
         width: $current-bar;
     }
+}
+
+
+//////////////////////////////////////////
+          ///loadin page//
+/////////////////////////////////////////
+
+
+.cont-img {
+	@include span-columns( 6 );
+
+	@include media($laptop) {
+		@include span-columns( 4 );
+	}
+
+	@include media($mobile) {
+		@include span-columns( 12 );
+	}
+}
+
+.cont-infor {
+	@include span-columns( 6 );
+
+	@include media($laptop) {
+		@include span-columns( 8);
+	}
+
+	@include media($mobile) {
+		@include span-columns( 12 );
+	}
 }
