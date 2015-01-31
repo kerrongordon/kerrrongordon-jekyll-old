@@ -1,9 +1,9 @@
 <section id="tools" class="main-work">
   <div class="page-content">
       <div class="wrapper">
-        <h2 class="section-title wow fadeInLeft">{{ site.data.tools.title }}</h2>
+        <h2 class="section-title">{{ site.data.tools.title }}</h2>
 
-        <div class="box animated zoomIn">
+        <div class="box">
           <button class="close">X</button>
           <div class="page-load animated fadeIn"></div>
         </div>
@@ -12,7 +12,7 @@
         {% for article in site.data.tools.article %}
         <article id="{{ article.id }}" class="content tools-infor {{ article.class }} wow {{ article.ani }}">
           <img src="{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.tools.icon_location }}/{{ article.icon }}">
-          <h4>{{ article.title }}</h4>
+          <h4 class="tab-title">{{ article.title }}</h4>
           <p class="lema">{{ article.content }}</p>
         </article>
         {% endfor %}

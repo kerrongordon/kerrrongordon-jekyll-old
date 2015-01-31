@@ -2,6 +2,7 @@
 	width: 100%;
 	height: 100%;
 	position: relative;
+	overflow-x: hidden;
 }
 
 .menu {
@@ -346,6 +347,10 @@
 .main-work {
 	@include transition ( all 0.5s ease-in-out );
 
+	.wrapper {
+		overflow: hidden;
+	}
+
 	.content {
 		@include span-columns( 3 );
 		text-align: center;
@@ -392,6 +397,10 @@
 	.right {
 		margin: 20px 0;
 	}
+}
+
+.tools-infor {
+	@include transition(all 0.5s ease-in-out);
 }
 
 
