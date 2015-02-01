@@ -22,17 +22,20 @@
          }
     });
 
-    $('.menu-icon').click(function() {
+    $('#nav-toggle').click(function() {
 
         $('.body').toggleClass( "menu-open" );
+        $('#nav-toggle').toggleClass( "active" );
     });
 
     $('#navigation-menu a').click(function() {
         $('.body').toggleClass( "menu-open" );
+        $('#nav-toggle').removeClass( "active" );
     });
 
     $('.main-page').click(function() {
         $('.body').removeClass( "menu-open" );
+        $('#nav-toggle').removeClass( "active" );
     });
 
 

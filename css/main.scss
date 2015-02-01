@@ -54,7 +54,7 @@ $asbestos: 		#7f8c8d;
 
 
 $accent_color: $wet-asphalt;
-$accent_color_secondary: #00bcd4;
+$accent_color_secondary: $peter-river;
 
 $header-bg-img:   '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.hero.backgroundImage }}';
 //$contact-bg-img:  '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.contact.backgroundImage }}';

@@ -8,7 +8,7 @@
 .menu {
 	width: 300px;
 	height: 100%;
-	background: #2b2b2b;
+	background: $wet-asphalt;
 	position: fixed;
 	display: block;
 	z-index: 9999;
@@ -526,7 +526,7 @@
 
 	&:before {
 		content: "";
-		border-left: solid 5px $accent_color_secondary;
+		border-left: solid 5px $peter-river;
 		margin-right: 10px;
 		opacity: 0.8;
 		padding: 20px 0;
@@ -601,7 +601,7 @@ section {
 
 .prog {
    background: #ccc;
-   height: .3em;
+   height: .35em;
    width: 100%;
    margin: 15px 0;
   }
@@ -612,14 +612,9 @@ section {
   transition: all 1s ease-in-out;
 }
 
-$current-color: #00bcd4;
-
 
 .color-3 { 
-    background: -webkit-linear-gradient(#fff -170%, $current-color 100%);
-    background: -moz-linear-gradient(#fff -170%, $current-color 100%);
-    background: -o-linear-gradient(#fff -170%, $current-color 100%);
-    background: linear-gradient(#fff -170%, $current-color 100%);
+    background: $peter-river;
 }
 
 $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%;
@@ -628,6 +623,44 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
     .prog-w-#{$i*5} { 
         width: $current-bar;
     }
+}
+
+//http://www.elijahmanor.com/css-animated-hamburger-icon/
+
+
+#nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; margin: 37px -50px;
+position: fixed; }
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: $peter-river;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px; 
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
 }
 
 
