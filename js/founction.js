@@ -47,12 +47,12 @@
         $('.box').css({left: "0%"});
         $('.elements-box').css({left: "-130%"});
 
-        $('.tools-infor')
-          .delay(800)
-          .queue( function(next){ 
-            $(this).css('height','0'); 
-            next(); 
-          });
+        //$('.box')
+          //.delay(800)
+          //.queue( function(next){ 
+            //$(this).css('position','relative'); 
+            //next(); 
+          //});
 
    			/* load in page by there id */
     		var pageId = $(this).attr('id');
@@ -68,7 +68,7 @@
 
         $('.box').css({left: "130%"});
         $('.elements-box').css({left: "0%"});
-        $('.tools-infor').css({height: "auto"});
+        //$('.box').css({position: "absolute"});
 
     		$('.page-load').load('page/load.html');
     });

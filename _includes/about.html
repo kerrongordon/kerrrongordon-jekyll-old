@@ -1,70 +1,30 @@
-<section id="main-face" class="main-user">
-  <div class="page-content">
-      <div class="wrapper">
-        
-        <div id="about-face" class="user-img wow zoomInDown">
-          <img src="{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.about.face_image }}">
-        </div>
-
-      </div>
-    </div>
-</section>
+{% include face.html %}
 
 <section id="about" class="main-infor">
   <div class="page-content">
       <div class="wrapper">
         
-        <article class="content wow zoomInLeft">
+        <article class="content">
 
-          <p class="lema">{{ site.data.about.paragraph-1 }}</p>
+          <p class="lema">{{ site.data.about.paragraph }}</p>
 
-          <div class="bar-l">
-            <span>Communication</span>
-            <div class="prog">
-              <span class="prog-bar color-3 prog-w-90"></span>
-            </div>
+          <div class="skill-block">
 
-            <span>Organization</span>
-            <div class="prog">
-              <span class="prog-bar color-3 prog-w-70"></span>
-            </div>
+          {% for skills in site.data.about.skills %}
 
-            <span>Learning</span>
-            <div class="prog">
-              <span class="prog-bar color-3 prog-w-100"></span>
-            </div>
-
-            <span>Teaching</span>
-            <div class="prog">
-              <span class="prog-bar color-3 prog-w-65"></span>
+          <div class="skill-box">
+            <div class="skill-label">{{ skills.skill }}</div>
+            <div class="skill">
+              <span class="skill-bar skill-level-{{ skills.level }}"></span>
             </div>
           </div>
+          
+          {% endfor %}
 
-          <div class="bar-r">
-            <span>Planning</span>
-            <div class="prog">
-              <span class="prog-bar color-3 prog-w-75"></span>
-            </div>
-
-            <span>Visual Design</span>
-            <div class="prog">
-              <span class="prog-bar color-3 prog-w-50"></span>
-            </div>
-
-            <span>UX Design</span>
-            <div class="prog">
-              <span class="prog-bar color-3 prog-w-80"></span>
-            </div>
-
-            <span>Programming</span>
-            <div class="prog">
-              <span class="prog-bar color-3 prog-w-65"></span>
-            </div>
           </div>
 
         </article>
 
-        
       </div>
     </div>
 </section>

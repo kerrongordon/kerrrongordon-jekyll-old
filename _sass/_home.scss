@@ -15,6 +15,10 @@
 	right: -300px;
 	@include transition(all 0.3s ease-in-out);
 
+	@include media($mobile) {
+		overflow: scroll;
+	}
+
 	a {
 		display: block;
 		text-align: center;
@@ -166,12 +170,13 @@
 
 		.lema {
 			margin: 60px auto;
-			max-width: 800px;
+			max-width: 700px;
 		}
 	}
 
 	.bar-l {
 		@include span-columns( 6 );
+		font-family: "Cinzel Decorative",cursive;
 		padding: 30px 50px;
 		font-size: 0.7em;
 		text-align: left;
@@ -183,6 +188,7 @@
 
 	.bar-r {
 		@include span-columns( 6 );
+		font-family: "Cinzel Decorative",cursive;
 		padding: 30px 50px;
 		font-size: 0.7em;
 		text-align: left;
@@ -191,6 +197,52 @@
 			@include span-columns( 12 );
 		}
 	}
+}
+
+.skill-block {
+	max-width: 900px;
+	margin: 10px auto;
+	@include clearfix;
+
+	@include media($mobile) {
+			
+	}
+}
+
+.skill-box {
+	width: 50%;
+	float: left;
+	margin: 0px auto;
+	padding: 0px 40px;
+	font-size: 0.7em;
+	text-align: left;
+	font-family: "Cinzel Decorative",cursive;
+
+	@include media($mobile) {
+		width: 100%;		
+	}
+}
+
+.skill {
+   background: #ccc;
+   height: .35em;
+   width: 100%;
+   margin: 15px 0;
+  }
+
+.skill-bar {
+  height: 100%;
+  display: block;
+  background: $peter-river;
+  transition: all 1s ease-in-out;
+}
+
+$bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%;
+@each $current-bar in $bar-list {
+    $i: index($bar-list, $current-bar);
+    .skill-level-#{$i*5} { 
+        width: $current-bar;
+    }
 }
 
 
@@ -403,6 +455,13 @@
 	@include transition(all 0.5s ease-in-out);
 }
 
+.pro {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	@include clearfix;
+}
+
 
 //////////////////////////////////////////
               ///site-footer//
@@ -599,31 +658,6 @@ section {
 }
 
 
-.prog {
-   background: #ccc;
-   height: .35em;
-   width: 100%;
-   margin: 15px 0;
-  }
-
-.prog-bar {
-  height: 100%;
-  display: block;
-  transition: all 1s ease-in-out;
-}
-
-
-.color-3 { 
-    background: $peter-river;
-}
-
-$bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%;
-@each $current-bar in $bar-list {
-    $i: index($bar-list, $current-bar);
-    .prog-w-#{$i*5} { 
-        width: $current-bar;
-    }
-}
 
 //http://www.elijahmanor.com/css-animated-hamburger-icon/
 

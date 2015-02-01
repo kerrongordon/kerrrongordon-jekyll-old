@@ -2,17 +2,15 @@ face_image: face.png
 
 title: About
 
-paragraph-1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic!
-
-paragraph-2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum laborum nemo error vero officiis voluptatem laudantium expedita temporibus amet perferendis magni voluptatum molestias, distinctio soluta nihil, ea officia est ipsa.
-
-paragraph-3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic!
-
-paragraph-4: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum laborum nemo error vero officiis voluptatem laudantium expedita temporibus amet perferendis magni voluptatum molestias, distinctio soluta nihil, ea officia est ipsa.
+paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non natus amet quos! Autem optio labore, non eaque enim aliquam perspiciatis esse quidem ipsum, omnis sequi quaerat, iure vel hic!
 
 
-list:
-- {title: 'dolor sit amet', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum'}
-- {title: 'dolor sit amet', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum'}
-- {title: 'dolor sit amet', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum'}
-
+skills: 
+- {skill: 'Communication', level: '90'}
+- {skill: 'Organization', level: '70'}
+- {skill: 'Learning', level: '100'}
+- {skill: 'Teaching', level: '65'}
+- {skill: 'Planning', level: '75'}
+- {skill: 'Visual Design', level: '50'}
+- {skill: 'UX Design', level: '80'}
+- {skill: 'Programming', level: '65'}
