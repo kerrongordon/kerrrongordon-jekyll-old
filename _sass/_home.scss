@@ -456,10 +456,10 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
 }
 
 .pro {
-	width: 100%;
-	height: 100%;
+	//width: 100%;
+	//height: 100%;
 	position: relative;
-	@include clearfix;
+	//@include clearfix;
 }
 
 

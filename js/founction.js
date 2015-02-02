@@ -43,16 +43,20 @@
     $('.page-load').load('page/load.html');
 
     $('.elements-box .content').on('click', function(){
+    
+        $('.elements-box').addClass('animated fadeOutLeft')
+          .delay(300)
+          .queue( function(next){ 
+            $(this).removeClass('animated fadeOutLeft').hide(); 
+            next(); 
+          });
 
-        $('.box').css({left: "0%"});
-        $('.elements-box').css({left: "-130%"});
-
-        //$('.box')
-          //.delay(800)
-          //.queue( function(next){ 
-            //$(this).css('position','relative'); 
-            //next(); 
-          //});
+          $('.box').addClass('animated zoomIn')
+          .delay(300)
+          .queue( function(next){ 
+            $(this).removeClass('animated zoomIn').show(); 
+            next(); 
+          });
 
    			/* load in page by there id */
     		var pageId = $(this).attr('id');
@@ -66,11 +70,29 @@
     $('.close').on('click', function(e){
     	e.preventDefault();
 
-        $('.box').css({left: "130%"});
-        $('.elements-box').css({left: "0%"});
-        //$('.box').css({position: "absolute"});
+        $('.elements-box').show().addClass('animated fadeInLeft')
+          .delay(300)
+          .queue( function(next){ 
+            $(this).removeClass('animated fadeInLeft'); 
+            next(); 
+          });
 
-    		$('.page-load').load('page/load.html');
+          $('.box').addClass('animated fadeOutRight').hide()
+          .delay(300)
+          .queue( function(next){ 
+            $(this).removeClass('animated fadeOutRight'); 
+            next(); 
+          });
+       
+
+    		//$('.page-load').load('page/load.html');
+
+        $('.page-load')
+          .delay(300)
+          .queue( function(next){ 
+            $(this).load('page/load.html'); 
+            next(); 
+          });
     });
 
 
