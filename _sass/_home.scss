@@ -69,80 +69,80 @@
 /////////////////////////////////////////
 
 
-.header-s {
-	@include retina-image($header-bg-img, cover);
-	height: 700px;
-    text-align: center;
-    @include transition ( all 0.3s ease-in-out );
-   
-
-    @include media($laptop) {
-		height: 500px;
-	}
-
-	@include media($mobile) {
-		height: 300px;
-	} 
-
-	.site-header {
-		z-index: 999;
-	}
-
-	.header-line {
-		line-height: 35em;
-
-		@include media($laptop) {
-			line-height: 15em;
-		}
-
-		@include media($mobile) {
-			line-height: 5em;
-		}
-	}
-
-	.site-name {
-		vertical-align: middle;
-		display: inline-block;
-		position: relative;
-		z-index: 2;
-
-		h1 {
-			font-family: 'Cinzel Decorative', cursive;
-			font-size: 5rem;
-
-			span {
-
-				&:after {
-					content: "";
-					border: solid 1px $header-color;
-					margin: 0px 5px;
-					box-shadow: 0 0 5px;
-					@include animation( blink 1.0s infinite ease-in );
-				}
-			}
-
-		
-
-		@include media($laptop) {
-			font-size: 3rem;
-		}
-
-		@include media($mobile) {
-			font-size: 2rem;
-		}
-
-		}
-	}
-
-	@include media($laptop) {
-		height: 500px;
-	}
-
-	@include media($mobile) {
-		height: 300px;
-	}
-
-}
+// .header-s {
+// 	@include retina-image($header-bg-img, cover);
+// 	height: 700px;
+//     text-align: center;
+//     @include transition ( all 0.3s ease-in-out );
+//
+//
+//     @include media($laptop) {
+// 		height: 500px;
+// 	}
+//
+// 	@include media($mobile) {
+// 		height: 300px;
+// 	}
+//
+// 	.site-header {
+// 		z-index: 999;
+// 	}
+//
+// 	.header-line {
+// 		line-height: 35em;
+//
+// 		@include media($laptop) {
+// 			line-height: 15em;
+// 		}
+//
+// 		@include media($mobile) {
+// 			line-height: 5em;
+// 		}
+// 	}
+//
+// 	.site-name {
+// 		vertical-align: middle;
+// 		display: inline-block;
+// 		position: relative;
+// 		z-index: 2;
+//
+// 		h1 {
+// 			font-family: 'Cinzel Decorative', cursive;
+// 			font-size: 5rem;
+//
+// 			span {
+//
+// 				&:after {
+// 					content: "";
+// 					border: solid 1px $header-color;
+// 					margin: 0px 5px;
+// 					box-shadow: 0 0 5px;
+// 					@include animation( blink 1.0s infinite ease-in );
+// 				}
+// 			}
+//
+//
+//
+// 		@include media($laptop) {
+// 			font-size: 3rem;
+// 		}
+//
+// 		@include media($mobile) {
+// 			font-size: 2rem;
+// 		}
+//
+// 		}
+// 	}
+//
+// 	@include media($laptop) {
+// 		height: 500px;
+// 	}
+//
+// 	@include media($mobile) {
+// 		height: 300px;
+// 	}
+//
+// }
 
 
 //////////////////////////////////////////
@@ -205,7 +205,7 @@
 	@include clearfix;
 
 	@include media($mobile) {
-			
+
 	}
 }
 
@@ -219,7 +219,7 @@
 	font-family: "Cinzel Decorative",cursive;
 
 	@include media($mobile) {
-		width: 100%;		
+		width: 100%;
 	}
 }
 
@@ -240,7 +240,7 @@
 $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%;
 @each $current-bar in $bar-list {
     $i: index($bar-list, $current-bar);
-    .skill-level-#{$i*5} { 
+    .skill-level-#{$i*5} {
         width: $current-bar;
     }
 }
@@ -349,7 +349,7 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
 	img {
 		border: solid 3px #fff;
 	}
-	
+
 	.full-w {
 		@include shift(0);
 
@@ -385,7 +385,7 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
 		@include media($mobile) {
 			@include span-columns( 12 );
 		}
-		
+
 	}
 
 }
@@ -424,7 +424,7 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
 
 		@include media($laptop) {
 			@include span-columns( 6 );
-			margin-right: 0; 
+			margin-right: 0;
 		}
 
 		@include media($mobile) {
@@ -562,7 +562,7 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
 		}
 	}
 
-	
+
 }
 
 
@@ -601,7 +601,7 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
 }
 
 .lema {
-	
+
 }
 
 .copyr {
@@ -650,10 +650,10 @@ section {
 @include keyframes( scaleOut ) {from {@include transform(scale( 0 ));} to {@include transform(scale( 100% ));}}
 
 @include keyframes( iconmove ) {
-	0% {@include transform(rotate( 0deg ));} 
+	0% {@include transform(rotate( 0deg ));}
 	25% {@include transform(rotate( 30deg ) scale(1.2,1.2));}
 	50% {@include transform(rotate( 0deg ) scale(1.5,1.5));}
-	75% {@include transform(rotate( -30deg ) scale(1.2,1.2));}  
+	75% {@include transform(rotate( -30deg ) scale(1.2,1.2));}
 	100% {@include transform(rotate( 0deg ));}
 }
 
@@ -675,7 +675,7 @@ position: fixed; }
   content: '';
 }
 #nav-toggle span:before {
-  top: -10px; 
+  top: -10px;
 }
 #nav-toggle span:after {
   bottom: -10px;

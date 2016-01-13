@@ -14,6 +14,7 @@ $base-line-height: 1.9;
 $spacing-unit:     60px;
 
 $text-color:       #222;
+$text-light-color: #fff;
 $background-color: #FCFCFC;
 $brand-color:      #2a7ae2;
 $header-color:     #fff;
@@ -83,8 +84,10 @@ $features-bg-img: '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.fea
 		"base/base",
 		"neat/neat",
         "base",
+        "mixins",
         "layout",
         "syntax-highlighting",
         "home",
+        "_section/section",
         "animate"
 ;

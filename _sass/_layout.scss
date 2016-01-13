@@ -1,5 +1,6 @@
 $mobile: new-breakpoint(max-width 538px 12);
 $laptop: new-breakpoint(max-width 900px 12);
+$tablet: new-breakpoint(max-width 900px 12);
 $large: new-breakpoint(max-width 1200px 12);
 
 /**
@@ -157,7 +158,7 @@ $large: new-breakpoint(max-width 1200px 12);
     //left: 130%;
     @include clearfix;
     @include transition(all 0.3s ease-in-out);
-    
+
     .close {
         margin: 20px 20px 0;
     }
@@ -172,6 +173,6 @@ $large: new-breakpoint(max-width 1200px 12);
     }
 }
 
-#navigation-menu a.mPS2id-highlight{ 
-    background: #ff0; 
+#navigation-menu a.mPS2id-highlight{
+    background: #ff0;
 }
