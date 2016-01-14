@@ -500,70 +500,70 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
 /////////////////////////////////////////
 
 
-.main-user {
-	overflow: inherit;
-	padding: 0;
-	height: 200px;
-
-	.page-content {
-		padding: 0;
-	}
-
-	.wrapper {
-		padding: 0;
-	}
-
-	.user-img {
-		text-align: center;
-		margin-top: -150px;
-		z-index: 444;
-
-		img {
-			border-radius: 50%;
-			width: 300px;
-			height: 300px;
-			border: solid 10px $background-color;
-			background-color: $accent_color;
-			//@include background(linear-gradient(rgba($accent_color, .7), $accent_color) left repeat);
-			z-index: 200;
-			position: relative;
-		}
-	}
-
-	@include media($laptop) {
-		height: 150px;
-
-		.user-img {
-			text-align: center;
-			margin-top: -100px;
-			z-index: 444;
-
-			img {
-				border-radius: 50%;
-				width: 200px;
-				height: 200px;
-			}
-		}
-	}
-
-	@include media($mobile) {
-		height: 80px;
-
-		.user-img {
-			text-align: center;
-			margin-top: -70px;
-			z-index: 444;
-
-			img {
-				border-radius: 50%;
-				width: 150px;
-				height: 150px;
-			}
-		}
-	}
-
-
-}
+// .main-user {
+// 	overflow: inherit;
+// 	padding: 0;
+// 	height: 200px;
+//
+// 	.page-content {
+// 		padding: 0;
+// 	}
+//
+// 	.wrapper {
+// 		padding: 0;
+// 	}
+//
+// 	.user-img {
+// 		text-align: center;
+// 		margin-top: -150px;
+// 		z-index: 444;
+//
+// 		img {
+// 			border-radius: 50%;
+// 			width: 300px;
+// 			height: 300px;
+// 			border: solid 10px $background-color;
+// 			background-color: $accent_color;
+// 			//@include background(linear-gradient(rgba($accent_color, .7), $accent_color) left repeat);
+// 			z-index: 200;
+// 			position: relative;
+// 		}
+// 	}
+//
+// 	@include media($laptop) {
+// 		height: 150px;
+//
+// 		.user-img {
+// 			text-align: center;
+// 			margin-top: -100px;
+// 			z-index: 444;
+//
+// 			img {
+// 				border-radius: 50%;
+// 				width: 200px;
+// 				height: 200px;
+// 			}
+// 		}
+// 	}
+//
+// 	@include media($mobile) {
+// 		height: 80px;
+//
+// 		.user-img {
+// 			text-align: center;
+// 			margin-top: -70px;
+// 			z-index: 444;
+//
+// 			img {
+// 				border-radius: 50%;
+// 				width: 150px;
+// 				height: 150px;
+// 			}
+// 		}
+// 	}
+//
+//
+// }
 
 
 

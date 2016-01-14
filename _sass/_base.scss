@@ -3,7 +3,7 @@
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+dl, dd, ol, ul, figure, img {
     margin: 0;
     padding: 0;
 }
@@ -153,13 +153,13 @@ pre {
  * Wrapper
  */
 .wrapper {
-    @include outer-container; 
+    @include outer-container;
     @include pad( 30px default );
     @extend %clearfix;
     @include transition ( all 0.3s ease-in-out );
 
     @include media-query($on-laptop) {
-        
+
     }
 }
 
@@ -223,7 +223,7 @@ pre {
     background: $accent_color;
     @include position( absolute, 0 0 0 0 );
     opacity: 0.7;
-    z-index: 1; 
+    z-index: 1;
 }
 
 
@@ -235,11 +235,11 @@ pre {
  */
 /* 1 */
 .ie9 img[src*=".svg"] {
-  width: 100%; 
+  width: 100%;
 }
 /* 2 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   img[src*=".svg"] {
-    width: 100%; 
+    width: 100%;
   }
 }

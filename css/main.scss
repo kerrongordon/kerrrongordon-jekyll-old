@@ -53,9 +53,11 @@ $pomegranate: 	#c0392b;
 $silver: 		#bdc3c7;
 $asbestos: 		#7f8c8d;
 
-
+$accent_1: #039BE5;
 $accent_color: $wet-asphalt;
 $accent_color_secondary: $peter-river;
+
+$animate: all 0.3s ease-in-out;
 
 $header-bg-img:   '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.hero.backgroundImage }}';
 //$contact-bg-img:  '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.contact.backgroundImage }}';
