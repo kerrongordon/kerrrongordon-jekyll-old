@@ -1,6 +1,7 @@
 $mobile: new-breakpoint(max-width 538px 12);
+$tablet: new-breakpoint(max-width 735px 12);
 $laptop: new-breakpoint(max-width 900px 12);
-$tablet: new-breakpoint(max-width 900px 12);
+$Llaptop: new-breakpoint(max-width 1057px 12);
 $large: new-breakpoint(max-width 1200px 12);
 
 /**

@@ -1,0 +1,24 @@
+<section id="projects" class="projects">
+  <div class="projects__full">
+    <div class="projects__primary">
+      <div class="wrapper">
+        <h2 class="section-title">{{ site.data.tools.title }}</h2>
+        <div class="projects__items">
+          {% for article in site.data.tools.article %}
+          <article id="{{ article.id }}" class="projects__item wow {{ article.ani }}">
+            <img class="projects__item__image" src="{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.tools.img_location }}/{{ article.img }}">
+            <h4 class="projects__item__title">{{ article.title }}</h4>
+            <p class="projects__item__content lema">{{ article.content }}</p>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="projects__secondary">
+      <div class="wrapper">
+        <button class="close">X</button>
+        <div id="loadContent"></div>
+      </div>
+    </div>
+  </div>
+</section>

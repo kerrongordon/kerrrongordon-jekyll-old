@@ -1,0 +1,61 @@
+.projects
+  width: 100%
+  margin: 60px 0
+  position: relative
+  overflow: hidden
+
+  +e('full')
+    width: 200%
+    +transition(all 0.5s ease-in-out)
+    +clearfix
+
+  +e('primary')
+    width: 50%
+    float: left
+
+  +e('secondary')
+    width: 50%
+    float: left
+
+  +e('items')
+    +align-items(stretch)
+    +display(flex)
+    +flex-direction(row)
+    +justify-content(center)
+    +flex-wrap(wrap)
+    +transition(all 0.5s ease-in-out)
+
+  +e('item')
+    width: 22%
+    text-align: center
+    margin: 20px 15px
+    background-color: #fff
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.37)
+    +transition(all 0.3s ease-in-out)
+
+    +e('title')
+      font-size: 17px
+      margin-bottom: 5px
+      text-transform: uppercase
+      font-weight: bold
+
+    +e('content')
+      padding: 10px
+      margin-bottom: 0
+
+    &:hover
+      cursor: pointer
+      box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.2), 0 15px 35px 5px rgba(0, 0, 0, 0.3)
+
+
+  +media($Llaptop)
+    +e('item')
+      width: 29%
+
+  +media($tablet)
+    +e('item')
+      width: 44%
+
+  +media($mobile)
+    +e('item')
+      width: 100%
