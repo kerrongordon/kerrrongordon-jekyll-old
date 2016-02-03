@@ -113,6 +113,8 @@ $large: new-breakpoint(max-width 1200px 12);
 
 .post-content {
     margin-bottom: $spacing-unit;
+    max-width: 800px;
+    margin:0 auto;
 
     h2 {
         font-size: 32px;
