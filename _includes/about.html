@@ -1,30 +1,18 @@
 {% include face.html %}
-
-<section id="about" class="main-infor">
-  <div class="page-content">
-      <div class="wrapper">
-        
-        <article class="content">
-
-          <p class="lema">{{ site.data.about.paragraph }}</p>
-
-          <div class="skill-block">
-
-          {% for skills in site.data.about.skills %}
-
-          <div class="skill-box">
-            <div class="skill-label">{{ skills.skill }}</div>
-            <div class="skill">
-              <span class="skill-bar skill-level-{{ skills.level }}"></span>
-            </div>
-          </div>
-          
-          {% endfor %}
-
-          </div>
-
-        </article>
-
+<section id="about" class="about">
+  <div class="wrapper">
+    <article class="about__content">
+      <p class="about__content__infor">{{ site.data.about.paragraph }}</p>
+    </article>
+    <div class="about__skill">
+      {% for skills in site.data.about.skills %}
+      <div class="about__skill__item">
+        <h4 class="about__skill__item__label">{{ skills.skill }}<span class="about__skill__item__label--span">{{ skills.level }}</span></h4>
+        <div class="about__skill__item__bar">
+          <span class="about__skill__item__level about__skill__item__level--{{ skills.level }}"></span>
+        </div>
       </div>
+      {% endfor %}
     </div>
+  </div>
 </section>

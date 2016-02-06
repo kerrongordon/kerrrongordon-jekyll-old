@@ -13,6 +13,7 @@
 	display: block;
 	z-index: 9999;
 	right: -300px;
+	box-shadow: inset 5px 0 14px -8px #000;
 	@include transition(all 0.3s ease-in-out);
 
 	@include media($mobile) {
@@ -50,6 +51,7 @@
 }
 
 .menu-open {
+	overflow: hidden;
 	.menu {
 		right: 0;
 	}
@@ -61,189 +63,25 @@
 	}
 }
 
-
-
-
-//////////////////////////////////////////
-              ///header-s//
-/////////////////////////////////////////
-
-
-// .header-s {
-// 	@include retina-image($header-bg-img, cover);
-// 	height: 700px;
-//     text-align: center;
-//     @include transition ( all 0.3s ease-in-out );
-//
-//
-//     @include media($laptop) {
-// 		height: 500px;
-// 	}
-//
-// 	@include media($mobile) {
-// 		height: 300px;
-// 	}
-//
-// 	.site-header {
-// 		z-index: 999;
-// 	}
-//
-// 	.header-line {
-// 		line-height: 35em;
-//
-// 		@include media($laptop) {
-// 			line-height: 15em;
-// 		}
-//
-// 		@include media($mobile) {
-// 			line-height: 5em;
-// 		}
-// 	}
-//
-// 	.site-name {
-// 		vertical-align: middle;
-// 		display: inline-block;
-// 		position: relative;
-// 		z-index: 2;
-//
-// 		h1 {
-// 			font-family: 'Cinzel Decorative', cursive;
-// 			font-size: 5rem;
-//
-// 			span {
-//
-// 				&:after {
-// 					content: "";
-// 					border: solid 1px $header-color;
-// 					margin: 0px 5px;
-// 					box-shadow: 0 0 5px;
-// 					@include animation( blink 1.0s infinite ease-in );
-// 				}
-// 			}
-//
-//
-//
-// 		@include media($laptop) {
-// 			font-size: 3rem;
-// 		}
-//
-// 		@include media($mobile) {
-// 			font-size: 2rem;
-// 		}
-//
-// 		}
-// 	}
-//
-// 	@include media($laptop) {
-// 		height: 500px;
-// 	}
-//
-// 	@include media($mobile) {
-// 		height: 300px;
-// 	}
-//
-// }
-
-
-//////////////////////////////////////////
-              ///main-infor//
-/////////////////////////////////////////
-
-
-
-.main-infor {
-	z-index: 1;
-
-	.content {
-		text-align: center;
-		font-size: 1.4rem;
-		@include span-columns( 12 );
-		@include transition ( all 0.7s ease-in-out );
-
-		@include media($laptop) {
-			@include span-columns( 12 );
-		}
-
-		@include media($mobile) {
-			@include span-columns( 12 );
-		}
-
-		.lema {
-			margin: 60px auto;
-			max-width: 700px;
-		}
-	}
-
-	.bar-l {
-		@include span-columns( 6 );
-		font-family: "Cinzel Decorative",cursive;
-		padding: 30px 50px;
-		font-size: 0.7em;
-		text-align: left;
-
-		@include media($mobile) {
-			@include span-columns( 12 );
-		}
-	}
-
-	.bar-r {
-		@include span-columns( 6 );
-		font-family: "Cinzel Decorative",cursive;
-		padding: 30px 50px;
-		font-size: 0.7em;
-		text-align: left;
-
-		@include media($mobile) {
-			@include span-columns( 12 );
-		}
-	}
+#shadowOver {
+	background: rgba(#000, 0.0);
+	@include transition(all 0.3s ease-in-out);
 }
 
-.skill-block {
-	max-width: 900px;
-	margin: 10px auto;
-	@include clearfix;
-
-	@include media($mobile) {
-
-	}
+.fadeOver {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	background: rgba(#000, 0.6) !important;
 }
 
-.skill-box {
-	width: 50%;
-	float: left;
-	margin: 0px auto;
-	padding: 0px 40px;
-	font-size: 0.7em;
-	text-align: left;
-	font-family: "Cinzel Decorative",cursive;
 
-	@include media($mobile) {
-		width: 100%;
-	}
-}
 
-.skill {
-   background: #ccc;
-   height: .35em;
-   width: 100%;
-   margin: 15px 0;
-  }
 
-.skill-bar {
-  height: 100%;
-  display: block;
-  background: $peter-river;
-  transition: all 1s ease-in-out;
-}
 
-$bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%;
-@each $current-bar in $bar-list {
-    $i: index($bar-list, $current-bar);
-    .skill-level-#{$i*5} {
-        width: $current-bar;
-    }
-}
 
 
 //////////////////////////////////////////
@@ -391,77 +229,6 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
 }
 
 
-//////////////////////////////////////////
-              ///main-work//
-/////////////////////////////////////////
-
-
-// .main-work {
-// 	@include transition ( all 0.5s ease-in-out );
-//
-// 	.wrapper {
-// 		overflow: hidden;
-// 	}
-//
-// 	.content {
-// 		@include span-columns( 3 );
-// 		text-align: center;
-// 		margin-top: 20px;
-// 		cursor: pointer;
-// 		@include transition ( all 0.2s ease-in-out );
-//
-// 		h4 {
-// 			font-size: 17px;
-// 			margin-bottom: 10px;
-// 			text-transform: uppercase;
-// 			font-weight: bold;
-// 		}
-//
-// 		img {
-// 			@include size( 100px 100px );
-// 			margin-top: 20px;
-// 		}
-//
-// 		@include media($laptop) {
-// 			@include span-columns( 6 );
-// 			margin-right: 0;
-// 		}
-//
-// 		@include media($mobile) {
-// 			@include span-columns( 12 );
-// 		}
-//
-// 		&:hover {
-// 			box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.2), 0 15px 35px 5px rgba(0, 0, 0, 0.3);
-//
-// 			img {
-// 				@include animation( iconmove 0.5s ease-in );
-// 			}
-// 		}
-//
-// 		&:active, &:focus {
-// 			background: transparent;
-// 			box-shadow: inset 0 0px 5px rgba(0, 0, 0, 0.3);
-// 			outline: none;
-// 		}
-//
-// 	}
-// 	.right {
-// 		margin: 20px 0;
-// 	}
-// }
-//
-// .tools-infor {
-// 	@include transition(all 0.5s ease-in-out);
-// }
-//
-// .pro {
-// 	//width: 100%;
-// 	//height: 100%;
-// 	position: relative;
-// 	//@include clearfix;
-// }
-
 
 //////////////////////////////////////////
               ///site-footer//
@@ -493,77 +260,6 @@ $bar-list: 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90
 	}
 }
 
-
-
-//////////////////////////////////////////
-              ///main-user//
-/////////////////////////////////////////
-
-
-// .main-user {
-// 	overflow: inherit;
-// 	padding: 0;
-// 	height: 200px;
-//
-// 	.page-content {
-// 		padding: 0;
-// 	}
-//
-// 	.wrapper {
-// 		padding: 0;
-// 	}
-//
-// 	.user-img {
-// 		text-align: center;
-// 		margin-top: -150px;
-// 		z-index: 444;
-//
-// 		img {
-// 			border-radius: 50%;
-// 			width: 300px;
-// 			height: 300px;
-// 			border: solid 10px $background-color;
-// 			background-color: $accent_color;
-// 			//@include background(linear-gradient(rgba($accent_color, .7), $accent_color) left repeat);
-// 			z-index: 200;
-// 			position: relative;
-// 		}
-// 	}
-//
-// 	@include media($laptop) {
-// 		height: 150px;
-//
-// 		.user-img {
-// 			text-align: center;
-// 			margin-top: -100px;
-// 			z-index: 444;
-//
-// 			img {
-// 				border-radius: 50%;
-// 				width: 200px;
-// 				height: 200px;
-// 			}
-// 		}
-// 	}
-//
-// 	@include media($mobile) {
-// 		height: 80px;
-//
-// 		.user-img {
-// 			text-align: center;
-// 			margin-top: -70px;
-// 			z-index: 444;
-//
-// 			img {
-// 				border-radius: 50%;
-// 				width: 150px;
-// 				height: 150px;
-// 			}
-// 		}
-// 	}
-//
-//
-// }
 
 
 
