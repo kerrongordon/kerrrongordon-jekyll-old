@@ -1,0 +1,41 @@
+.features
+  +retina-image($features-bg-img, cover)
+  padding: 60px 0
+
+  +e('items')
+    +align-items(stretch)
+    +display(flex)
+    +flex-direction(row)
+    +justify-content(center)
+    +flex-wrap(wrap)
+    +transition(all 0.5s ease-in-out)
+    position: relative
+    z-index: 10
+
+  +e('item')
+    width: 33.3%
+    padding: 20px
+
+    +e('container')
+      background: #fff
+      color: $text-color
+      box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.5)
+
+    +e('title')
+      margin: 0
+      padding: 0 10px 0
+
+    +e('content')
+      margin: 0
+      padding: 20px
+
+  +media($tablet)
+    +e('item')
+      width: 50%
+
+      &:nth-child(3)
+        width: 100%
+
+  +media($mobile)
+    +e('item')
+      width: 100%

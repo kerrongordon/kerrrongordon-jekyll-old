@@ -173,60 +173,60 @@
 /////////////////////////////////////////
 
 
-.features {
-	@include retina-image($features-bg-img, cover);
-
-	.overlay {
-		opacity: 0.9;
-	}
-
-	.f-item {
-		@include row()
-	}
-
-	img {
-		border: solid 3px #fff;
-	}
-
-	.full-w {
-		@include shift(0);
-
-		@include media($laptop) {
-			@include shift(3);
-		}
-
-		@include media($mobile) {
-			@include span-columns( 12 );
-			@include shift(0);
-		}
-	}
-
-	.content {
-		@include span-columns( 4 );
-		@include transition ( all 0.7s ease-in-out );
-
-		h4 {
-			font-size: 17px;
-			margin-bottom: 10px;
-			text-transform: uppercase;
-			font-weight: bold;
-		}
-
-		.lema {
-			color: $header-color;
-		}
-
-		@include media($laptop) {
-			@include span-columns( 6 );
-		}
-
-		@include media($mobile) {
-			@include span-columns( 12 );
-		}
-
-	}
-
-}
+// .features {
+// 	@include retina-image($features-bg-img, cover);
+//
+// 	.overlay {
+// 		opacity: 0.9;
+// 	}
+//
+// 	.f-item {
+// 		@include row()
+// 	}
+//
+// 	img {
+// 		border: solid 3px #fff;
+// 	}
+//
+// 	.full-w {
+// 		@include shift(0);
+//
+// 		@include media($laptop) {
+// 			@include shift(3);
+// 		}
+//
+// 		@include media($mobile) {
+// 			@include span-columns( 12 );
+// 			@include shift(0);
+// 		}
+// 	}
+//
+// 	.content {
+// 		@include span-columns( 4 );
+// 		@include transition ( all 0.7s ease-in-out );
+//
+// 		h4 {
+// 			font-size: 17px;
+// 			margin-bottom: 10px;
+// 			text-transform: uppercase;
+// 			font-weight: bold;
+// 		}
+//
+// 		.lema {
+// 			color: $header-color;
+// 		}
+//
+// 		@include media($laptop) {
+// 			@include span-columns( 6 );
+// 		}
+//
+// 		@include media($mobile) {
+// 			@include span-columns( 12 );
+// 		}
+//
+// 	}
+//
+// }
 
 
 
@@ -278,6 +278,8 @@
 	letter-spacing: 0.1em;
 	text-align: left;
 	margin-bottom: 2.5em;
+	position: relative;
+	z-index: 10;
 
 	&:before {
 		content: "";
