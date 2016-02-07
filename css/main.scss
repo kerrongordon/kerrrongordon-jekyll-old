@@ -15,7 +15,7 @@ $spacing-unit:     60px;
 
 $text-color:       #222;
 $text-light-color: #fff;
-$background-color: #FCFCFC;
+$background-color: #ecf0f1;
 $brand-color:      #2a7ae2;
 $header-color:     #fff;
 
@@ -89,7 +89,7 @@ $features-bg-img: '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.fea
         "mixins",
         "layout",
         "syntax-highlighting",
+        "global",
         "home",
-        "_section/section",
-        "animate"
+        "_section/section"
 ;

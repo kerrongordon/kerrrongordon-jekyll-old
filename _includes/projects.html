@@ -5,10 +5,12 @@
         <h2 class="section-title">{{ site.data.tools.title }}</h2>
         <div class="projects__items">
           {% for post in site.categories.projects limit:8 %}
-          <article id="{{ post.id }}" class="projects__item wow {{ post.ani }}">
-            <img class="projects__item__image" src="{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.tools.img_location }}/{{ post.img }}">
-            <h4 class="projects__item__title">{{ post.title }}</h4>
-            <p class="projects__item__content lema">{{ post.excerpt }}</p>
+          <article id="{{ post.id }}" class="projects__item">
+            <div class="projects__item__container">
+              <img class="projects__item__image" src="{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.tools.img_location }}/{{ post.img }}">
+              <h4 class="projects__item__title">{{ post.title }}</h4>
+              <p class="projects__item__content lema">{{ post.excerpt }}</p>
+            </div>
           </article>
           {% endfor %}
         </div>
