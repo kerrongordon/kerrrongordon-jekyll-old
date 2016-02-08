@@ -2,10 +2,10 @@
   <div class="overlay"></div>
   <div class="wrapper">
     <h2 class="section-title">{{ site.data.contact.title }}</h2>
-    <form class="contact__form" action="//formspree.io/{{ site.email }}" method="POST">
+    <form id="contact__form" class="contact__form" action="//formspree.io/{{ site.email }}" method="POST">
       <div class="contact__form__name">
         <label>Your Name</label>
-        <input type="text" name="name" class="contact__form__input" required placeholder="james brown" onfocus="this.placeholder = ''" onblur="this.placeholder = 'james brown'">
+        <input type="text" id="name" name="name" class="contact__form__input" required placeholder="james brown" onfocus="this.placeholder = ''" onblur="this.placeholder = 'james brown'">
       </div>
       <div class="contact__form__email">
         <label>Your Email</label>
@@ -13,7 +13,7 @@
       </div>
       <div class="contact__form__message">
         <label>Message</label>
-        <textarea type="text" name="message" class="contact__form__input contact__form__textarea" required></textarea>
+        <textarea type="text" id="message" name="message" class="contact__form__input contact__form__textarea" required></textarea>
       </div>
       <input type="submit" value="Send Message">
     </form>
