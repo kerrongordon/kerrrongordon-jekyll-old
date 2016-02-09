@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 var pageScroll = (function (speed) {
 
-  var pageLink = $('.page-link');
+  var pageLink = $('.menu__list__item');
 
   pageLink.on('click', goToSection);
 
@@ -26,24 +26,22 @@ var pageScroll = (function (speed) {
 
 var mainMenu = (function () {
 
-  var body              = $('.body'),
-      navToggle         = $('#nav-toggle'),
-      mainPage          = $('.main-page'),
-      navigationMenuA   = $('#navigation-menu a');
+  var $menu             = $('.menu'),
+      $body             = $('.main-page'),
+      $menuToggle       = $('.menu__toggle'),
+      $pageLink         = $('.menu__list__item');
 
-    navToggle.on('click', menuToggle);
-    mainPage.on('click', menuClose);
-    navigationMenuA.on('click', menuToggle);
+    $menuToggle.on('click', menuToggle);
+    $pageLink.on('click', menuToggle);
+    $body.on('click', menuClose);
 
     function menuToggle() {
-      body.toggleClass( 'menu-open' );
-      navToggle.toggleClass( 'active' );
+      $menu.toggleClass( 'menu--open' );
     }
 
     function menuClose() {
-      if (body.hasClass('menu-open')) {
-        body.removeClass( "menu-open" );
-        navToggle.removeClass( "active" );
+      if ($menu.hasClass('menu--open')) {
+        $menu.removeClass( "menu--open" );
       }
     }
 
@@ -53,7 +51,7 @@ var projects = (function(animat){
 
     var pFull   		= $('.projects__full'),
         pclose  		= $('.projects__close'),
-				proje   		= $('#projects'),
+        proje   		= $('#projects'),
         loadCon 		= $('#loadContent'),
         pItem   		= $('.projects__item'),
         pItems  		= $('.projects__items'),

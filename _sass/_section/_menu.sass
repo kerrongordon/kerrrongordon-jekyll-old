@@ -1,0 +1,67 @@
+.menu
+  position: absolute
+  background: $wet-asphalt
+  width: 300px
+  left: -300px
+  height: 100%
+  padding: 20px
+  z-index: 999
+  +transition(all 0.4s ease-in-out)
+
+  +e('items')
+    position: fixed
+
+  +e('toggle')
+    position: fixed
+    left: 0px
+    cursor: pointer
+    +transition(all 0.4s ease-in-out)
+
+    +e('item')
+      width: 40px
+      height: 5px
+      background: $accent_1
+      position: relative
+      margin: 6px
+      display: block
+
+  +e('logo')
+    width: 150px
+    margin: 0 auto
+
+    +e('item')
+
+  +e('list')
+    width: 250px
+    margin: 0 auto
+
+    +e('item')
+      display: block
+      padding: 10px
+      margin-left: 20px
+      color: $text-light-color
+      text-decoration: none
+      +transition(all 0.2s ease-in-out)
+
+      &:before
+        content: ''
+        border-left: solid 5px $accent_1
+        padding: 10px
+        +transition(all 0.2s ease-in-out)
+
+      &:visited
+        color: $text-light-color
+
+      &:hover
+        text-decoration: none
+        margin-left: 0
+        background: $accent_1
+
+        &:before
+          border-color: $text-light-color
+
+  +m('open')
+    left: -0px
+
+    .menu__toggle
+      left: 300px
