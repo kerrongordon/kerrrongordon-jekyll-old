@@ -1,0 +1,95 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: 'Open Sans', sans-serif;
+$base-font-size:   14px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.9;
+
+$spacing-unit:     60px;
+
+$text-color:       #222;
+$text-light-color: #fff;
+$background-color: #ecf0f1;
+$brand-color:      #2a7ae2;
+$header-color:     #fff;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$on-small:          320px;
+$on-laptop:         800px;
+$on-large:          1200px;
+
+
+
+
+//colors http://flatuicolors.com/
+
+$turquoise:		#1abc9c;
+$emerland: 		#2ecc71;
+$peter-river:	#3498db;
+$amethyst:      #9b59b6;
+$wet-asphalt: 	#34495e;
+$green-sea: 	#16a085;
+$nephritis: 	#27ae60;
+$belize-hole: 	#2980b9;
+$wisteria: 		#8e44ad;
+$midnight-blue: #2c3e50;
+$sun-flower: 	#f1c40f;
+$carrot: 		#e67e22;
+$alizarin: 		#e74c3c;
+$clouds: 		#ecf0f1;
+$concrete: 		#95a5a6;
+$orange: 		#f39c12;
+$pumpkin: 		#d35400;
+$pomegranate: 	#c0392b;
+$silver: 		#bdc3c7;
+$asbestos: 		#7f8c8d;
+
+$accent_1: #039BE5;
+$accent_color: $wet-asphalt;
+$accent_color_secondary: $peter-river;
+
+$animate: all 0.3s ease-in-out;
+
+$header-bg-img:   '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.config.heroBackground }}';
+$contact-bg-img:  '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.config.contactBackground }}';
+$features-bg-img: '{{ site.baseurl }}/{{ site.image_location }}/{{ site.data.config.featuresBackground }}';
+
+
+
+// Using media queries with like this:
+// @include media-query($palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+		"bourbon/bourbon",
+		"base/base",
+		"neat/neat",
+        "base",
+        "mixins",
+        "layout",
+        "syntax-highlighting",
+        "global",
+        "home",
+        "_section/section"
+;

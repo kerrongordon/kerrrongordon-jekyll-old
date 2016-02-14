@@ -6,8 +6,6 @@ img: page-7.jpg
 excerpt: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non
 ---
 
-![image]({{ site.baseurl }}/{{ site.image_location }}/{{ site.data.tools.img_location }}/{{ page.img }})
-
 This template uses [Typicons][ty] web font, provided by [Fontello][fo] font bundling service. It allows you to quickly
 add nice icons into your pages by using css tags.
 

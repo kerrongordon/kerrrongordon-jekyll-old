@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
-  {% include head.html %}
+<html lang="en">
+  {% include meta/head.html %}
   <body class="body">
-    {% include menu.html %}
+    {% include modules/menu.html %}
     <div class="main-page">
       {{ content }}
     </div>
+    {% include components/notification.html %}
   </body>
 </html>

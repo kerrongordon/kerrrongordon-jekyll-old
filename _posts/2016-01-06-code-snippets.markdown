@@ -6,7 +6,6 @@ img: page-6.jpg
 excerpt: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non
 ---
 
-![image]({{ site.baseurl }}/{{ site.image_location }}/{{ site.data.tools.img_location }}/{{ page.img }})
 
 Whenever you need to post a code snippet, use the liquid tags `hilight` and `endhilight` like this:
 

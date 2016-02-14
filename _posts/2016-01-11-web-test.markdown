@@ -2,7 +2,7 @@
 layout: page
 title:  "Lorem ipsum dolor"
 categories: features
-img: page-3.jpg
+img: features-3.jpg
 excerpt: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non
 ---
 

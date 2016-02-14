@@ -6,7 +6,7 @@ img: page-3.jpg
 excerpt: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non
 ---
 
-![image]({{ site.baseurl }}/{{ site.image_location }}/{{ site.data.tools.img_location }}/{{ page.img }})
+![image]({{ site.baseurl }}/{{ site.image_location }}/{{ page.categories }}/{{ page.img }})
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
 To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
