@@ -1,7 +1,7 @@
 {% for post in site.categories.features limit:include.num %}
 <article class="{{ include.data }}__item">
 	<div class="{{ include.data }}__item__container">
-		<img src="{{ site.baseurl }}{{ site.image_location }}/{{ include.data }}/{{ post.img }}">
+		<img src="{{ site.baseurl }}{{ site.image_location }}/post/{{ post.img }}">
 		<h4 class="{{ include.data }}__item__title">{{ post.title }}</h4>
 		<p class="{{ include.data }}__item__content">{{ post.excerpt }}</p>
 	</div>

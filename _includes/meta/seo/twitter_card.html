@@ -1,5 +1,5 @@
-<meta name="twitter:card" content="{{ include.type }}" />
-<meta name="twitter:site" content="@{% if page.twitter != null %}{{ page.title }}{% else %}{{ site.data.config.twitter }}{% endif %}" />
-<meta name="twitter:title" content="{% if page.title != null %}{{ page.title }}{% else %}{{ site.data.config.title }}{% endif %}" />
-<meta name="twitter:description" content="{% if page.description != null %}{{ page.description }}{% else %}{{ site.data.config.description }}{% endif %}" />
-<meta name="twitter:image" content="{% if page.img != null %}{{ page.img }}{% endif %}" />
+<meta name="twitter:card"           content="{{ include.type }}" />
+<meta name="twitter:site"           content="@{% if page.twitter != null %}{{ page.title }}{% else %}{{ site.data.config.twitter }}{% endif %}"/>
+<meta name="twitter:title"          content="{% if page.title != null %}{{ page.title }}{% else %}{{ site.data.config.title }}{% endif %}"/>
+<meta name="twitter:description"    content="{% if page.description != null %}{{ page.description }}{% else %}{{ site.data.config.description }}{% endif %}"/>
+<meta name="twitter:image"          content="{% if page.img != null %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}/{{ site.image_location }}/post/{{ page.img }}{% elsif post.img != null %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}/{{ site.image_location }}/post/{{ post.img }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{{ site.image_location }}/avatar.jpg{% endif %}" />
