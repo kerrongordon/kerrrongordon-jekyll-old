@@ -1,0 +1,104 @@
+.body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow-x: hidden;
+}
+
+// .menu {
+// 	width: 300px;
+// 	height: 100%;
+// 	background: $wet-asphalt;
+// 	position: fixed;
+// 	display: block;
+// 	z-index: 9999;
+// 	right: -300px;
+// 	box-shadow: inset 5px 0 14px -8px #000;
+// 	@include transition(all 0.3s ease-in-out);
+//
+// 	@include media($mobile) {
+// 		overflow: scroll;
+// 	}
+//
+// 	a {
+// 		display: block;
+// 		text-align: center;
+// 		padding: 15px;
+// 		color: $header-color;
+//
+// 		svg fill {
+// 			color: $header-color;
+// 		}
+// 	}
+// }
+//
+// .main-page {
+// 	right: 0px;
+// 	position: relative;
+// 	@include transition(all 0.3s ease-in-out);
+// }
+//
+// .menu-icon {
+// 	width: 60px;
+// 	margin: 37px -55px;
+// 	float: left;
+// 	@include transition(all 0.3s ease-in-out);
+// }
+//
+// .site-logo {
+// 	margin: 25px auto;
+// 	width: 100%;
+// }
+//
+// .menu-open {
+// 	overflow: hidden;
+// 	.menu {
+// 		right: 0;
+// 	}
+// 	.main-page {
+// 		right: 300px;
+// 	}
+// 	.menu-icon {
+// 		margin: 37px -55px;
+// 	}
+// }
+
+
+
+//http://www.elijahmanor.com/css-animated-hamburger-icon/
+
+
+// #nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; margin: 37px -50px;
+// position: fixed; }
+// #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+//   cursor: pointer;
+//   border-radius: 1px;
+//   height: 5px;
+//   width: 35px;
+//   background: $peter-river;
+//   position: absolute;
+//   display: block;
+//   content: '';
+// }
+// #nav-toggle span:before {
+//   top: -10px;
+// }
+// #nav-toggle span:after {
+//   bottom: -10px;
+// }
+//
+// #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+//   @include transition(all 500ms ease-in-out);
+// }
+// #nav-toggle.active span {
+//   background-color: transparent;
+// }
+// #nav-toggle.active span:before, #nav-toggle.active span:after {
+//   top: 0;
+// }
+// #nav-toggle.active span:before {
+//   @include transform(rotate(45deg));
+// }
+// #nav-toggle.active span:after {
+//   @include transform(rotate(-45deg));
+// }

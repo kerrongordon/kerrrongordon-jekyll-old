@@ -1,0 +1,5 @@
+<meta property="og:url"         content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+<meta property="og:type"        content="{{ include.type }}" />
+<meta property="og:title"       content="{% if page.title != null %}{{ page.title }}{% else %}{{ site.data.config.title }}{% endif %}" />
+<meta property="og:description" content="{% if page.description != null %}{{ page.description }}{% else %}{{ site.data.config.description }}{% endif %}" />
+<meta property="og:image"       content="{% if page.img != null %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}/{{ site.image_location }}/post/{{ page.img }}{% elsif post.img != null %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}/{{ site.image_location }}/post/{{ post.img }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}/{{ site.image_location }}/{{ site.data.config.heroBackground }}.jpg{% endif %}" />

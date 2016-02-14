@@ -1,0 +1,18 @@
+<section id="projects" class="projects">
+  <div class="projects__full">
+    <div class="projects__primary">
+      <div class="wrapper">
+        <h2 class="section-title">{{ site.data.config.sectionTitle4 }}</h2>
+        <div class="projects__items">
+          {% include components/projects_cate.html data="projects" num="8" %}
+        </div>
+      </div>
+    </div>
+    <div class="projects__secondary">
+      <div class="wrapper">
+        <button class="projects__close">X</button>
+        <div id="loadContent"></div>
+      </div>
+    </div>
+  </div>
+</section>

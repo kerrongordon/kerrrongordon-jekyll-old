@@ -1,0 +1,75 @@
+.projects
+  width: 100%
+  padding: 60px 0
+  position: relative
+  overflow: hidden
+
+  +e('full')
+    width: 200%
+    +transition(all 0.5s ease-in-out)
+    +clearfix
+
+  +e('primary')
+    width: 50%
+    float: left
+
+  +e('secondary')
+    width: 50%
+    float: left
+
+  +e('close')
+    float: right
+    margin-right: 10px
+    position: relative
+    z-index: 11
+
+  +e('items')
+    +align-items(stretch)
+    +display(flex)
+    +flex-direction(row)
+    +justify-content(center)
+    +flex-wrap(wrap)
+    +transition(all 0.5s ease-in-out)
+    transform: translateX(0)
+
+    +m('left')
+      transform: translateX(-50%)
+
+  +e('item')
+    width: 25%
+    text-align: center
+    padding: 10px
+
+    +e('container')
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.37)
+      background-color: $header-color
+      +transition(all 0.3s ease-in-out)
+
+      &:hover
+        cursor: pointer
+        box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.2), 0 15px 35px 5px rgba(0, 0, 0, 0.3)
+
+    +e('title')
+      font-size: 17px
+      margin-bottom: 5px
+      text-transform: uppercase
+      font-weight: bold
+
+    +e('content')
+      padding: 10px
+      margin-bottom: 0
+
+  +media($Llaptop)
+    +e('item')
+      width: 33.3%
+
+      &:nth-child(7),&:nth-child(8)
+        width: 50%
+
+  +media($tablet)
+    +e('item')
+      width: 50%
+
+  +media($mobile)
+    +e('item')
+      width: 100%

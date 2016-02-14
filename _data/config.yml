@@ -1,0 +1,47 @@
+# Site settings
+title: Kerron Gordon
+email: kgpsounds.com@gmail.com
+avatar: avatar.png
+twitter: kerrongordon
+
+
+# information about yourself
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+skills:
+- {skill: 'Communication', level: '70'}
+- {skill: 'Organization', level: '80'}
+- {skill: 'Learning', level: '80'}
+- {skill: 'Teaching', level: '65'}
+- {skill: 'Planning', level: '75'}
+- {skill: 'Visual Design', level: '50'}
+- {skill: 'UX Design', level: '80'}
+- {skill: 'Programming', level: '65'}
+
+
+# site logo and menu list
+logo: icons/loop.svg
+
+menu:
+- {title: 'Home', link: '#home'}
+- {title: 'About', link: '#about'}
+- {title: 'Features', link: '#features'}
+- {title: 'Projects', link: '#projects'}
+- {title: 'Contact', link: '#contact'}
+
+
+# background images settings for sections all images are in assets/img dir
+heroBackground: header-bg-2
+featuresBackground: features-bg
+contactBackground: contact-bg
+
+
+# section title
+sectionTitle1: Home
+sectionTitle2: About
+sectionTitle3: Features
+sectionTitle4: Projects
+sectionTitle5: Stay in touch

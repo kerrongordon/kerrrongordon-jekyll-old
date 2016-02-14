@@ -1,0 +1,17 @@
+<section id="menu" class="menu">
+    <div class="menu__items">
+        <div class="menu__toggle">
+            <span class="menu__toggle__item"></span>
+            <span class="menu__toggle__item"></span>
+            <span class="menu__toggle__item"></span>
+        </div>
+        <div class="menu__logo">
+            {% include components/avatar.html data="menu" %}
+        </div>
+        <div class="menu__list">
+            {% for menu in site.data.config.menu %}
+            <a class="menu__list__item" href="{{ site.baseurl }}/{{ menu.link }}">{{ menu.title }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

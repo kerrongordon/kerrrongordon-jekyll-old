@@ -1,0 +1,78 @@
+
+//-----------------------------------------------------
+//section
+//-----------------------------------------------------
+
+.section-title
+  text-transform: uppercase
+  font-style: italic
+  font-weight: bold
+  text-rendering: auto
+  letter-spacing: 0.1em
+  text-align: left
+  margin-bottom: 2.5em
+  position: relative
+  z-index: 10
+  &:before
+    content: ""
+    border-left: solid 5px $peter-river
+    margin-right: 10px
+    opacity: 0.8
+    padding: 20px 0
+  +media($laptop)
+    font-size: 1.6rem
+
+  +media($mobile)
+    font-size: 1.2rem
+
+img
+  margin-bottom: 20px
+
+section
+  overflow: hidden
+  +transition(all 0.5s ease-in-out)
+
+
+
+//-----------------------------------------------------
+//forms
+//-----------------------------------------------------
+
+textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple=multiple]
+  border-radius: 0
+  box-shadow: none
+  background: rgba($accent_color, 0.5)
+  border-color: $header-color
+  color: $header-color
+
+textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus
+  border-color: $accent_color_secondary
+  box-shadow: none
+
+button, input[type="submit"]
+  border-radius: 0
+  background-color: rgba($accent_color_secondary, 0.7)
+  +transition(all 0.4s ease-in-out)
+
+button:hover, input[type="submit"]:hover
+  background-color: $accent_color_secondary
+
+
+
+.notification
+  background: rgba(0, 0, 0, 0.71)
+  position: fixed
+  z-index: 50
+  bottom: 50px
+  left: -1000px
+  opacity: 0
+  color: #fff
+  padding: 10px
+  +transition(all 0.5s ease-in-out)
+
+  +e('show')
+    left: 10px
+    opacity: 1
+
+  p
+    margin: 0
