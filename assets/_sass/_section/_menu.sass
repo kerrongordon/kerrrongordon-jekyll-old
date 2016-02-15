@@ -1,6 +1,6 @@
 .menu
-  position: absolute
-  background: $wet-asphalt
+  position: fixed
+  background: $accent-color-1
   width: 300px
   left: -300px
   height: 100%
@@ -20,7 +20,7 @@
     +e('item')
       width: 40px
       height: 5px
-      background: $accent_1
+      background: $accent-color-2
       position: relative
       margin: 6px
       display: block
@@ -39,26 +39,26 @@
       display: block
       padding: 10px
       margin-left: 20px
-      color: $text-light-color
+      color: $text-color-light
       text-decoration: none
       +transition(all 0.2s ease-in-out)
 
       &:before
         content: ''
-        border-left: solid 5px $accent_1
+        border-left: solid 5px $accent-color-2
         padding: 10px
         +transition(all 0.2s ease-in-out)
 
       &:visited
-        color: $text-light-color
+        color: $text-color-light
 
       &:hover
         text-decoration: none
         margin-left: 0
-        background: $accent_1
+        background: $accent-color-2
 
         &:before
-          border-color: $text-light-color
+          border-color: $text-color-light
 
   +m('open')
     left: -0px
