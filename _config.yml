@@ -9,6 +9,8 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
+exclude: [package.json]
+
 image_location: assets/img
 javascript_location: assets/js
 

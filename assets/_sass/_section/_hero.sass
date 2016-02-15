@@ -1,10 +1,13 @@
 .hero
   width: 100%
-  height: 700px
+  height: 800px
   position: relative
   +transition($animate)
   background-size: cover
   +retina-image($header-bg-img, cover)
+
+  +media($laptop)
+    height: 600px
 
   +media($tablet)
     height: 500px
@@ -18,7 +21,7 @@
     right: 0
     bottom: 0
     position: absolute
-    background-color: rgba($wet-asphalt, 0.5)
+    background-color: rgba($accent-color-1, 0.5)
 
   +e('title')
     top: 50%
@@ -27,24 +30,27 @@
     +transform(translate(-50%, -50%))
 
   h1
-    font-size: 4.5rem
+    font-size: 4rem
     text-align: center
     +transition($animate)
-    color: $text-light-color
+    color: $text-color-light
     font-family: 'Cinzel Decorative', cursive
 
-    +media($tablet)
+    +media($laptop)
       font-size: 3rem
 
-    +media($mobile)
+    +media($tablet)
       font-size: 2rem
+
+    +media($mobile)
+      font-size: 1.5rem
 
   span
     &:after
       content: ""
       margin: 0px 5px
       box-shadow: 0 0 5px
-      border: solid 1px $text-light-color
+      border: solid 1px $text-color-light
       +animation( cursorBlinking 1.0s infinite ease-in )
 
 

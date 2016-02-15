@@ -1,0 +1,22 @@
+{
+  "name": "kerrongordon.github.io",
+  "version": "1.0.0",
+  "description": "my website",
+  "main": "index.js",
+  "scripts": {
+    "test": "jekyll build",
+    "build": "jekyll serve -w",
+    "serve": "live-server ./_site",
+    "start": "npm run build & npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerrongordon/kerrongordon.github.io.git"
+  },
+  "author": "kerron gordon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kerrongordon/kerrongordon.github.io/issues"
+  },
+  "homepage": "https://github.com/kerrongordon/kerrongordon.github.io#readme"
+}
