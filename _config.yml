@@ -11,6 +11,10 @@ markdown: kramdown
 
 exclude: [package.json]
 
+paginate: 3
+paginate_path: blog/page:num
+destination: _site/
+
 image_location: assets/img
 javascript_location: assets/js
 
@@ -20,3 +24,4 @@ sass:
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
