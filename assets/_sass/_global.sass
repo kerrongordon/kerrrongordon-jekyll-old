@@ -88,20 +88,25 @@ button:hover, input[type="submit"]:hover
 //notification
 //-----------------------------------------------------
 
+.notify
+  background: green
+  position: fixed
+  left: -300px
+  bottom: 100px
+  width: 250px
+  z-index: 200
+  +transition(all 0.5s ease-in-out)
+
+  +m('show')
+    left: 0
+
 .notification
   background: rgba(0, 0, 0, 0.71)
-  position: fixed
-  z-index: 50
-  bottom: 50px
-  left: -1000px
-  opacity: 0
+  opacity: 1
+  margin: 10px
   color: #fff
   padding: 10px
   +transition(all 0.5s ease-in-out)
-
-  +e('show')
-    left: 10px
-    opacity: 1
 
   p
     margin: 0
@@ -124,8 +129,7 @@ button:hover, input[type="submit"]:hover
     margin: 20px
     border-radius: 3px
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 3px rgba(0, 0, 0, 0.2)
-    +transition($animate) 
+    +transition($animate)
 
     &:hover
       box-shadow: 0 0px 0px 1px rgba(0,0,0,0.2),0 15px 35px 5px rgba(0,0,0,0.3)
-
