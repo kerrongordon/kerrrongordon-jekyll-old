@@ -1,11 +1,12 @@
 ---
+layout: null
 ---
 
 $(document).ready(function () {
 
   //mainMenu();
   projects(500);
-  forms('{{site.email}}');
+  forms('{{site.data.config.email}}');
 
 });
 
@@ -73,13 +74,14 @@ var forms = (function (email) {
     		data: $(this).serialize(),
     		dataType: 'json',
     		beforeSend: function() {
-          formInput.val('');
+          notification('beforeSend');
     		},
     		success: function(data) {
-          notification('ms');
+          notification('success');
+          formInput.val('');
     		},
     		error: function(err) {
-          notification('e');
+          notification('error');
     		}
     	});
     }
@@ -87,22 +89,48 @@ var forms = (function (email) {
 
 
 var notification = (function (e) {
-  var notification      = $('.notification');
+  var notification      = $('.notification'),
+      $notify            = $('.notify');
 
-  notification.addClass('notification__show');
+  //notification.addClass('notification__show');
 
-  if (e === 'ms') {
-    notification.append('<p class="notification__notify notification__notify--success">Message sent!</p>');
-  } else if (e === 'e') {
-    notification.append('<p class="notification__notify notification__notify--error">Ops, there was an error.</p>');
+  notify();
+
+  if (e === 'beforeSend') {
+    $notify.append('<div class="notification"><p>Data is Prossing.</p></div>');
+  } else if (e === 'success') {
+    $notify.append('<div class="notification"><p>Message sent!.</p></div>');
+  } else if (e === 'error') {
+    $notify.append('<div class="notification"><p>Ops, there was an error.</p></div>');
   }
 
-  notification.delay(5000)
-  .queue( function(next){
-      $(this).removeClass('notification__show');
-      $('.notification__notify').remove();
-      next();
-  });
+
+  if ($notify.length) {
+    var i = $notify.find('.notification');
+
+     $notify.delay(5000)
+     .queue(function(next){
+       i.first().remove();
+       next();
+     });
+  }
+
+
+
+
+  // notification.delay(5000)
+  // .queue( function(next){
+  //     $(this).removeClass('notification__show');
+  //     $('.notification__notify').remove();
+  //     next();
+  // });
+
+});
+
+var notify = (function () {
+  var notify = $('.notify');
+
+  notify.toggleClass('notify--show');
 
 });
 
