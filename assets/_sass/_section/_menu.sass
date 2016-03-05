@@ -1,52 +1,32 @@
 .menu
   position: fixed
-  background: $accent-color-1
-  width: 300px
-  left: -300px
-  height: 100%
-  padding: 20px
+  width: 130px
+  top: 50%
+  right: 0px
   z-index: 999
-  +transition(all 0.4s ease-in-out)
-
-  +e('items')
-    position: fixed
-
-  +e('toggle')
-    position: fixed
-    left: 0px
-    cursor: pointer
-    +transition(all 0.4s ease-in-out)
-
-    +e('item')
-      width: 40px
-      height: 5px
-      background: $accent-color-2
-      position: relative
-      margin: 6px
-      display: block
-
-  +e('logo')
-    width: 150px
-    margin: 0 auto
-
-    +e('item')
+  +transform(translateY(-50%))
 
   +e('list')
-    width: 250px
-    margin: 0 auto
 
     +e('item')
       display: block
       padding: 10px
-      margin-left: 20px
+      text-align: right
       color: $text-color-light
       text-decoration: none
       +transition(all 0.2s ease-in-out)
 
-      &:before
+      span
+        opacity: 0
+        +transition(all 0.4s ease)
+
+      &:after
         content: ''
-        border-left: solid 5px $accent-color-2
-        padding: 10px
+        float: right
+        margin: 5px auto auto 10px
+        border: solid 2px $accent-color-2
+        border-radius: 50%
+        padding: 5px
         +transition(all 0.2s ease-in-out)
 
       &:visited
@@ -55,10 +35,19 @@
       &:hover
         text-decoration: none
         margin-left: 0
-        background: $accent-color-2
+        //background: $accent-color-2
 
-        &:before
-          border-color: $text-color-light
+        span
+          opacity: 1
+
+        &:after
+          border-color: $accent-color-3
+
+      +m('active')
+
+        &:after
+          border-color: $accent-color-3
+          background: $text-color-light
 
   +m('open')
     left: -0px
