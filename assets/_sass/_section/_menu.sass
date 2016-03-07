@@ -12,7 +12,7 @@
       display: block
       padding: 10px
       text-align: right
-      color: $text-color-light
+      color: $accent-color-4
       text-decoration: none
       +transition(all 0.2s ease-in-out)
 
@@ -30,12 +30,11 @@
         +transition(all 0.2s ease-in-out)
 
       &:visited
-        color: $text-color-light
+        color: $accent-color-4
 
       &:hover
         text-decoration: none
         margin-left: 0
-        //background: $accent-color-2
 
         span
           opacity: 1
@@ -48,9 +47,3 @@
         &:after
           border-color: $accent-color-3
           background: $text-color-light
-
-  +m('open')
-    left: -0px
-
-    .menu__toggle
-      left: 300px

@@ -3,8 +3,6 @@
   height: 800px
   position: relative
   +transition($animate)
-  background-size: cover
-  +retina-image($header-bg-img, cover)
 
   +media($laptop)
     height: 600px
@@ -14,6 +12,15 @@
 
   +media($mobile)
     height: 300px
+
+  +e('image')
+    width: 100%
+    height: 100%
+    top: 0
+    bottom: 0
+    position: fixed
+    background-size: cover
+    +retina-image($header-bg-img, cover)
 
   +e('overlay')
     top: 0

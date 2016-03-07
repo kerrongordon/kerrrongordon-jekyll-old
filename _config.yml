@@ -1,7 +1,5 @@
 baseurl: "" # the subpath of your site, e.g. /blog/
 
-
-
 url: "https://kerrongordon.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -11,8 +9,6 @@ markdown: kramdown
 
 exclude: [package.json]
 
-paginate: 3
-paginate_path: blog/page:num
 destination: _site/
 
 image_location: assets/img
@@ -24,4 +20,3 @@ sass:
 
 gems:
   - jekyll-sitemap
-  - jekyll-paginate

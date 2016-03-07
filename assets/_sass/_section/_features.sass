@@ -17,17 +17,22 @@
     padding: 20px
 
     +e('container')
-      background: #fff
-      color: $text-color
-      box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.5)
+      color: $text-color-light
+
+      img
+        box-shadow: 0 25px 25px -20px rgba(0,0,0,0.7)
 
     +e('title')
       margin: 0
       padding: 0 10px 0
+      text-shadow: 0 0 5px rgba(#000, 0.8)
+      text-align: center
 
     +e('content')
       margin: 0
       padding: 20px
+      text-shadow: 0 0 5px rgba(#000, 0.8)
+      text-align: center
 
   +media($tablet)
     +e('item')

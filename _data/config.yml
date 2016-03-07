@@ -31,7 +31,6 @@ menu:
 - {title: 'Features', link: '#features'}
 - {title: 'Projects', link: '#projects'}
 - {title: 'Contact', link: '#contact'}
-- {title: 'blog', link: 'blog'}
 
 
 # background images settings for sections all images are in assets/img dir
