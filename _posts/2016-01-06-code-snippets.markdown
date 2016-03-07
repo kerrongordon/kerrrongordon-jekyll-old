@@ -14,4 +14,6 @@ Whenever you need to post a code snippet, use the liquid tags `hilight` and `end
 puts "Hello World!"
 {% endhighlight %}
 
+![image]({{ site.baseurl }}/{{ site.image_location }}/post/big/{{ page.img }})
+
 Note that this only provides color-coding. For that you might need to use a front end colorization engine like Highlight.JS or something similar.

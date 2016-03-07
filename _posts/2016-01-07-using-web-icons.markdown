@@ -17,7 +17,7 @@ To add an icon somewhere in the template simply do:
 
 This will insert a home icon, just as the one seen in the sidebar. The available class names you can use are as follows:
 
-
+![image]({{ site.baseurl }}/{{ site.image_location }}/post/big/{{ page.img }})
 
 These should work in all the browsers, all the way down to and including IE7, but not IE6.
 

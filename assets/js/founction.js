@@ -4,7 +4,7 @@ layout: null
 
 $(document).ready(function () {
 
-  //mainMenu();
+  mainMenu();
   projects(500);
   forms('{{site.data.config.email}}');
 
@@ -14,7 +14,38 @@ $(document).ready(function () {
 
 var mainMenu = (function () {
 
+      var aChildren = $(".menu__list").children(); // find the a children of the list items
+      var aArray = []; // create the empty aArray
+      for (var i=0; i < aChildren.length; i++) {
+          var aChild = aChildren[i];
+          var ahref = $(aChild).attr('href');
+          aArray.push(ahref);
+      } // this for loop fills the aArray with attribute href values
 
+      $(window).scroll(function(){
+          var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+          var windowHeight = $(window).height(); // get the height of the window
+          var docHeight = $(document).height();
+
+          for (var i=0; i < aArray.length; i++) {
+              var theID = aArray[i];
+              var divPos = $(theID).offset().top/1.05; // get the offset of the div from the top of page
+              var divHeight = $(theID).height(); // get the height of the div in question
+              if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+                  $("a[href='" + theID + "']").addClass("menu__list__item--active");
+              } else {
+                  $("a[href='" + theID + "']").removeClass("menu__list__item--active");
+              }
+          }
+
+          if(windowPos + windowHeight == docHeight) {
+              if (!$("nav li:last-child a").hasClass("menu__list__item--active")) {
+                  var navActiveCurrent = $(".menu__list__item--active").attr("href");
+                  $("a[href='" + navActiveCurrent + "']").removeClass("menu__list__item--active");
+                  $("nav li:last-child a").addClass("menu__list__item--active");
+              }
+          }
+      });
 
 });
 

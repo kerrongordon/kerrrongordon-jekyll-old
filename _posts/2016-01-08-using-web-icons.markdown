@@ -6,8 +6,6 @@ img: page-8.jpg
 excerpt: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non
 ---
 
-![image]({{ site.baseurl }}/{{ site.image_location }}/{{ page.categories }}/{{ page.img }})
-
 This template uses [Typicons][ty] web font, provided by [Fontello][fo] font bundling service. It allows you to quickly
 add nice icons into your pages by using css tags.
 
@@ -23,7 +21,7 @@ This will insert a home icon, just as the one seen in the sidebar. The available
 
 These should work in all the browsers, all the way down to and including IE7, but not IE6.
 
-
+![image]({{ site.baseurl }}/{{ site.image_location }}/post/big/{{ page.img }})
 
 [ty]: http://typicons.com/
 [fo]: http://fontello.com/
