@@ -1,17 +1,16 @@
 ---
 layout: page
 title:  "Lorem ipsum dolor"
-categories: projects
-img: page-4.jpg
+img: page-3.jpg
 excerpt: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-
-![image]({{ site.baseurl }}/{{ site.image_location }}/post/big/{{ page.img }})
 To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
 
 Jekyll also offers powerful support for code snippets:
+
+![image]({{ site.baseurl }}/{{ site.image_location }}/post/big/{{ page.img }})
 
 {% highlight ruby %}
 def print_hi(name)
