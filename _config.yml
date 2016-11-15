@@ -14,6 +14,12 @@ destination: _site/
 image_location: assets/img
 javascript_location: assets/js
 
+collections:
+  projects:
+    output: true
+
+  features:
+
 sass:
   sass_dir: assets/_sass
   style: compressed

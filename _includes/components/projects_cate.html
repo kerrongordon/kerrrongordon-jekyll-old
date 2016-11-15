@@ -1,4 +1,4 @@
-{% for post in site.categories.projects limit:include.num %}
+{% for post in site.projects limit:include.num %}
 <article id="{{ post.id }}" class="{{ include.data }}__item">
 	<div class="{{ include.data }}__item__container">
 		<img class="{{ include.data }}__item__image" src="{{ site.baseurl }}{{ site.image_location }}/post/{{ post.img }}">

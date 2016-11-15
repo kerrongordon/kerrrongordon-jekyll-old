@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  "Lorem ipsum dolor"
-categories: projects
 img: page-7.jpg
 excerpt: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non
 ---
