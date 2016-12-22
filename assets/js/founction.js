@@ -57,6 +57,7 @@ var projects = (function(animat){
         loadCon 		= $('#loadContent'),
         pItem   		= $('.projects__item'),
         pItems  		= $('.projects__items'),
+        viewmode    = $('.viewmode'),
         settings 		= {
             loading: '{{ site.baseurl }}/assets/loading.html'
         };
@@ -68,24 +69,28 @@ var projects = (function(animat){
 
     function openprojectitem(e) {
         pFull.addClass('projects__items--left');
+        viewmode.addClass('viewmode_on');
         pItems.hide(animat);
         var pageId = $(this).attr('id');
-        loadCon.load(pageId + '.html');
-
-				$('html, body').animate({
-          scrollTop: proje.offset().top
-        }, animat);
+        loadCon.load(pageId + '/index.html');
+        document.location.hash = pageId;
     }
 
     function closeprojectitem(e) {
         e.preventDefault();
         pFull.removeClass('projects__items--left');
+        viewmode.removeClass('viewmode_on');
         pItems.show();
         loadCon.delay(animat)
         .queue( function(next){
             $(this).load(settings.loading);
             next();
         });
+        // $('html, body').animate({
+        //   scrollTop: proje.offset().top
+        // }, animat);
+
+        location.href = '#projects';
     }
 
 });
@@ -104,12 +109,9 @@ var forms = (function (email) {
     		method: 'POST',
     		data: $(this).serialize(),
     		dataType: 'json',
-    		beforeSend: function() {
-          notification('beforeSend');
-    		},
     		success: function(data) {
-          notification('success');
           formInput.val('');
+          notification('success');
     		},
     		error: function(err) {
           notification('error');
@@ -123,31 +125,25 @@ var notification = (function (e) {
   var notification      = $('.notification'),
       $notify            = $('.notify');
 
-  //notification.addClass('notification__show');
-
   notify();
 
-  if (e === 'beforeSend') {
-    $notify.append('<div class="notification"><p>Data is Prossing.</p></div>');
-  } else if (e === 'success') {
+  if (e === 'success') {
     $notify.append('<div class="notification"><p>Message sent!.</p></div>');
-  } else if (e === 'error') {
+  } 
+
+  if (e === 'error') {
     $notify.append('<div class="notification"><p>Ops, there was an error.</p></div>');
   }
 
-
   if ($notify.length) {
-    var i = $notify.find('.notification');
+      var i = $notify.find('.notification');
 
-     $notify.delay(5000)
-     .queue(function(next){
-       i.first().remove();
-       next();
-     });
-  }
-
-
-
+       $notify.delay(5000)
+       .queue(function(next){
+         i.remove();
+         next();
+       });
+    }
 
   // notification.delay(5000)
   // .queue( function(next){
@@ -171,6 +167,7 @@ $(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      //document.location.hash = target.selector;
       if (target.length) {
         $('html, body').animate({
           scrollTop: target.offset().top
