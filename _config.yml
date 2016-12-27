@@ -7,16 +7,21 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
-exclude: [package.json]
+exclude: [package.json, node_modules, npm-debug.log.2014774714]
+include: [.htaccess]
 
 destination: _site/
 
 image_location: assets/img
 javascript_location: assets/js
 
+large_thumbnail: assets/img/post/large-thumbnail
+small_thumbnail: assets/img/post/small-thumbnail
+
 collections:
   projects:
     output: true
+    permalink: /projects/:path/
 
   features:
 
