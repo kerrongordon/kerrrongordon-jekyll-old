@@ -14,23 +14,23 @@ $(document).ready(function () {
 
 var mainMenu = (function () {
 
-      var aChildren = $(".menu__list").children(); // find the a children of the list items
-      var aArray = []; // create the empty aArray
+      var aChildren = $(".menu__list").children();
+      var aArray = [];
       for (var i=0; i < aChildren.length; i++) {
           var aChild = aChildren[i];
           var ahref = $(aChild).attr('href');
           aArray.push(ahref);
-      } // this for loop fills the aArray with attribute href values
+      }
 
       $(window).scroll(function(){
-          var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
-          var windowHeight = $(window).height(); // get the height of the window
+          var windowPos = $(window).scrollTop();
+          var windowHeight = $(window).height();
           var docHeight = $(document).height();
 
           for (var i=0; i < aArray.length; i++) {
               var theID = aArray[i];
-              var divPos = $(theID).offset().top/1.05; // get the offset of the div from the top of page
-              var divHeight = $(theID).height(); // get the height of the div in question
+              var divPos = $(theID).offset().top/1.05;
+              var divHeight = $(theID).height();
               if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
                   $("a[href='" + theID + "']").addClass("menu__list__item--active");
               } else {
@@ -70,7 +70,7 @@ var projects = (function(animat){
     function openprojectitem(e) {
         pFull.addClass('projects__items--left');
         viewmode.addClass('viewmode_on');
-        pItems.hide(animat);
+        /**pItems.hide(animat); **/
         var pageId = $(this).attr('id');
         loadCon.load(pageId + '/index.html');
         document.location.hash = pageId;
@@ -86,9 +86,6 @@ var projects = (function(animat){
             $(this).load(settings.loading);
             next();
         });
-        // $('html, body').animate({
-        //   scrollTop: proje.offset().top
-        // }, animat);
 
         location.href = '#projects';
     }
@@ -128,11 +125,11 @@ var notification = (function (e) {
   notify();
 
   if (e === 'success') {
-    $notify.append('<div class="notification"><p>Message sent!.</p></div>');
-  } 
+    $notify.append('<div class="notification pass"><p>Message sent!.</p></div>');
+  }
 
   if (e === 'error') {
-    $notify.append('<div class="notification"><p>Ops, there was an error.</p></div>');
+    $notify.append('<div class="notification error"><p>Ops, there was an error.</p></div>');
   }
 
   if ($notify.length) {
@@ -145,13 +142,6 @@ var notification = (function (e) {
        });
     }
 
-  // notification.delay(5000)
-  // .queue( function(next){
-  //     $(this).removeClass('notification__show');
-  //     $('.notification__notify').remove();
-  //     next();
-  // });
-
 });
 
 var notify = (function () {
@@ -161,17 +151,21 @@ var notify = (function () {
 
 });
 
+function goTo(e) {
+  window.location.hash = "#"+e[0].id;
+}
+
 
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      //document.location.hash = target.selector;
       if (target.length) {
         $('html, body').animate({
           scrollTop: target.offset().top
         }, 1000);
+        setTimeout(goTo(target), 1050);
         return false;
       }
     }

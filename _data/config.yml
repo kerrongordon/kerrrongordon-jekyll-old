@@ -14,7 +14,7 @@ description: >
 skills:
 - {skill: 'Communication', level: '70'}
 - {skill: 'Organization', level: '80'}
-- {skill: 'Learning', level: '80'}
+- {skill: 'Learning', level: '75'}
 - {skill: 'Teaching', level: '65'}
 - {skill: 'Planning', level: '75'}
 - {skill: 'Visual Design', level: '50'}
@@ -28,7 +28,7 @@ logo: icons/loop.svg
 menu:
 - {title: 'Home', link: '#home'}
 - {title: 'About', link: '#about'}
-- {title: 'Features', link: '#features'}
+# - {title: 'Features', link: '#features'}
 - {title: 'Projects', link: '#projects'}
 - {title: 'Contact', link: '#contact'}
 
@@ -43,5 +43,5 @@ contactBackground: contact-bg
 sectionTitle1: Home
 sectionTitle2: About
 sectionTitle3: Features
-sectionTitle4: Projects
+sectionTitle4: Portfolio
 sectionTitle5: Stay in touch

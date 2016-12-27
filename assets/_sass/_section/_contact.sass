@@ -1,12 +1,17 @@
 .contact
-  +retina-image($contact-bg-img, cover)
+  // +retina-image($contact-bg-img, cover)
   padding: 60px 0
 
   +e('form')
     position: relative
     z-index: 10
     max-width: 700px
-    margin: 0 auto
+    margin: 2em auto 0
 
     +e('textarea')
       min-height: 200px
+
+  input[type="submit"]
+    position: relative
+    left: 50%
+    transform: translateX(-50%)

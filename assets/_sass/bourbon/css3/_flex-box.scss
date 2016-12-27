@@ -1,320 +1,395 @@
-// CSS3 Flexible Box Model and property defaults
 
-// Custom shorthand notation for flexbox
-@mixin box($orient: inline-axis, $pack: start, $align: stretch) {
-  @include display-box;
-  @include box-orient($orient);
-  @include box-pack($pack);
-  @include box-align($align);
+// Flexbox Mixins
+// http://philipwalton.github.io/solved-by-flexbox/
+// https://github.com/philipwalton/solved-by-flexbox
+//
+// Copyright (c) 2013 Brian Franco
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to
+// permit persons to whom the Software is furnished to do so, subject to
+// the following conditions:
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+// CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+// TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+// SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+//
+// This is a set of mixins for those who want to mess around with flexbox
+// using the native support of current browsers. For full support table
+// check: http://caniuse.com/flexbox
+//
+// Basically this will use:
+//
+// * Fallback, old syntax (IE10, mobile webkit browsers - no wrapping)
+// * Final standards syntax (FF, Safari, Chrome, IE11, Opera)
+//
+// This was inspired by:
+//
+// * http://dev.opera.com/articles/view/advanced-cross-browser-flexbox/
+//
+// With help from:
+//
+// * http://w3.org/tr/css3-flexbox/
+// * http://the-echoplex.net/flexyboxes/
+// * http://msdn.microsoft.com/en-us/library/ie/hh772069(v=vs.85).aspx
+// * http://css-tricks.com/using-flexbox/
+// * http://dev.opera.com/articles/view/advanced-cross-browser-flexbox/
+// * https://developer.mozilla.org/en-us/docs/web/guide/css/flexible_boxes
+
+//----------------------------------------------------------------------
+
+// Flexbox Containers
+//
+// The 'flex' value causes an element to generate a block-level flex
+// container box.
+//
+// The 'inline-flex' value causes an element to generate a inline-level
+// flex container box.
+//
+// display: flex | inline-flex
+//
+// http://w3.org/tr/css3-flexbox/#flex-containers
+//
+// (Placeholder selectors for each type, for those who rather @extend)
+
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 
-@mixin display-box {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox; // IE 10
-  display: box;
+%flexbox { @include flexbox; }
+
+//----------------------------------
+
+@mixin inline-flex {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
 }
 
-@mixin box-orient($orient: inline-axis) {
-// horizontal|vertical|inline-axis|block-axis|inherit
-  @include prefixer(box-orient, $orient, webkit moz spec);
-}
+%inline-flex { @include inline-flex; }
 
-@mixin box-pack($pack: start) {
-// start|end|center|justify
-  @include prefixer(box-pack, $pack, webkit moz spec);
-  -ms-flex-pack: $pack; // IE 10
-}
+//----------------------------------------------------------------------
 
-@mixin box-align($align: stretch) {
-// start|end|center|baseline|stretch
-  @include prefixer(box-align, $align, webkit moz spec);
-  -ms-flex-align: $align; // IE 10
-}
+// Flexbox Direction
+//
+// The 'flex-direction' property specifies how flex items are placed in
+// the flex container, by setting the direction of the flex container's
+// main axis. This determines the direction that flex items are laid out in.
+//
+// Values: row | row-reverse | column | column-reverse
+// Default: row
+//
+// http://w3.org/tr/css3-flexbox/#flex-direction-property
 
-@mixin box-direction($direction: normal) {
-// normal|reverse|inherit
-  @include prefixer(box-direction, $direction, webkit moz spec);
-  -ms-flex-direction: $direction; // IE 10
-}
-
-@mixin box-lines($lines: single) {
-// single|multiple
-  @include prefixer(box-lines, $lines, webkit moz spec);
-}
-
-@mixin box-ordinal-group($int: 1) {
-  @include prefixer(box-ordinal-group, $int, webkit moz spec);
-  -ms-flex-order: $int; // IE 10
-}
-
-@mixin box-flex($value: 0.0) {
-  @include prefixer(box-flex, $value, webkit moz spec);
-  -ms-flex: $value; // IE 10
-}
-
-@mixin box-flex-group($int: 1) {
-  @include prefixer(box-flex-group, $int, webkit moz spec);
-}
-
-// CSS3 Flexible Box Model and property defaults
-// Unified attributes for 2009, 2011, and 2012 flavours.
-
-// 2009 - display (box | inline-box)
-// 2011 - display (flexbox | inline-flexbox)
-// 2012 - display (flex | inline-flex)
-@mixin display($value) {
-//  flex | inline-flex
-    @if $value == "flex" {
-        // 2009
-        display: -webkit-box;
-        display: -moz-box;
-        display: box;
-
-        // 2012
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox; // 2011 (IE 10)
-        display: flex;
-    }
-
-    @elseif $value == "inline-flex" {
-        display: -webkit-inline-box;
-        display: -moz-inline-box;
-        display: inline-box;
-
-        display: -webkit-inline-flex;
-        display: -moz-inline-flex;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-    }
-
-    @else {
-        display: $value;
-    }
-}
-
-// 2009 - box-flex (integer)
-// 2011 - flex (decimal | width decimal)
-// 2012 - flex (integer integer width)
-@mixin flex($value) {
-
-    // Grab flex-grow for older browsers.
-    $flex-grow: nth($value, 1);
-
-    // 2009
-    @include prefixer(box-flex, $flex-grow, webkit moz spec);
-
-    // 2011 (IE 10), 2012
-    @include prefixer(flex, $value, webkit moz ms spec);
-}
-
-// 2009 - box-orient ( horizontal | vertical | inline-axis | block-axis)
-//      - box-direction (normal | reverse)
-// 2011 - flex-direction (row | row-reverse | column | column-reverse)
-// 2012 - flex-direction (row | row-reverse | column | column-reverse)
 @mixin flex-direction($value: row) {
-
-    // Alt values.
-    $value-2009: $value;
-    $value-2011: $value;
-    $direction: "normal";
-
-    @if $value == row {
-        $value-2009: horizontal;
-    }
-
-    @elseif $value == "row-reverse" {
-        $value-2009: horizontal;
-        $direction: reverse;
-    }
-
-    @elseif $value == column {
-        $value-2009: vertical;
-    }
-
-    @elseif $value == "column-reverse" {
-        $value-2009: vertical;
-        $direction: reverse;
-    }
-
-    // 2009
-    @include prefixer(box-orient, $value-2009, webkit moz spec);
-    @if $direction == "reverse" {
-        @include prefixer(box-direction, $direction, webkit moz spec);
-    }
-
-    // 2012
-    @include prefixer(flex-direction, $value, webkit moz spec);
-
-    // 2011 (IE 10)
-    -ms-flex-direction: $value;
+	@if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+	} @else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	} @else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+	} @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
 }
+	// Shorter version:
+	@mixin flex-dir($args...) { @include flex-direction($args...); }
 
-// 2009 - box-lines (single | multiple)
-// 2011 - flex-wrap (nowrap | wrap | wrap-reverse)
-// 2012 - flex-wrap (nowrap | wrap | wrap-reverse)
+//----------------------------------------------------------------------
+
+// Flexbox Wrap
+//
+// The 'flex-wrap' property controls whether the flex container is single-line
+// or multi-line, and the direction of the cross-axis, which determines
+// the direction new lines are stacked in.
+//
+// Values: nowrap | wrap | wrap-reverse
+// Default: nowrap
+//
+// http://w3.org/tr/css3-flexbox/#flex-wrap-property
+
 @mixin flex-wrap($value: nowrap) {
-
-    // Alt values.
-    $alt-value: $value;
-    @if $value == nowrap {
-        $alt-value: single;
-    }
-
-    @elseif $value == wrap {
-        $alt-value: multiple;
-    }
-
-    @elseif $value == "wrap-reverse" {
-        $alt-value: multiple;
-    }
-
-    @include prefixer(box-lines, $alt-value, webkit moz spec);
-    @include prefixer(flex-wrap, $value, webkit moz ms spec);
+	// No Webkit Box fallback.
+	-webkit-flex-wrap: $value;
+	-moz-flex-wrap: $value;
+	@if $value == nowrap {
+		-ms-flex-wrap: none;
+	} @else {
+		-ms-flex-wrap: $value;
+	}
+	flex-wrap: $value;
 }
 
-// 2009 - TODO: parse values into flex-direction/flex-wrap
-// 2011 - TODO: parse values into flex-direction/flex-wrap
-// 2012 - flex-flow (flex-direction || flex-wrap)
-@mixin flex-flow($value) {
-    @include prefixer(flex-flow, $value, webkit moz spec);
+//----------------------------------------------------------------------
+
+// Flexbox Flow (shorthand)
+//
+// The 'flex-flow' property is a shorthand for setting the 'flex-direction'
+// and 'flex-wrap' properties, which together define the flex container's
+// main and cross axes.
+//
+// Values: <flex-direction> | <flex-wrap>
+// Default: row nowrap
+//
+// http://w3.org/tr/css3-flexbox/#flex-flow-property
+
+@mixin flex-flow($values: (row nowrap)) {
+	// No Webkit Box fallback.
+	-webkit-flex-flow: $values;
+	-moz-flex-flow: $values;
+	-ms-flex-flow: $values;
+	flex-flow: $values;
 }
 
-// 2009 - box-ordinal-group (integer)
-// 2011 - flex-order (integer)
-// 2012 - order (integer)
+//----------------------------------------------------------------------
+
+// Flexbox Order
+//
+// The 'order' property controls the order in which flex items appear within
+// their flex container, by assigning them to ordinal groups.
+//
+// Default: 0
+//
+// http://w3.org/tr/css3-flexbox/#order-property
+
 @mixin order($int: 0) {
-    // 2009
-    @include prefixer(box-ordinal-group, $int, webkit moz spec);
-
-    // 2012
-    @include prefixer(order, $int, webkit moz spec);
-
-    // 2011 (IE 10)
-    -ms-flex-order: $int;
+	-webkit-box-ordinal-group: $int + 1;
+	-webkit-order: $int;
+	-moz-order: $int;
+	-ms-flex-order: $int;
+	order: $int;
 }
 
-// 2012 - flex-grow (number)
-@mixin flex-grow($number: 0) {
-    @include prefixer(flex-grow, $number, webkit moz spec);
-    -ms-flex-positive: $number;
+//----------------------------------------------------------------------
+
+// Flexbox Grow
+//
+// The 'flex-grow' property sets the flex grow factor. Negative numbers
+// are invalid.
+//
+// Default: 0
+//
+// http://w3.org/tr/css3-flexbox/#flex-grow-property
+
+@mixin flex-grow($int: 0) {
+	-webkit-box-flex: $int;
+	-webkit-flex-grow: $int;
+	-moz-flex-grow: $int;
+	-ms-flex-positive: $int;
+	flex-grow: $int;
 }
 
-// 2012 - flex-shrink (number)
-@mixin flex-shrink($number: 1) {
-    @include prefixer(flex-shrink, $number, webkit moz spec);
-    -ms-flex-negative: $number;
+//----------------------------------------------------------------------
+
+// Flexbox Shrink
+//
+// The 'flex-shrink' property sets the flex shrink factor. Negative numbers
+// are invalid.
+//
+// Default: 1
+//
+// http://w3.org/tr/css3-flexbox/#flex-shrink-property
+
+@mixin flex-shrink($int: 1) {
+	-webkit-flex-shrink: $int;
+	-moz-flex-shrink: $int;
+	-ms-flex-negative: $int;
+	flex-shrink: $int;
 }
 
-// 2012 - flex-basis (number)
-@mixin flex-basis($width: auto) {
-    @include prefixer(flex-basis, $width, webkit moz spec);
-    -ms-flex-preferred-size: $width;
+//----------------------------------------------------------------------
+
+// Flexbox Basis
+//
+// The 'flex-basis' property sets the flex basis. Negative lengths are invalid.
+//
+// Values: Like "width"
+// Default: auto
+//
+// http://www.w3.org/TR/css3-flexbox/#flex-basis-property
+
+@mixin flex-basis($value: auto) {
+	-webkit-flex-basis: $value;
+	-moz-flex-basis: $value;
+	-ms-flex-preferred-size: $value;
+	flex-basis: $value;
 }
 
-// 2009 - box-pack (start | end | center | justify)
-// 2011 - flex-pack (start | end | center | justify)
-// 2012 - justify-content (flex-start | flex-end | center | space-between | space-around)
-@mixin justify-content ($value: flex-start) {
+//----------------------------------------------------------------------
 
-    // Alt values.
-    $alt-value: $value;
-    @if $value == "flex-start" {
-        $alt-value: start;
-    }
+// Flexbox "Flex" (shorthand)
+//
+// The 'flex' property specifies the components of a flexible length: the
+// flex grow factor and flex shrink factor, and the flex basis. When an
+// element is a flex item, 'flex' is consulted instead of the main size
+// property to determine the main size of the element. If an element is
+// not a flex item, 'flex' has no effect.
+//
+// Values: none | <flex-grow> <flex-shrink> || <flex-basis>
+// Default: See individual properties (1 1 0).
+//
+// http://w3.org/tr/css3-flexbox/#flex-property
 
-    @elseif $value == "flex-end" {
-        $alt-value: end;
-    }
+@mixin flex($fg: 1, $fs: null, $fb: null) {
 
-    @elseif $value == "space-between" {
-        $alt-value: justify;
-    }
+	// Set a variable to be used by box-flex properties
+	$fg-boxflex: $fg;
 
-    @elseif $value == "space-around" {
-        $alt-value: center;
-    }
+	// Box-Flex only supports a flex-grow value so let's grab the
+	// first item in the list and just return that.
+	@if type-of($fg) == 'list' {
+		$fg-boxflex: nth($fg, 1);
+	}
 
-    // 2009
-    @include prefixer(box-pack, $alt-value, webkit moz spec);
-
-    // 2012
-    @include prefixer(justify-content, $value, webkit moz ms o spec);
-
-    // 2011 (IE 10)
-    -ms-flex-pack: $alt-value;
+	-webkit-box-flex: $fg-boxflex;
+	-webkit-flex: $fg $fs $fb;
+	-moz-box-flex: $fg-boxflex;
+	-moz-flex: $fg $fs $fb;
+	-ms-flex: $fg $fs $fb;
+	flex: $fg $fs $fb;
 }
 
-// 2009 - box-align (start | end | center | baseline | stretch)
-// 2011 - flex-align (start | end | center | baseline | stretch)
-// 2012 - align-items (flex-start | flex-end | center | baseline | stretch)
+//----------------------------------------------------------------------
+
+// Flexbox Justify Content
+//
+// The 'justify-content' property aligns flex items along the main axis
+// of the current line of the flex container. This is done after any flexible
+// lengths and any auto margins have been resolved. Typically it helps distribute
+// extra free space leftover when either all the flex items on a line are
+// inflexible, or are flexible but have reached their maximum size. It also
+// exerts some control over the alignment of items when they overflow the line.
+//
+// Note: 'space-*' values not supported in older syntaxes.
+//
+// Values: flex-start | flex-end | center | space-between | space-around
+// Default: flex-start
+//
+// http://w3.org/tr/css3-flexbox/#justify-content-property
+
+@mixin justify-content($value: flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	} @else if $value == space-around {
+		-ms-flex-pack: distribute;
+	} @else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+	// Shorter version:
+	@mixin flex-just($args...) { @include justify-content($args...); }
+
+//----------------------------------------------------------------------
+
+// Flexbox Align Items
+//
+// Flex items can be aligned in the cross axis of the current line of the
+// flex container, similar to 'justify-content' but in the perpendicular
+// direction. 'align-items' sets the default alignment for all of the flex
+// container's items, including anonymous flex items. 'align-self' allows
+// this default alignment to be overridden for individual flex items. (For
+// anonymous flex items, 'align-self' always matches the value of 'align-items'
+// on their associated flex container.)
+//
+// Values: flex-start | flex-end | center | baseline | stretch
+// Default: stretch
+//
+// http://w3.org/tr/css3-flexbox/#align-items-property
+
 @mixin align-items($value: stretch) {
-
-    $alt-value: $value;
-
-    @if $value == "flex-start" {
-        $alt-value: start;
-    }
-
-    @elseif $value == "flex-end" {
-        $alt-value: end;
-    }
-
-    // 2009
-    @include prefixer(box-align, $alt-value, webkit moz spec);
-
-    // 2012
-    @include prefixer(align-items, $value, webkit moz ms o spec);
-
-    // 2011 (IE 10)
-    -ms-flex-align: $alt-value;
+	@if $value == flex-start {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+	} @else if $value == flex-end {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+	} @else {
+		-webkit-box-align: $value;
+		-ms-flex-align: $value;
+	}
+	-webkit-align-items: $value;
+	-moz-align-items: $value;
+	align-items: $value;
 }
 
-// 2011 - flex-item-align (auto | start | end | center | baseline | stretch)
-// 2012 - align-self (auto | flex-start | flex-end | center | baseline | stretch)
+//----------------------------------
+
+// Flexbox Align Self
+//
+// Values: auto | flex-start | flex-end | center | baseline | stretch
+// Default: auto
+
 @mixin align-self($value: auto) {
-
-    $value-2011: $value;
-    @if $value == "flex-start" {
-        $value-2011: start;
-    }
-
-    @elseif $value == "flex-end" {
-        $value-2011: end;
-    }
-
-    // 2012
-    @include prefixer(align-self, $value, webkit moz spec);
-
-    // 2011 (IE 10)
-    -ms-flex-item-align: $value-2011;
+	// No Webkit Box Fallback.
+	-webkit-align-self: $value;
+	-moz-align-self: $value;
+	@if $value == flex-start {
+		-ms-flex-item-align: start;
+	} @else if $value == flex-end {
+		-ms-flex-item-align: end;
+	} @else {
+		-ms-flex-item-align: $value;
+	}
+	align-self: $value;
 }
 
-// 2011 - flex-line-pack (start | end | center | justify | distribute | stretch)
-// 2012 - align-content (flex-start | flex-end | center | space-between | space-around | stretch)
+//----------------------------------------------------------------------
+
+// Flexbox Align Content
+//
+// The 'align-content' property aligns a flex container's lines within the
+// flex container when there is extra space in the cross-axis, similar to
+// how 'justify-content' aligns individual items within the main-axis. Note,
+// this property has no effect when the flexbox has only a single line.
+//
+// Values: flex-start | flex-end | center | space-between | space-around | stretch
+// Default: stretch
+//
+// http://w3.org/tr/css3-flexbox/#align-content-property
+
 @mixin align-content($value: stretch) {
-
-    $value-2011: $value;
-    @if $value == "flex-start" {
-        $value-2011: start;
-    }
-
-    @elseif $value == "flex-end" {
-        $value-2011: end;
-    }
-
-    @elseif $value == "space-between" {
-        $value-2011: justify;
-    }
-
-    @elseif $value == "space-around" {
-        $value-2011: distribute;
-    }
-
-    // 2012
-    @include prefixer(align-content, $value, webkit moz spec);
-
-    // 2011 (IE 10)
-    -ms-flex-line-pack: $value-2011;
+	// No Webkit Box Fallback.
+	-webkit-align-content: $value;
+	-moz-align-content: $value;
+	@if $value == flex-start {
+		-ms-flex-line-pack: start;
+	} @else if $value == flex-end {
+		-ms-flex-line-pack: end;
+	} @else {
+		-ms-flex-line-pack: $value;
+	}
+	align-content: $value;
 }
