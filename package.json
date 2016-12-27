@@ -4,10 +4,13 @@
   "description": "my website",
   "main": "index.js",
   "scripts": {
-    "test": "jekyll build",
-    "build": "jekyll serve -w",
+    "sw": "sw-precache --root='./' --static-file-globs='_site/**/*.{js,html,css,xml,json,ico,png,jpg,gif,svg,eot,ttf,woff}'",
+    "rp": "replace '_site/' '' service-worker.js",
+    "jb": "jekyll build",
+    "jbw": "jekyll build --watch",
+    "build": "npm run jb && npm run sw && npm run rp && npm run jb",
     "serve": "live-server ./_site",
-    "start": "npm run build & npm run serve"
+    "start": "npm run jbw & npm run serve"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/kerrongordon/kerrongordon.github.io/issues"
   },
-  "homepage": "https://github.com/kerrongordon/kerrongordon.github.io#readme"
+  "homepage": "https://github.com/kerrongordon/kerrongordon.github.io#readme",
+  "devDependencies": {
+    "live-server": "^1.1.0",
+    "replace": "^0.3.0",
+    "sw-precache": "^4.2.3"
+  }
 }
