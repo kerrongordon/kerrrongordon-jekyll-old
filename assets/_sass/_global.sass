@@ -1,4 +1,4 @@
-@font-face 
+@font-face
   font-family: 'Cinzel Decorative'
   src: url('../fonts/CinzelDecorative-Regular.ttf')  format('truetype')
 
@@ -22,9 +22,9 @@ body
   position: relative
 
 .overlay
-  background-color: $accent-color-1
+  background-color: #000
   +position(absolute, 0 0 0 0)
-  opacity: 0.7
+  opacity: 0.5
 
 pre
   padding: 10px
@@ -67,24 +67,36 @@ img
 
 section
   overflow: hidden
-  +transition(all 0.5s ease-in-out)
+  //+transition(all 0.5s ease-in-out)
 
+.title-d
+  z-index: 10
+  position: relative
+  text-align: center
+  font-family: "Cinzel Decorative",cursive
 
+.features
+  padding: 100px 0
 
 //-----------------------------------------------------
 //forms
 //-----------------------------------------------------
 
 textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple=multiple]
-  border-radius: 0
-  box-shadow: none
-  background: rgba($accent-color-1, 0.5)
+  border-radius: 3px
+  background: $text-color-light
   border-color: $text-color-light
-  color: $text-color-light
+  color: $text-color
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5)
+  +transition(all 0.3s ease-in-out)
 
 textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus
-  border-color: $accent-color-2
-  box-shadow: none
+  border-color: $text-color-light
+  box-shadow: 0px 23px 17px -10px rgba(0,0,0,0.5)
+
+textarea:hover, input[type="email"]:hover, input[type="text"]:hover
+  border-color: $text-color-light
+  box-shadow: 0px 12px 11px 0px rgba(0, 0, 0, 0.5)
 
 button, input[type="submit"]
   border-radius: 0
@@ -93,6 +105,7 @@ button, input[type="submit"]
 
 button:hover, input[type="submit"]:hover
   background-color: $accent-color-2
+  box-shadow: 0px 12px 11px 0px rgba(0, 0, 0, 0.5)
 
 //-----------------------------------------------------
 //notification
@@ -112,13 +125,19 @@ button:hover, input[type="submit"]:hover
     opacity: 1
 
 .notification
-  background: rgba(0, 0, 0, 0.85)
+  background: $text-color-light
   border-radius: 5px
   margin: 15px
-  color: #fff
+  color: $text-color
   padding: 15px
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.46)
   +transition(all 0.5s ease-in-out)
+
+.pass
+  background: #2ecc71
+
+.error
+  background: #e74c3c
 
   p
     margin: 0

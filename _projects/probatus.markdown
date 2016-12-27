@@ -2,7 +2,7 @@
 layout: page
 title:  "Probatus"
 img: probatus.jpg
-excerpt: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non
+excerpt: Probatus is a static html5 and css3 template build with Google Web Starter Kit  
 ---
 
 ### Tools Use to build Probatus
